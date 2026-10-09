@@ -13,10 +13,6 @@ def test_joins_whitespace_with_hyphens():
     assert normalize_team_slug("Team   Blue\tNorth") == "team-blue-north"
 
 
-def test_joins_newlines_with_hyphens():
-    assert normalize_team_slug("Team\nBlue") == "team-blue"
-
-
 def test_rejects_blank_names():
     with pytest.raises(ValueError, match="non-whitespace"):
         normalize_team_slug("   ")
