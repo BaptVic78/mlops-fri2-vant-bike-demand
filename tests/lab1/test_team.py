@@ -16,3 +16,8 @@ def test_joins_whitespace_with_hyphens():
 def test_rejects_blank_names():
     with pytest.raises(ValueError, match="non-whitespace"):
         normalize_team_slug("   ")
+
+
+def test_rejects_only_tabs_and_newlines():
+    with pytest.raises(ValueError, match="non-whitespace"):
+        normalize_team_slug("\t\n\t")
