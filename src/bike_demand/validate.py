@@ -35,11 +35,64 @@ NORMALISED = ("temp", "atemp", "hum", "windspeed")
 COUNTS = ("cnt", "casual", "registered")
 
 
+
 def check_domains(frame: pd.DataFrame) -> None:
-    raise NotImplementedError(
-        "TODO(Week 1, Lab 2): validate domains, finite ranges and date "
-        "windows. See README 'Expected failures'."
-    )
+    # Check categorical domains and integer values
+    for column, (minimum, maximum) in DOMAINS.items():
+        values = frame[column]
+        if not (
+            np.isfinite(values)
+            & (values >= minimum)
+            & (values <= maximum)
+            & (values % 1 == 0)
+        ).all():
+            raise ValueError(
+                f"{column}: values must be integers between {minimum} and {maximum}"
+            )
+
+    # Check normalized weather features
+    for column in NORMALISED:
+        values = frame[column]
+        if not (
+            np.isfinite(values)
+            & (values >= 0)
+            & (values <= 1)
+        ).all():
+            raise ValueError(
+                f"{column}: values must be finite and between 0 and 1"
+            )
+
+    # Check nonnegative integer rental counts
+    for column in COUNTS:
+        values = frame[column]
+        if not (
+            np.isfinite(values)
+            & (values >= 0)
+            & (values % 1 == 0)
+        ).all():
+            raise ValueError(
+                f"{column}: values must be nonnegative integers"
+            )
+
+    # Check date boundaries
+    dates = frame["dteday"]
+    if not dates.between(
+        pd.Timestamp("2011-01-01"),
+        pd.Timestamp("2012-12-31"),
+    ).all():
+        raise ValueError(
+            "dteday: dates must be between 2011-01-01 and 2012-12-31"
+        )
+
+    # Check consistency between year and date
+    expected_year = dates.dt.year - 2011
+    if not (frame["yr"] == expected_year).all():
+        raise ValueError("yr: inconsistent with dteday")
+
+    # Check consistency between month and date
+    if not (frame["mnth"] == dates.dt.month).all():
+        raise ValueError("mnth: inconsistent with dteday")
+
 
 
 def load_data(path: Path | str) -> pd.DataFrame:

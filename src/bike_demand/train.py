@@ -1,5 +1,5 @@
 """Validate, fit on train, compare on validation and record two local runs."""
-
+from sklearn.ensemble import RandomForestRegressor
 import argparse
 import json
 import tempfile
@@ -44,27 +44,62 @@ def load_config(path: Path) -> dict:
     return config
 
 
+
 def select_features(frame: pd.DataFrame, features: list[str]) -> pd.DataFrame:
-    raise NotImplementedError(
-        "TODO(Week 1, Lab 2): select only the ordered predictors, excluding "
-        "labels and identities. See README 'Expected failures'."
-    )
+    if features != list(FEATURES):
+        raise ValueError("features: require the contract's ordered predictors")
+
+    return frame.loc[:, features].copy()
+
+
 
 
 def compare_mean(
     train_target: pd.Series, validation_target: pd.Series
 ) -> tuple[float, float]:
-    raise NotImplementedError(
-        "TODO(Week 1, Lab 2): fit the comparator on training targets and "
-        "compute validation MAE. See README 'Expected failures'."
+    train_mean = float(train_target.mean())
+
+    predictions = np.full(
+        len(validation_target),
+        train_mean
     )
+
+    validation_mae = float(
+        mean_absolute_error(validation_target, predictions)
+    )
+
+    return train_mean, validation_mae
+
+
 
 
 def fit_evaluate(train: pd.DataFrame, validation: pd.DataFrame, config: dict):
-    raise NotImplementedError(
-        "TODO(Week 1, Lab 2): fit the RF on train and evaluate only on "
-        "validation rows. See README 'Expected failures'."
+    features = config["features"]
+
+    # Select the same ordered predictors
+    X_train = select_features(train, features)
+    X_validation = select_features(validation, features)
+
+    # Target: hourly bike rental count
+    y_train = train["cnt"]
+    y_validation = validation["cnt"]
+
+    # Initialize the model using the fixed configuration
+    model = RandomForestRegressor(**config["model"])
+
+    # Fit only on 2011 training rows
+    model.fit(X_train, y_train)
+
+    # Predict only on 2012 Jan-Jun validation rows
+    predictions = model.predict(X_validation)
+
+    # Evaluate with Mean Absolute Error
+    validation_mae = float(
+        mean_absolute_error(y_validation, predictions)
     )
+
+    return model, predictions, validation_mae
+
 
 
 def reload_validation(
