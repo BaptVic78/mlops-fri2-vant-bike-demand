@@ -18,14 +18,14 @@ def split_data(frame: pd.DataFrame) -> dict[str, pd.DataFrame]:
     test = frame.loc[frame["dteday"].between("2012-07-01", "2012-12-31")]
     partitions["test"] = test.sort_values(["dteday", "hr", "instant"])
 
-    #checks for nonempty and complete partitions
+    # checks for nonempty and complete partitions
     if any(part.empty for part in partitions.values()):
         raise ValueError("partitions: require nonempty partitions")
     if sum(len(part) for part in partitions.values()) != len(frame):
         raise ValueError("partitions: require complete coverage")
-    
+
     return partitions
-    
+
 
 def partition_summary(partitions: dict[str, pd.DataFrame]) -> dict:
     return {
