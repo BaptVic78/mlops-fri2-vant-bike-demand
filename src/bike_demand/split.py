@@ -10,11 +10,22 @@ WINDOWS = {
 
 
 def split_data(frame: pd.DataFrame) -> dict[str, pd.DataFrame]:
-    raise NotImplementedError(
-        "TODO(Week 1, Lab 2): assign sorted, nonempty, disjoint and "
-        "complete partitions. See README 'Expected failures'."
-    )
+    partitions = {}
+    train = frame.loc[frame["dteday"].between("2011-01-01", "2011-12-31")]
+    partitions["train"] = train.sort_values(["dteday", "hr", "instant"])
+    validation = frame.loc[frame["dteday"].between("2012-01-01", "2012-06-30")]
+    partitions["validation"] = validation.sort_values(["dteday", "hr", "instant"])
+    test = frame.loc[frame["dteday"].between("2012-07-01", "2012-12-31")]
+    partitions["test"] = test.sort_values(["dteday", "hr", "instant"])
 
+    #checks for nonempty and complete partitions
+    if any(part.empty for part in partitions.values()):
+        raise ValueError("partitions: require nonempty partitions")
+    if sum(len(part) for part in partitions.values()) != len(frame):
+        raise ValueError("partitions: require complete coverage")
+    
+    return partitions
+    
 
 def partition_summary(partitions: dict[str, pd.DataFrame]) -> dict:
     return {
