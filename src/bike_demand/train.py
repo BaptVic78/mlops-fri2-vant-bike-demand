@@ -10,6 +10,7 @@ import joblib
 import numpy as np
 import pandas as pd
 import yaml
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 
 from bike_demand.preflight import check_snapshot, sha256
@@ -45,25 +46,28 @@ def load_config(path: Path) -> dict:
 
 
 def select_features(frame: pd.DataFrame, features: list[str]) -> pd.DataFrame:
-    raise NotImplementedError(
-        "TODO(Week 1, Lab 2): select only the ordered predictors, excluding "
-        "labels and identities. See README 'Expected failures'."
-    )
+    if list(features) != list(FEATURES):
+        raise ValueError("features: require the contract's ordered predictors")
+    return frame.loc[:, features]
 
 
 def compare_mean(
     train_target: pd.Series, validation_target: pd.Series
 ) -> tuple[float, float]:
-    raise NotImplementedError(
-        "TODO(Week 1, Lab 2): fit the comparator on training targets and "
-        "compute validation MAE. See README 'Expected failures'."
-    )
+    mean = float(train_target.mean())
+    predictions = np.full(len(validation_target), mean)
+    return mean, float(mean_absolute_error(validation_target, predictions))
 
 
 def fit_evaluate(train: pd.DataFrame, validation: pd.DataFrame, config: dict):
-    raise NotImplementedError(
-        "TODO(Week 1, Lab 2): fit the RF on train and evaluate only on "
-        "validation rows. See README 'Expected failures'."
+    features = config["features"]
+    model = RandomForestRegressor(**config["model"])
+    model.fit(select_features(train, features), train["cnt"])
+    predictions = model.predict(select_features(validation, features))
+    return (
+        model,
+        predictions,
+        float(mean_absolute_error(validation["cnt"], predictions)),
     )
 
 
