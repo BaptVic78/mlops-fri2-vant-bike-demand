@@ -18,11 +18,17 @@ Leave blank or write "not attempted" if the core is unfinished.
 
 ## Fault diagnosis and your own Fault B
 
-Three lines: Choice (which rule did you break?), Reason (what risk does it protect?), Result (actual rejection, valid control, remaining limitation).
+Choice: Fault B changes exactly one cell, `hr`, to 24 on a temporary copy of the six-row `tests/fixtures/missing-hours.csv` fixture, breaking the allowed 0–23 hour range.
+
+Reason: Reject impossible hours before they reach model training or evaluation.
+
+Result: `.venv/bin/python -m pytest -q tests/exercise/test_fault_b.py` passed (1 test). The unchanged valid control loaded all six rows; the faulty copy raised `ValueError` mentioning `hr` and remained byte-for-byte unchanged after rejection. The test uses temporary copies and does not edit `data/raw/hour.csv`. This experiment checks one hour-range fault, not every validation rule.
 
 ## Review observation and author's response
 
 ## Contribution and assistance/recovery acknowledgement
+
+Codex assisted with implementing the data-domain checks and added and ran the Fault B test and its report entry.
 
 ## Blockers and next action
 
