@@ -2,7 +2,7 @@
 
 - Team and repository (`mlops-<session>-<team-name>-bike-demand`):  `mlops-fri2-vant-bike-demand`.
 - Members: Nils Giraud, Victor Rouleau, Axel Alacache, Thomas Soubagne.
-- Current driver / reviewer / evidence recorder (proposed initial allocation): Victor Rouleau - Nils Giraud / Axel Alacache  / Thomas Soubagne
+- Current driver / reviewer / evidence recorder (proposed initial allocation): Victor Rouleau - Axel Alacache / Thomas Soubagne  / Nils Giraud
 
 ## Workflow
 
