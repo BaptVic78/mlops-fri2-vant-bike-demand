@@ -127,8 +127,20 @@ A further improvement would be to repeat the training from a clean committed ver
 
 ## Screenshots
 
-The screenshots will be added under `reports/images/`, with captions identifying the relevant PR, commit or run.
+### Lab 1
 
-For Lab 1, we have screenshots of the branch creation and passing tests, Nils's code changes, and the push of commit `a168d55`.
+![Branch creation and passing tests](images/LAB1/commande_creation_de_branche_et_validation.png)
 
-For Lab 2, we don't have any screenshots for the moment
+Nils's branch creation and local Lab 1 test run: 4 passed and 44 deselected. The checked commit is not visible in this screenshot.
+
+![Team slug normalization fix](images/LAB1/fix_team.py.png)
+
+Normalization fix submitted by Nils in PR #3, commit `a168d55`. It handles repeated whitespace and converts the team name to lowercase.
+
+![Commit and push](images/LAB1/pullrequest.png)
+
+Creation and successful push of commit `a168d55` to the team repository. PR #3 was later closed without merging after Victor's PR #1 was selected.
+
+### Lab 2
+
+No screenshots were taken during Lab 2. The available evidence is recorded in [PR #6](https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/pull/6), its code changes and checks, and the committed [metrics](metrics.json).
