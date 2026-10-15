@@ -1,0 +1,63 @@
+## Lab 01 — Git Workflow & Code Quality Checks
+
+### 1. Objective
+
+The objective of Lab 01 was to practice collaborative development using GitHub, including feature branches, Pull Requests, code reviews, automated testing, and code quality checks.
+
+### 2. Changes Implemented
+
+**File: `src/bike_demand/team.py`**
+
+Updated the `normalize_team_slug()` function to improve whitespace handling.
+
+- Replaced `.replace(" ", "-")` with `"-".join(team_name.lower().split())`.
+- Multiple spaces are now converted into a single hyphen.
+- Tabs and newline characters are correctly handled.
+- Existing validation for empty or whitespace-only team names was preserved.
+
+**File: `tests/lab1/test_team.py`**
+
+Added a new unit test:
+
+`test_joins_word_separated_by_newline()`
+
+This test verifies that the input `"Team\nBlue"` correctly produces `"team-blue"`.
+
+### 3. Testing and Code Quality
+
+The following commands were used to validate the implementation:
+
+```bash
+uv run --locked pytest -q -m lab1
+uv run --locked pytest -q -m infra
+uv run --locked ruff check .
+uv run --locked ruff format --check .
+```
+
+The Lab 1 tests and local code quality checks passed after the corrections.
+
+### 4. Git Workflow
+
+The team followed a collaborative Git workflow:
+
+1. Changes were developed on a separate feature branch.
+2. The updated code and unit test were committed and pushed to GitHub.
+3. A Pull Request was created to propose the changes to `main`.
+4. Automated quality checks were used to validate the implementation.
+5. The Pull Request was merged into the main branch.
+
+### 5. Evidence
+
+The following evidence documents the work completed:
+
+- **Evidence 1:** Pull Request showing the modifications to `team.py`.
+- **Evidence 2:** New unit test added to `test_team.py`.
+- **Evidence 3:** Successful pytest execution for Lab 1.
+- **Evidence 4:** Successful Ruff checks.
+- **Evidence 5:** Merged Pull Request on GitHub.
+
+### 6. Conclusion
+
+Lab 01 demonstrated how to collaborate on a shared GitHub repository while maintaining code quality through automated testing and Pull Requests.
+
+The changes improved the reliability of team name normalization and introduced additional test coverage for newline characters.
