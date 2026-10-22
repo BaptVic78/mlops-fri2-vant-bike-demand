@@ -102,6 +102,42 @@ uv run --locked mlflow server --backend-store-uri sqlite:///tracking/mlflow.db -
 committed as evidence; never commit credentials or individual private reports.
 CI currently checks only infrastructure/quality; expand it in Week 3.
 
+## Lab 4 prediction input contract
+
+`src/bike_demand/schemas.py` defines `PredictionRequest`, the Pydantic request
+model for the prediction API. All twelve fields are required in one flat JSON
+object. Extra fields are rejected, including the target/leakage columns `cnt`,
+`casual` and `registered`.
+
+| Fields | Accepted values (inclusive) |
+| --- | --- |
+| `season` | Integer 1–4 |
+| `yr`, `holiday`, `workingday` | Integer 0–1 |
+| `mnth` | Integer 1–12 |
+| `hr` | Integer 0–23 |
+| `weekday` | Integer 0–6 |
+| `weathersit` | Integer 1–4 |
+| `temp`, `atemp`, `hum`, `windspeed` | Finite numbers 0–1 |
+
+Validation is strict: numeric strings, booleans and null values are rejected.
+Integer fields also reject floating-point values. Weather fields accept JSON
+numbers (including integers) on the dataset's normalized scale, not Celsius or
+percentages. Field order follows `configs/baseline.yaml`.
+
+Example valid input:
+
+```json
+{
+  "season": 1, "yr": 0, "mnth": 1, "hr": 8,
+  "holiday": 0, "weekday": 1, "workingday": 1, "weathersit": 1,
+  "temp": 0.3, "atemp": 0.3, "hum": 0.6, "windspeed": 0.2
+}
+```
+
+The API author can import `PredictionRequest` from `bike_demand.schemas` and
+use it as the request-body type for `POST /predict`. This schema alone does not
+implement the endpoints or load a model.
+
 ## Support and individual reports
 
 If setup remains blocked after five minutes, contact the instructor using the
