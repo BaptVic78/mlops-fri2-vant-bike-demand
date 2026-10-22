@@ -9,6 +9,9 @@ from pathlib import Path
 import joblib
 import pandas as pd
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.encoders import jsonable_encoder
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
 
 from bike_demand.preflight import sha256
 from bike_demand.schemas import PredictionRequest
@@ -58,6 +61,17 @@ def create_app(
         yield
 
     app = FastAPI(title="Bike demand prediction", lifespan=lifespan)
+
+    @app.exception_handler(RequestValidationError)
+    async def validation_error(request: Request, error: RequestValidationError):
+        # Overflowing JSON numbers become inf; keep the error body valid JSON.
+        detail = jsonable_encoder(
+            error.errors(),
+            custom_encoder={
+                float: lambda value: value if math.isfinite(value) else str(value)
+            },
+        )
+        return JSONResponse(status_code=422, content={"detail": detail})
 
     def loaded_model(request: Request) -> tuple[object, str]:
         state = request.app.state
