@@ -1,0 +1,17 @@
+$ docker image inspect bike-demand:lab3
+Id=sha256:af0942bc3c4cd4096959afe0e960f51428d12303026ff45e87915367eb302501
+Created=2026-10-22T07:14:33.952816041Z
+Size=357403732
+Os/Arch=linux/amd64
+Cmd=["python","-m","bike_demand.train","--config","configs/baseline.yaml"]
+Env=["PATH=/app/.venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","LANG=C.UTF-8","GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305","PYTHON_VERSION=3.12.12","PYTHON_SHA256=fb85a13414b028c49ba18bbd523c2d055a30b56b18b92ce454ea2c51edc656c4","UV_PYTHON_DOWNLOADS=never","UV_COMPILE_BYTECODE=1","UV_LINK_MODE=copy"]
+$ base image digests resolved during build (from 02-docker-build.log)
+astral-sh/uv:0.12.24@sha256:3af4716e991d6956a41e573eab705d0ee08500cd829ed30293eb8472f372c65a
+python:3.12.12-slim@sha256:f3fa41d74a768c2fce8016b98c191ae8c1bacd8f1152870a3f9f87d350920b7c
+$ versions inside the image (--network none)
+Python 3.12.12
+uv 0.12.24 (x86_64-unknown-linux-musl)
+git version 2.47.3
+sklearn 1.9.1 pandas 2.3.3 numpy 2.5.3 mlflow 3.17.0 joblib 1.6.0
+$ host versions via uv run --locked
+3.12.15 sklearn 1.9.1 pandas 2.3.3 numpy 2.5.3 mlflow 3.17.0 joblib 1.6.0

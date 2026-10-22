@@ -1,0 +1,27 @@
+$ git rev-parse HEAD
+022c3c48af43990ad7440e855a28a4e7706698d5
+$ uv --version
+uv 0.12.24 (5411378eb 2026-10-08 x86_64-pc-windows-msvc)
+$ uv lock --check
+Resolved 98 packages in 2ms
+exit=0
+$ uv sync --locked
+Resolved 98 packages in 1ms
+Checked 97 packages in 45ms
+exit=0
+$ uv run --locked pytest -q
+.................................................                        [100%]
+============================== warnings summary ===============================
+tests/exercise/test_baseline.py::test_saved_model_readback_rerun_and_held_test
+  C:\Users\Utilisateur\OneDrive\Desktop\ING5\MLOps\mlops-fri2-vant-bike-demand\.venv\Lib\site-packages\mlflow\store\tracking\sqlalchemy_store.py:327: SADeprecationWarning: The ``noload`` loader strategy is deprecated and will be removed in a future release.  This option produces incorrect results by returning ``None`` for related items. (deprecated since: 2.1)
+    sqlalchemy.orm.configure_mappers()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+49 passed, 1 warning in 32.97s
+exit=0
+$ uv run --locked ruff check .
+All checks passed!
+exit=0
+$ uv run --locked ruff format --check .
+21 files already formatted
+exit=0

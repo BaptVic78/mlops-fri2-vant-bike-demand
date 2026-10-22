@@ -1,0 +1,96 @@
+{
+  "timestamp": "2026-10-22T07:16:57.304418+00:00",
+  "training_commit": "unavailable",
+  "working_tree_dirty": null,
+  "data_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+  "features": [
+    "season",
+    "yr",
+    "mnth",
+    "hr",
+    "holiday",
+    "weekday",
+    "workingday",
+    "weathersit",
+    "temp",
+    "atemp",
+    "hum",
+    "windspeed"
+  ],
+  "partitions": {
+    "train": {
+      "rows": 8645,
+      "date_min": "2011-01-01",
+      "date_max": "2011-12-31"
+    },
+    "validation": {
+      "rows": 4358,
+      "date_min": "2012-01-01",
+      "date_max": "2012-06-30"
+    },
+    "test": {
+      "rows": 4376,
+      "date_min": "2012-07-01",
+      "date_max": "2012-12-31"
+    }
+  },
+  "config": {
+    "data": "data/raw/hour.csv",
+    "features": [
+      "season",
+      "yr",
+      "mnth",
+      "hr",
+      "holiday",
+      "weekday",
+      "workingday",
+      "weathersit",
+      "temp",
+      "atemp",
+      "hum",
+      "windspeed"
+    ],
+    "model": {
+      "n_estimators": 50,
+      "max_depth": 10,
+      "random_state": 42,
+      "n_jobs": 1
+    }
+  },
+  "effective_model_settings": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": 10,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 50,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "model_version": "baseline-f82323405940",
+  "model_run_id": "1f7af4b38c494eb6b0885555c94c8c12",
+  "model_sha256": "d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07",
+  "naive_run_id": "6b575c742e21430890ad389b171c32a6",
+  "train_mean": 143.79444765760556,
+  "validation_mae": {
+    "naive_train_mean": 154.23179306864967,
+    "random_forest": 86.84685685591091
+  },
+  "readback": {
+    "reload_mae": 86.84685685591091,
+    "reload_mae_delta": 0.0,
+    "metadata_matches": true,
+    "logged_model_bytes_match": true,
+    "prediction_max_abs_delta": 0.0
+  }
+}

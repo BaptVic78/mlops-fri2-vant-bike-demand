@@ -1,0 +1,50 @@
+# Negative lock tests on a temporary copy (C:/Users/Utilisateur/AppData/Local/Temp/bd-l3neg) of commit 022c3c48af43990ad7440e855a28a4e7706698d5
+
+## Case 1: uv.lock absent
+$ uv sync --locked
+Using CPython 3.12.15
+Creating virtual environment at: .venv
+error: Unable to find lockfile at `uv.lock`, but `--locked` was provided. To create a lockfile, run `uv lock` or `uv sync` without the flag.
+exit=1
+uv.lock recreated? no
+$ docker build -t bike-demand:lab3-nolock .
+#11 ERROR: failed to calculate checksum of ref 8yn31bayloreyer47qmfy7ncw::vkmzi7hsx7z5dpt4tpftj1c56: "/uv.lock": not found
+ERROR: failed to build: failed to solve: failed to compute cache key: failed to calculate checksum of ref 8yn31bayloreyer47qmfy7ncw::vkmzi7hsx7z5dpt4tpftj1c56: "/uv.lock": not found
+exit=1
+
+## Case 2: uv.lock stale (pyproject.toml gains a dependency, lock unchanged)
+$ diff of pyproject.toml
+12a13
+>     "tabulate>=0.9,<1",
+$ uv lock --check
+Resolved 99 packages in 8.88s
+error: The lockfile at `uv.lock` needs to be updated, but `--check` was provided.
+
+hint: To update the lockfile, run `uv lock`.
+exit=1
+$ uv sync --locked
+Resolved 99 packages in 120ms
+error: The lockfile at `uv.lock` needs to be updated, but `--locked` was provided.
+
+hint: To update the lockfile, run `uv lock`.
+exit=1
+lock unchanged by the failed commands? NO
+$ docker build -t bike-demand:lab3-stale .
+#12 3.259 error: The lockfile at `uv.lock` needs to be updated, but `--locked` was provided.
+#12 3.259 hint: To update the lockfile, run `uv lock`.
+#12 ERROR: process "/bin/sh -c uv sync --locked --no-install-project" did not complete successfully: exit code: 1
+3.259 error: The lockfile at `uv.lock` needs to be updated, but `--locked` was provided.
+3.259 hint: To update the lockfile, run `uv lock`.
+ERROR: failed to build: failed to solve: process "/bin/sh -c uv sync --locked --no-install-project" did not complete successfully: exit code: 1
+exit=1
+
+## Note added after review of the line above
+The 'NO' compared the temp lock (git blob bytes, LF) with the working-tree lock (CRLF, core.autocrlf=true).
+Re-check against the git blob instead:
+$ git show HEAD:uv.lock | sha256sum
+8598f1f2f6e3c6e4a3bc3391110d5c2a4fb3233b0045961b4e3048f4ebde0330 *-
+$ sha256sum <temp copy>/uv.lock
+8598f1f2f6e3c6e4a3bc3391110d5c2a4fb3233b0045961b4e3048f4ebde0330 *C:/Users/Utilisateur/AppData/Local/Temp/bd-l3neg/uv.lock
+=> identical: the failed uv commands did not modify or regenerate uv.lock.
+$ git status --short uv.lock   (real repository)
+(empty = real lock unmodified)

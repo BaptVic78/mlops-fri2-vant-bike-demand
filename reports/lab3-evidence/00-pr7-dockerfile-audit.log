@@ -1,0 +1,22 @@
+# Audit of the Dockerfile/.dockerignore merged in PR #7 (ffb321a), built at commit 022c3c4 before Lab 3 changes
+# Excerpts from the raw build/run logs; image tag bike-demand:lab3-pr7 (since removed)
+
+## Build context transfer (docker build --progress=plain -t bike-demand:lab3-pr7 .)
+#7 transferring context: 516.33MB 58.5s
+#7 transferring context: 549.04MB 63.6s
+#7 transferring context: 591.80MB 67.2s done
+
+## Runtime stderr of 'docker run --rm bike-demand:lab3-pr7' (uv run rebuilds the project at start)
+   Building bike-demand @ file:///app
+      Built bike-demand @ file:///app
+Uninstalled 1 package in 3ms
+Installed 1 package in 2ms
+
+## Runtime stderr with --network none
+   Building bike-demand @ file:///app
+      Built bike-demand @ file:///app
+Uninstalled 1 package in 4ms
+Installed 1 package in 2ms
+
+## Result
+validation_mae {'naive_train_mean': 154.23179306864967, 'random_forest': 86.84685685591091} model_sha256 d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07
