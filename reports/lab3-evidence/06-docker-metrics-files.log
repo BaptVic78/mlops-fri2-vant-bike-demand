@@ -1,0 +1,11 @@
+train exit=0
+-rwxr-xr-x 1 root root 3582 Oct 22 07:18 reports/metrics-history.jsonl
+-rwxr-xr-x 1 root root 2184 Oct 22 07:18 reports/metrics.json
+
+artifacts/:
+total 5128
+-rw-r--r-- 1 root root    1793 Oct 22 07:18 model-metadata.json
+-rw-r--r-- 1 root root 5243633 Oct 22 07:18 model.joblib
+2 reports/metrics-history.jsonl
+c4ba1825f4 86.84685685591091
+unavailabl 86.84685685591091

@@ -1,0 +1,20 @@
+$ docker run --rm --network none bike-demand:lab3 python -m bike_demand.preflight
+Preflight passed: imports, frozen snapshot and writable outputs.
+This does not complete exercises, verify GitHub CI, or certify other OSes.
+exit=0
+$ docker run --rm --network none bike-demand:lab3 pytest -q
+.................................................                        [100%]
+=============================== warnings summary ===============================
+tests/exercise/test_baseline.py::test_saved_model_readback_rerun_and_held_test
+  /app/.venv/lib/python3.12/site-packages/mlflow/store/tracking/sqlalchemy_store.py:327: SADeprecationWarning: The ``noload`` loader strategy is deprecated and will be removed in a future release.  This option produces incorrect results by returning ``None`` for related items. (deprecated since: 2.1)
+    sqlalchemy.orm.configure_mappers()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+49 passed, 1 warning in 17.45s
+exit=0
+$ docker run --rm --network none bike-demand:lab3 ruff check .
+All checks passed!
+exit=0
+$ docker run --rm --network none bike-demand:lab3 uv lock --check --offline
+Resolved 98 packages in 4ms
+exit=0

@@ -102,6 +102,103 @@ uv run --locked mlflow server --backend-store-uri sqlite:///tracking/mlflow.db -
 committed as evidence; never commit credentials or individual private reports.
 CI currently checks only infrastructure/quality; expand it in Week 3.
 
+## Lab 3 – Reproducible Docker Environment
+
+The Lab 2 baseline reruns in a clean Linux container whose dependencies come
+only from `uv.lock`. The image never uses your local `.venv`, `artifacts/` or
+`tracking/`, and needs no network at runtime.
+
+**1. Prerequisites.** Git, Docker with BuildKit (Docker Desktop or Engine ≥ 23;
+checked with Docker 28.5.1, linux/amd64), and uv `>=0.12.19,<0.13` for the host
+lock checks. Network is needed once, at build time, to pull
+`python:3.12.12-slim`, `ghcr.io/astral-sh/uv:0.12.24`, the Debian `git` package
+and the locked wheels.
+
+**2. Lock check (host).** These must pass without changing `uv.lock`:
+
+```bash
+uv lock --check
+uv sync --locked
+uv run --locked pytest -q
+```
+
+**3. Build.** From the repository root:
+
+```bash
+docker build -t bike-demand:lab3 .
+docker image inspect bike-demand:lab3 --format '{{.Id}}'
+```
+
+The first layer copies only `pyproject.toml`, `uv.lock` and `.python-version`
+and runs `uv sync --locked --no-install-project`, so code changes do not
+reinstall dependencies. The build fails if `uv.lock` is missing or stale.
+
+**4. Run the Lab 2 pipeline.** `CMD` runs
+`python -m bike_demand.train --config configs/baseline.yaml` from `/app/.venv`
+(no `uv run`, so nothing is resynced or rebuilt at start):
+
+```bash
+docker run --rm bike-demand:lab3
+docker run --rm --network none bike-demand:lab3
+```
+
+The result JSON (same content as `reports/metrics.json`) is printed on stdout.
+To copy the generated files out of the container:
+
+```bash
+docker run --name bike-lab3-run bike-demand:lab3
+docker cp bike-lab3-run:/app/reports/metrics.json ./metrics-docker.json
+docker cp bike-lab3-run:/app/reports/metrics-history.jsonl ./metrics-history-docker.jsonl
+docker rm bike-lab3-run
+```
+
+**5. Tests in the image.**
+
+```bash
+docker run --rm --network none bike-demand:lab3 python -m bike_demand.preflight
+docker run --rm --network none bike-demand:lab3 pytest -q
+docker run --rm --network none bike-demand:lab3 ruff check .
+docker run --rm --network none bike-demand:lab3 uv lock --check --offline
+```
+
+**6. Compare with Lab 2.** The Lab 2 reference is the committed
+`reports/metrics.json` (run at `c4ba182`). Compare `validation_mae`, `data_sha256`,
+`partitions`, `config` and `effective_model_settings` with the container output.
+Observed on 2026-10-22: validation MAE random forest `86.84685685591091`, naive
+train mean `154.23179306864967`, identical to Lab 2 with and without network.
+Run IDs and `model_version` are new UUIDs on every run by design.
+
+**7. Negative lock tests.** On a temporary copy (never on the real lock):
+
+```bash
+REPO="$PWD"; mkdir -p /tmp/bike-neg
+git archive HEAD | tar -x -C /tmp/bike-neg && cp Dockerfile .dockerignore /tmp/bike-neg/
+cd /tmp/bike-neg
+rm uv.lock && uv sync --locked          # error: Unable to find lockfile ... exit 1
+git -C "$REPO" show HEAD:uv.lock > uv.lock
+# add a dependency to pyproject.toml, e.g. "tabulate>=0.9,<1", then:
+uv sync --locked                        # error: The lockfile ... needs to be updated ... exit 1
+docker build -t bike-demand:lab3-stale . # fails at uv sync --locked
+```
+
+**8. Limits.**
+
+- `.git` is excluded from the image, so `training_commit` is `"unavailable"` and
+  `working_tree_dirty` is `null` in container runs: identify the code by the
+  image ID and the commit it was built from (see `reports/lab-03.md`).
+- `model_sha256` is identical across Linux runs but differs from Windows runs
+  (same MAE, same predictions). Do not expect byte-identical model files across
+  operating systems.
+- The Debian `git` package is installed from the live Debian mirror (not
+  pinned); the base images are pinned by tag, not digest (digests are recorded
+  in `reports/lab-03.md`).
+- The container runs as root and the outputs are lost with `--rm` unless copied.
+- On Windows with `core.autocrlf=true`, text files enter the build context with
+  CRLF; `data/raw/hour.csv` is protected by `.gitattributes` and preflight
+  verifies its SHA-256 inside the image.
+
+Raw logs of the Lab 3 verification are in `reports/lab3-evidence/`.
+
 ## Support and individual reports
 
 If setup remains blocked after five minutes, contact the instructor using the
