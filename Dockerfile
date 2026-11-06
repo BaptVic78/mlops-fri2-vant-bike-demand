@@ -29,5 +29,8 @@ COPY reports/week-01-team.md reports/week-01-team.md
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked
 
-# Call the environment built above. `uv run` would sync again on every start.
-CMD [".venv/bin/python", "-m", "bike_demand.train", "--config", "configs/baseline.yaml"]
+# Train while building. Startup and requests only load this artifact.
+RUN .venv/bin/python -m bike_demand.train --config configs/baseline.yaml
+
+EXPOSE 8000
+CMD [".venv/bin/uvicorn", "bike_demand.api:app", "--host", "0.0.0.0", "--port", "8000"]
