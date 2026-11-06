@@ -1,0 +1,7 @@
+2026-11-06T15:54:38.902681084Z INFO:     Started server process [1]
+2026-11-06T15:54:38.902926728Z INFO:     Waiting for application startup.
+2026-11-06T15:54:44.941638297Z INFO:     Application startup complete.
+2026-11-06T15:54:44.943776858Z INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+2026-11-06T15:54:46.040218397Z {"event": "http_request", "method": "GET", "route": "/health", "status_code": 200, "outcome": "accepted", "duration_ms": 5.518, "model_version": "baseline-462260e47aa9"}
+2026-11-06T15:54:46.252918608Z {"event": "http_request", "method": "POST", "route": "/predict", "status_code": 200, "outcome": "accepted", "duration_ms": 68.359, "model_version": "baseline-462260e47aa9"}
+2026-11-06T15:54:46.364658612Z {"event": "http_request", "method": "POST", "route": "/predict", "status_code": 422, "outcome": "rejected", "duration_ms": 1.891, "model_version": "baseline-462260e47aa9"}
