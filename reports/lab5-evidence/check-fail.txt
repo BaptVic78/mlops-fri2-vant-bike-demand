@@ -1,0 +1,3 @@
+claim model expected baseline-not-this-image observed baseline-bb0954a06404 result FAIL
+claim image expected sha256:28a5889ca38184e65a9cd7d78f9f4b64aafd0b622d5b7fd75787c21e5b8d8621 observed sha256:28a5889ca38184e65a9cd7d78f9f4b64aafd0b622d5b7fd75787c21e5b8d8621 result ok
+exit 1

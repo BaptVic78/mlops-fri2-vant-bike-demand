@@ -1,0 +1,5 @@
+{"event": "http_request", "method": "GET", "route": "/health", "status_code": 200, "outcome": "accepted", "duration_ms": 2.169, "model_version": "baseline-bb0954a06404"}
+{"event": "http_request", "method": "GET", "route": "/health", "status_code": 200, "outcome": "accepted", "duration_ms": 0.826, "model_version": "baseline-bb0954a06404"}
+{"event": "http_request", "method": "POST", "route": "/predict", "status_code": 200, "outcome": "accepted", "duration_ms": 18.127, "model_version": "baseline-bb0954a06404"}
+{"event": "http_request", "method": "GET", "route": "/health", "status_code": 200, "outcome": "accepted", "duration_ms": 0.892, "model_version": "baseline-bb0954a06404"}
+{"event": "http_request", "method": "POST", "route": "/predict", "status_code": 200, "outcome": "accepted", "duration_ms": 6.321, "model_version": "baseline-bb0954a06404"}

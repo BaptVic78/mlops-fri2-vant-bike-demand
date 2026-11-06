@@ -258,10 +258,20 @@ docker stop bike-lab5-broken
 
 ### Check from outside the container
 
-Axel's external check script will be run here, from the host, against the
-running container. It compares the observed model and code with the expected
-values recorded in [reports/lab5-evidence/image-id.txt](reports/lab5-evidence/image-id.txt).
-*Pending Axel's PR: the command and its output will be added when it is merged.*
+From the host, not from inside the container and not with TestClient. Pass the
+expected model from the build output and the expected image from
+`docker image inspect bike-demand:lab5 --format "{{.Id}}"`. Do not read
+`model_version` from the live `/health` body and pass that value back in.
+
+```bash
+uv run --locked python scripts/check_deployment.py --container bike-lab5 --expect-model <model_version> --expect-image <image id>
+```
+
+The script sends `GET /health` and the README `POST /predict` example, then
+reads the running container's image id. Exit 0 when both claims match. A wrong
+`--expect-model` exits 1 and the output names the model claim. On Windows,
+`uv` must be at least 0.12.19. The recorded run is in
+[reports/lab-05.md](reports/lab-05.md).
 
 ## Lab 4 prediction input contract
 

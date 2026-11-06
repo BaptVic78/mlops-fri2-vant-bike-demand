@@ -10,8 +10,8 @@ README, section [Deploy](../README.md#deploy).
 |---|---|---|---|
 | Start-up | Victor Rouleau | Nils Giraud | #15 |
 | Logs | Nils Giraud | Thomas Soubagne | #16 |
-| External check | Axel Alacache | Victor Rouleau | pending |
-| README Deploy and this report | Thomas Soubagne | Axel Alacache | this PR |
+| External check | Axel Alacache | Victor Rouleau | this PR |
+| README Deploy and this report | Thomas Soubagne | Axel Alacache | #17 |
 
 ## Commit → image
 
@@ -49,8 +49,9 @@ No request body, header or IP address appears. The prediction is a single
 served value, not a metric. The July–December 2012 test rows are not used.
 
 The `model_version` in the responses and log lines matches the value recorded
-after the build. Comparing it with an independent expected value is the job of
-Axel's external check, still pending (see below).
+after the build. Comparing it with an independent expected value is the
+external check below. That check was run against a later rebuild, so its
+version label is not `baseline-462260e47aa9`.
 
 ## Deliberate failure
 
@@ -88,10 +89,42 @@ A stranger can name the cause from the 503 detail and the log alone.
 - The start-up line `Model not loaded: ...` is plain text, not JSON like the request
   lines. It is still readable with `docker logs`.
 
-## External check (pending)
+## External check
 
-Axel's script, run from the host against the running container, is not merged
-yet. We report no check result until it has run. When it is merged, this
-section will cite: the command, its output against `bike-demand:lab5` (expected exit 0),
-and one deliberately wrong expected value (expected non-zero exit, naming the
-claim that fails).
+Run on another laptop (Windows, Docker Desktop 29.8.2, `uv` 0.12.23). The
+system `uv` on that laptop is 0.11.28, which this repo rejects, so the commands
+used a portable 0.12.23. This is not Thomas's image and not a CI run.
+
+The image was rebuilt from this branch after the README check command was
+added. `scripts/check_deployment.py` and this report are not copied into the
+image. `tests/test_check_deployment.py` is copied, because the Dockerfile copies
+`tests/`.
+
+- Command: `docker build -t bike-demand:lab5 .` (exit 0)
+- Image ID: `sha256:28a5889ca38184e65a9cd7d78f9f4b64aafd0b622d5b7fd75787c21e5b8d8621`
+- `model_version` taken from the build output, not from the live service: `baseline-bb0954a06404`
+- `model_sha256` in that same build output: `d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07`
+
+The version label differs from the run above because training records a new
+run id. The model checksum is the one already stored in `reports/metrics.json`.
+No July–December 2012 metric is computed here.
+
+The container was started with the README command (`UVICORN_PORT=8080`,
+published on `127.0.0.1:8000` only). `docker inspect --format "{{.Image}}"`
+on `bike-lab5` returned the same image id.
+
+```sh
+uv run --locked python scripts/check_deployment.py --container bike-lab5 --expect-model baseline-bb0954a06404 --expect-image sha256:28a5889ca38184e65a9cd7d78f9f4b64aafd0b622d5b7fd75787c21e5b8d8621
+```
+
+Exit 0. Raw output: [check-ok.txt](lab5-evidence/check-ok.txt).
+
+The same command with `--expect-model baseline-not-this-image` exited 1. The
+model line says FAIL and prints both values. The image line stays ok.
+Raw output: [check-fail.txt](lab5-evidence/check-fail.txt).
+
+`docker logs` for that container: [check-logs.txt](lab5-evidence/check-logs.txt).
+The first line is the readiness request. The next two are the passing check
+(`GET /health`, `POST /predict`). The last two are the failing check. One JSON
+line per request, with the model version and no body. The script does not use
+TestClient.
