@@ -20,6 +20,6 @@ The tests job printed:
 156 passed, 2 warnings in 14.14s
 ```
 
-That line is from the runner log of job `128017586991`, step `uv run --locked pytest -q`. It is not a laptop run. The runner did not train a model and did not build an image.
+That line is from the runner log of job `128017586991`, step `uv run --locked pytest -q`. The suite fitted fixture models on the runner. Image verification belongs to the separate build job.
 
 The choices are in the README, section [CI](../README.md#ci).

@@ -76,6 +76,8 @@ def load_data(path: Path | str) -> pd.DataFrame:
                     frame[field], format="%Y-%m-%d", errors="raise"
                 )
             else:
+                if pd.api.types.is_bool_dtype(frame[field]):
+                    raise ValueError("boolean values are not numeric CSV fields")
                 frame[field] = pd.to_numeric(frame[field], errors="raise")
         except (ValueError, TypeError) as error:
             raise ValueError(
