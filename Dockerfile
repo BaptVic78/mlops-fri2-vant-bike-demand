@@ -1,5 +1,10 @@
 FROM python:3.12.12-slim
 
+# The training record calls git. The repository itself stays out of the image.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends git \
+    && rm -rf /var/lib/apt/lists/*
+
 COPY --from=ghcr.io/astral-sh/uv:0.12.24 /uv /uvx /bin/
 
 # Never download another Python at build or run time. The base image is the pin.
