@@ -1,0 +1,11 @@
+run: 42254284603
+url: https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/actions/runs/42254284603
+event: pull_request
+workflow: CI
+head: cb273b95f7e5e342b9e64f58df571abf636a4959
+conclusion: success
+lock: success 2026-11-06T16:38:35Z 2026-11-06T16:38:55Z
+style: success 2026-11-06T16:38:58Z 2026-11-06T16:39:15Z
+tests: success 2026-11-06T16:39:17Z 2026-11-06T16:39:42Z
+tests job: 128017586991
+pytest: 156 passed, 2 warnings in 14.14s
