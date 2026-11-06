@@ -127,6 +127,7 @@ dependencies = [
     { name = "pydantic" },
     { name = "pyyaml" },
     { name = "scikit-learn" },
+    { name = "uvicorn" },
 ]
 
 [package.dev-dependencies]
@@ -145,6 +146,7 @@ requires-dist = [
     { name = "pydantic", specifier = ">=2,<3" },
     { name = "pyyaml", specifier = ">=6,<7" },
     { name = "scikit-learn", specifier = ">=1.5,<2" },
+    { name = "uvicorn", specifier = ">=0.34,<1" },
 ]
 
 [package.metadata.requires-dev]

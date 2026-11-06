@@ -1,0 +1,10 @@
+GET /health
+200 {"status":"ok","model_version":"baseline-bcfe5dc5b701"}
+
+POST /predict with the README example
+200 {"prediction":146.59529728935132,"model_version":"baseline-bcfe5dc5b701"}
+
+POST /predict {"season":1}
+422 missing required fields
+
+Server log: Application startup complete. Uvicorn running on http://0.0.0.0:8000. No training on the request.

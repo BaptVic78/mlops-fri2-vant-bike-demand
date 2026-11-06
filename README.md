@@ -102,6 +102,71 @@ uv run --locked mlflow server --backend-store-uri sqlite:///tracking/mlflow.db -
 committed as evidence; never commit credentials or individual private reports.
 CI currently checks only infrastructure/quality; expand it in Week 3.
 
+## Lab 3: build and rerun
+
+The image installs only `uv.lock` (`uv sync --locked`) and does not use the
+laptop `.venv`. `.git`, `.venv`, `artifacts/` and `tracking/` stay out of the
+build context (`.dockerignore`). Because `.git` is not in the image, a training
+run records no commit SHA. That is a property of the package, not a different
+dataset or config.
+
+Build and rerun the Lab 2 baseline from a clean checkout. The run needs no
+network: dependencies were installed at build time, and the command calls
+`.venv/bin/python` directly.
+
+```bash
+docker build -t bike-demand:lab3 .
+docker image inspect bike-demand:lab3 --format "{{.Id}}"
+docker run --rm --network none bike-demand:lab3
+docker run --rm --network none --entrypoint .venv/bin/pytest bike-demand:lab3 -q
+```
+
+A missing or stale lock must fail. On a throwaway copy, not in this checkout:
+
+```bash
+uv lock --check
+# delete uv.lock, or change pyproject.toml without updating the lock
+uv sync --locked
+```
+
+`uv sync --locked` exits non-zero and does not write a new lock. Do not run
+`uv lock` to turn that failure into a pass.
+
+## Lab 4: run and test the service
+
+The Lab 4 image is the Lab 3 image with two changes: `uvicorn` is a declared
+dependency, and the image trains once during the build. The default command
+loads that artifact. It does not train on startup or on a request.
+
+Publish the port only on this machine:
+
+```bash
+docker build -t bike-demand:lab4 .
+docker run --rm -p 127.0.0.1:8000:8000 bike-demand:lab4
+```
+
+`GET /health` returns 200 and the artifact's `model_version` when the model
+loaded, and 503 when it did not. `POST /predict` returns 200 with a finite
+non-negative `prediction` and the same `model_version`. Invalid JSON returns
+422. A valid request with no model returns 503.
+
+```bash
+curl.exe http://127.0.0.1:8000/health
+curl.exe -X POST http://127.0.0.1:8000/predict -H "Content-Type: application/json" -d "{\"season\":1,\"yr\":0,\"mnth\":1,\"hr\":8,\"holiday\":0,\"weekday\":1,\"workingday\":1,\"weathersit\":1,\"temp\":0.3,\"atemp\":0.3,\"hum\":0.6,\"windspeed\":0.2}"
+```
+
+Run the tests in the image, not only on the laptop:
+
+```bash
+docker run --rm --network none --entrypoint .venv/bin/pytest bike-demand:lab4 -q
+```
+
+To rerun training instead of serving, replace the command:
+
+```bash
+docker run --rm --network none --entrypoint .venv/bin/python bike-demand:lab4 -m bike_demand.train --config configs/baseline.yaml
+```
+
 ## Lab 4 prediction input contract
 
 `src/bike_demand/schemas.py` defines `PredictionRequest`, the Pydantic request
@@ -134,9 +199,9 @@ Example valid input:
 }
 ```
 
-The API author can import `PredictionRequest` from `bike_demand.schemas` and
-use it as the request-body type for `POST /predict`. This schema alone does not
-implement the endpoints or load a model.
+`POST /predict` uses `PredictionRequest` from `bike_demand.schemas` as its
+body. The handlers live in `src/bike_demand/api.py` and load the artifact saved
+by `bike_demand.train`.
 
 ## Support and individual reports
 
