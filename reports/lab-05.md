@@ -80,6 +80,11 @@ A stranger can name the cause from the 503 detail and the log alone.
   failed here with `curl: (52) Empty reply from server`. Docker Desktop accepts the
   connection while the model is still loading and then closes it. In one run, loading
   took about 40 s. The README now uses `--retry 60 --retry-all-errors --retry-delay 2`.
+- **Windows shell (review by Axel).** The evidence above was recorded with `curl` in
+  Git Bash. In PowerShell, `curl` is `Invoke-WebRequest`, so the README now uses `curl.exe`.
+  These README commands were rerun in PowerShell 5.1 on the same image: health 200,
+  predict 200, and 503 for the failure. With single-quoted JSON, PowerShell 5.1 sent an
+  invalid body and `/predict` returned 422, so the README escapes the quotes (`\"`).
 - The start-up line `Model not loaded: ...` is plain text, not JSON like the request
   lines. It is still readable with `docker logs`.
 

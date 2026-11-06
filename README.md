@@ -170,9 +170,11 @@ docker run --rm --network none --entrypoint .venv/bin/python bike-demand:lab4 -m
 ## Deploy
 
 From the repository root, build the image and start the service. These commands
-use a POSIX shell and Docker with Linux containers.
+were run in Windows PowerShell 5.1 with Docker Desktop (Linux containers). In
+PowerShell, `curl` is an alias of `Invoke-WebRequest` and rejects `--fail`, so
+the commands call `curl.exe`. A POSIX version of the `curl` lines follows.
 
-```sh
+```powershell
 docker build -t bike-demand:lab5 .
 docker run --rm -d --name bike-lab5 -e UVICORN_PORT=8080 -p 127.0.0.1:8000:8080 bike-demand:lab5
 ```
@@ -189,6 +191,15 @@ Desktop accepts the connection and closes it (`curl: (52) Empty reply from
 server`), which `--retry-connrefused` does not retry. `--retry-all-errors`
 (curl 7.71 or later) retries it, and also retries a 503, so the wait fails
 after about two minutes if the model never loads:
+
+```powershell
+curl.exe --fail --retry 60 --retry-all-errors --retry-delay 2 http://127.0.0.1:8000/health
+curl.exe --fail -H "Content-Type: application/json" -d '{\"season\":1,\"yr\":0,\"mnth\":1,\"hr\":8,\"holiday\":0,\"weekday\":1,\"workingday\":1,\"weathersit\":1,\"temp\":0.3,\"atemp\":0.3,\"hum\":0.6,\"windspeed\":0.2}' http://127.0.0.1:8000/predict
+```
+
+PowerShell 5.1 strips the inner double quotes when it calls `curl.exe`, so
+the JSON keeps `\"`. Without them the body is not valid JSON and `/predict`
+returns 422. In a POSIX shell (Git Bash, macOS, Linux), use plain quotes instead:
 
 ```sh
 curl --fail --retry 60 --retry-all-errors --retry-delay 2 http://127.0.0.1:8000/health
@@ -237,9 +248,10 @@ The evidence for the Lab 5 run is in [reports/lab-05.md](reports/lab-05.md).
 
 To reproduce the failure:
 
-```sh
+```powershell
 docker run --rm -d --name bike-lab5-broken -e UVICORN_PORT=8080 -p 127.0.0.1:8000:8080 --entrypoint sh bike-demand:lab5 -c "rm artifacts/model.joblib && exec .venv/bin/uvicorn bike_demand.api:app --no-access-log"
-curl -i http://127.0.0.1:8000/health
+Start-Sleep 15   # wait until the process listens
+curl.exe -i http://127.0.0.1:8000/health
 docker logs bike-lab5-broken
 docker stop bike-lab5-broken
 ```
