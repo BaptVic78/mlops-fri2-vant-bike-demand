@@ -1,0 +1,2 @@
+claim endpoint expected http://127.0.0.1:8000 observed http://127.0.0.1:8001 result FAIL
+exit 1

@@ -1,0 +1,2 @@
+claim container expected running observed stopped result FAIL
+exit 1

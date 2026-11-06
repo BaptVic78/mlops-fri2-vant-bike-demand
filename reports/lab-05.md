@@ -128,3 +128,31 @@ The first line is the readiness request. The next two are the passing check
 (`GET /health`, `POST /predict`). The last two are the failing check. One JSON
 line per request, with the model version and no body. The script does not use
 TestClient.
+
+## Review response
+
+Victor Rouleau's review on PR #18: the requests used a fixed port, so they could
+reach a different container from the one named by `--container`. A stopped
+container also satisfied `docker inspect`.
+
+The script now requires that container to be running. It sends both requests to
+its published loopback port. A `--base-url` that is not that binding exits 1
+and names the endpoint; it does not call the other port. The regression test is
+`test_supplied_endpoint_must_match_the_inspected_container`.
+
+Rerun on the same image, without rebuilding. The script is not in the image.
+
+- Matching command, no `--base-url`: exit 0. Same two claim lines as
+  [check-ok.txt](lab5-evidence/check-ok.txt).
+- `--expect-model baseline-not-this-image`: exit 1. Same lines as
+  [check-fail.txt](lab5-evidence/check-fail.txt).
+- `--base-url http://127.0.0.1:8001` while `bike-lab5` is published on
+  `127.0.0.1:8000`: exit 1. Raw output:
+  [check-endpoint.txt](lab5-evidence/check-endpoint.txt).
+  The container's `http_request` log stayed at 5 lines, so this command did not
+  reach it.
+- `docker create --name bike-lab5-stopped bike-demand:lab5`, not started:
+  exit 1. Raw output: [check-stopped.txt](lab5-evidence/check-stopped.txt).
+  The container was removed with `docker rm`.
+
+`uv run --locked pytest -q tests/test_check_deployment.py`: 7 passed.

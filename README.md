@@ -267,9 +267,12 @@ expected model from the build output and the expected image from
 uv run --locked python scripts/check_deployment.py --container bike-lab5 --expect-model <model_version> --expect-image <image id>
 ```
 
-The script sends `GET /health` and the README `POST /predict` example, then
-reads the running container's image id. Exit 0 when both claims match. A wrong
-`--expect-model` exits 1 and the output names the model claim. On Windows,
+The script inspects `--container` and sends `GET /health` and the README
+`POST /predict` example to that container's published `127.0.0.1` port. A
+stopped container exits 1 before any request. `--base-url` is optional; if you
+pass one, it must be that same binding, or the check names the endpoint and
+does not call another port. Exit 0 when the model and image claims match. A
+wrong `--expect-model` exits 1 and the output names the model claim. On Windows,
 `uv` must be at least 0.12.19. The recorded run is in
 [reports/lab-05.md](reports/lab-05.md).
 
