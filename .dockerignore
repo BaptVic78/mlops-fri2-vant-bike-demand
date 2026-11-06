@@ -1,9 +1,16 @@
 .venv/
+**/.venv/
 .git/
+**/.git/
 __pycache__/
+**/__pycache__/
 *.py[cod]
 .pytest_cache/
+**/.pytest_cache/
 .ruff_cache/
+**/.ruff_cache/
+mlops-course/
+reports/images/
 .coverage
 htmlcov/
 build/

@@ -102,6 +102,36 @@ uv run --locked mlflow server --backend-store-uri sqlite:///tracking/mlflow.db -
 committed as evidence; never commit credentials or individual private reports.
 CI currently checks only infrastructure/quality; expand it in Week 3.
 
+## Lab 3: build and rerun
+
+The image installs only `uv.lock` (`uv sync --locked`) and does not use the
+laptop `.venv`. `.git`, `.venv`, `artifacts/` and `tracking/` stay out of the
+build context (`.dockerignore`). Because `.git` is not in the image, a training
+run records no commit SHA. That is a property of the package, not a different
+dataset or config.
+
+Build and rerun the Lab 2 baseline from a clean checkout. The run needs no
+network: dependencies were installed at build time, and the command calls
+`.venv/bin/python` directly.
+
+```bash
+docker build -t bike-demand:lab3 .
+docker image inspect bike-demand:lab3 --format "{{.Id}}"
+docker run --rm --network none bike-demand:lab3
+docker run --rm --network none --entrypoint .venv/bin/pytest bike-demand:lab3 -q
+```
+
+A missing or stale lock must fail. On a throwaway copy, not in this checkout:
+
+```bash
+uv lock --check
+# delete uv.lock, or change pyproject.toml without updating the lock
+uv sync --locked
+```
+
+`uv sync --locked` exits non-zero and does not write a new lock. Do not run
+`uv lock` to turn that failure into a pass.
+
 ## Lab 4 prediction input contract
 
 `src/bike_demand/schemas.py` defines `PredictionRequest`, the Pydantic request
