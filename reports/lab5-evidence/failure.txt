@@ -1,0 +1,40 @@
+$ docker run --rm -d --name bike-lab5-broken -e UVICORN_PORT=8080 -p 127.0.0.1:8000:8080 --entrypoint sh bike-demand:lab5 -c "rm artifacts/model.joblib && exec .venv/bin/uvicorn bike_demand.api:app --no-access-log"
+
+$ curl http://127.0.0.1:8000/health
+{"detail":"Model not available: FileNotFoundError: [Errno 2] No such file or directory: '/app/artifacts/model.joblib'"}
+HTTP 503
+
+$ curl -X POST http://127.0.0.1:8000/predict  # valid README example
+{"detail":"Model not available: FileNotFoundError: [Errno 2] No such file or directory: '/app/artifacts/model.joblib'"}
+HTTP 503
+
+$ curl --fail --retry 3 --retry-all-errors --retry-delay 1 http://127.0.0.1:8000/health  # README readiness wait, shortened
+curl: (22) The requested URL returned error: 503
+curl: (22) The requested URL returned error: 503
+curl: (22) The requested URL returned error: 503
+curl: (22) The requested URL returned error: 503
+(exit 22)
+
+$ docker logs -t bike-lab5-broken
+2026-11-06T15:55:15.023806655Z INFO:     Started server process [1]
+2026-11-06T15:55:15.023905637Z INFO:     Waiting for application startup.
+2026-11-06T15:55:15.030239372Z Model not loaded: FileNotFoundError: [Errno 2] No such file or directory: '/app/artifacts/model.joblib'
+2026-11-06T15:55:15.030278298Z INFO:     Application startup complete.
+2026-11-06T15:55:15.048186782Z INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+2026-11-06T15:55:16.326664357Z {"event": "http_request", "method": "GET", "route": "/health", "status_code": 503, "outcome": "error", "duration_ms": 3.523, "model_version": null}
+2026-11-06T15:55:16.446062875Z {"event": "http_request", "method": "GET", "route": "/health", "status_code": 503, "outcome": "error", "duration_ms": 1.386, "model_version": null}
+2026-11-06T15:55:16.550468836Z {"event": "http_request", "method": "POST", "route": "/predict", "status_code": 503, "outcome": "error", "duration_ms": 2.076, "model_version": null}
+2026-11-06T15:55:16.681914292Z {"event": "http_request", "method": "GET", "route": "/health", "status_code": 503, "outcome": "error", "duration_ms": 0.806, "model_version": null}
+2026-11-06T15:55:17.700573600Z {"event": "http_request", "method": "GET", "route": "/health", "status_code": 503, "outcome": "error", "duration_ms": 0.962, "model_version": null}
+2026-11-06T15:55:18.704723628Z {"event": "http_request", "method": "GET", "route": "/health", "status_code": 503, "outcome": "error", "duration_ms": 1.032, "model_version": null}
+2026-11-06T15:55:19.708983071Z {"event": "http_request", "method": "GET", "route": "/health", "status_code": 503, "outcome": "error", "duration_ms": 0.769, "model_version": null}
+
+$ docker stop bike-lab5-broken
+bike-lab5-broken
+$ docker ps -a --filter name=bike-lab5
+(no container left)
+$ docker image inspect bike-demand:lab5 --format {{.Id}}
+sha256:76962f6103dab76d24a6b3d2d26705a41ea32cf10cc2367cb8879f166a3f88af
+$ docker run --rm --entrypoint ls bike-demand:lab5 artifacts
+model-metadata.json
+model.joblib

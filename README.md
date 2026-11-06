@@ -170,9 +170,11 @@ docker run --rm --network none --entrypoint .venv/bin/python bike-demand:lab4 -m
 ## Deploy
 
 From the repository root, build the image and start the service. These commands
-use a POSIX shell and Docker with Linux containers.
+were run in Windows PowerShell 5.1 with Docker Desktop (Linux containers). In
+PowerShell, `curl` is an alias of `Invoke-WebRequest` and rejects `--fail`, so
+the commands call `curl.exe`. A POSIX version of the `curl` lines follows.
 
-```sh
+```powershell
 docker build -t bike-demand:lab5 .
 docker run --rm -d --name bike-lab5 -e UVICORN_PORT=8080 -p 127.0.0.1:8000:8080 bike-demand:lab5
 ```
@@ -183,10 +185,24 @@ exposes the service only on the laptop's loopback address. The image defaults
 to port 8000. Setting `UVICORN_PORT` at startup lets the same image listen on
 8080 without a rebuild. The last port in the publish rule must match it.
 
-From the host, wait for the model to load, then send one prediction:
+From the host, wait for the model to load, then send one prediction.
+Loading the model took 6 s to 40 s on our laptops. While it loads, Docker
+Desktop accepts the connection and closes it (`curl: (52) Empty reply from
+server`), which `--retry-connrefused` does not retry. `--retry-all-errors`
+(curl 7.71 or later) retries it, and also retries a 503, so the wait fails
+after about two minutes if the model never loads:
+
+```powershell
+curl.exe --fail --retry 60 --retry-all-errors --retry-delay 2 http://127.0.0.1:8000/health
+curl.exe --fail -H "Content-Type: application/json" -d '{\"season\":1,\"yr\":0,\"mnth\":1,\"hr\":8,\"holiday\":0,\"weekday\":1,\"workingday\":1,\"weathersit\":1,\"temp\":0.3,\"atemp\":0.3,\"hum\":0.6,\"windspeed\":0.2}' http://127.0.0.1:8000/predict
+```
+
+PowerShell 5.1 strips the inner double quotes when it calls `curl.exe`, so
+the JSON keeps `\"`. Without them the body is not valid JSON and `/predict`
+returns 422. In a POSIX shell (Git Bash, macOS, Linux), use plain quotes instead:
 
 ```sh
-curl --fail --retry 15 --retry-connrefused --retry-delay 1 http://127.0.0.1:8000/health
+curl --fail --retry 60 --retry-all-errors --retry-delay 2 http://127.0.0.1:8000/health
 curl --fail -H 'Content-Type: application/json' -d '{"season":1,"yr":0,"mnth":1,"hr":8,"holiday":0,"weekday":1,"workingday":1,"weathersit":1,"temp":0.3,"atemp":0.3,"hum":0.6,"windspeed":0.2}' http://127.0.0.1:8000/predict
 ```
 
@@ -211,6 +227,41 @@ docker stop bike-lab5
 ```
 
 Each HTTP request produces one JSON log entry with the method, route template, HTTP status, outcome, duration in milliseconds, and loaded model version. The model version is null when no model is loaded. Request and response bodies, query strings, headers, client IP addresses, and credentials are excluded to protect sensitive data.
+
+### Deploy: design choices
+
+Each answer gives the choice we kept, the option we rejected, and why.
+The evidence for the Lab 5 run is in [reports/lab-05.md](reports/lab-05.md).
+
+| Question | Kept | Rejected | Why |
+|---|---|---|---|
+| **Settings**: what changes between laptop and container? | Only run-time settings passed with `-e`: `UVICORN_HOST` (`0.0.0.0` in the image, loopback on a laptop) and `UVICORN_PORT`. The port is published on `127.0.0.1` only. | Rebuilding the image for each port, or publishing with `-p 8000:8000` on every interface. | One image serves every environment, so the image ID stays the identity of what runs. Publishing on loopback keeps the service off the local network. |
+| **Model**: where does it come from at start-up? | From `/app/artifacts` inside the image. `docker build` trains it once, before the service exists. | Mounting `artifacts/` from the laptop with `-v`, or training when the container starts. | A mount makes the model depend on whose laptop runs it. Training at start-up is forbidden and slow. Baked in, the model is fixed by the image. |
+| **Ready**: when is the service ready? | When `GET /health` returns HTTP 200 with `status: ok` and a `model_version`. This happens only after `load_artifact` checked the metadata, the feature order and the model SHA-256. | "The process is up" or the Uvicorn line `Application startup complete`. | Uvicorn starts even when the model failed to load. Only `/health` says that the model is usable. |
+| **Broken**: what does it say if the model is missing? | The process stays up. `/health` and a valid `/predict` return HTTP 503 with `Model not available: <cause>`. Start-up writes `Model not loaded: <cause>` to the log. | Crash the container at start-up. | A crashed container hides the reason and a restart loop hides it again. A 503 with the cause lets an operator diagnose without a shell in the container. |
+| **Log line**: what must one request tell an operator? | One JSON line per request on stdout, read with `docker logs`: `event`, `method`, `route`, `status_code`, `outcome` (`accepted`, `rejected`, `error`), `duration_ms` and `model_version`. Uvicorn's access log is off, so there is exactly one line per request. | Uvicorn's default access log alone, or one line per processing step. | The access log has no model version and no outcome. Several lines per request are hard to read without a request id. |
+| **Secrets**: what must never appear in a log? | Never: request and response bodies (feature values, predictions), query strings, headers, client IP addresses, credentials, environment variables, and any metric on the July–December 2012 test rows. | Logging the request body "to debug". | The status, route and outcome are enough to separate a valid request from a rejected one. A body in a log is data we would then have to protect. |
+| **Identity**: which id shows which model is running? | `model_version` (from `model-metadata.json`, returned by `/health`, `/predict` and each log line) for the model. The image ID (`docker image inspect`) and the Git commit it was built from for the code. | Trusting the image tag `bike-demand:lab5`. | A tag can be moved to another build. The image ID and `model_version` are derived from the content. `.git` is not copied into the image, so the commit is recorded outside the image, in the report next to the image ID. |
+| **Expected**: who knows the expected model, and when? | The person who builds the image records the commit, the image ID and the `model_version` right after `docker build`, before any request. Axel's external check compares the running container against these values. | Reading the expected value from the running service itself. | A check that asks the service what to expect always passes. The expected values must be fixed before the run and come from outside the container. *(Check command: pending Axel's PR.)* |
+| **Promise**: what does "deployed" promise to others? | The image built from a named commit starts from this README, answers `/health` and `/predict` as in Lab 4, writes one log line per request, and the external check passes against the expected model and code. | "The container is running." | A running container is not a verified deployment. "Deployed" here is local to one laptop: it does not promise model quality, a CI run, or a cloud URL (Lab 6). |
+| **Failure**: break it once, what does it leave behind? | We start the same image without its model (the `rm` runs inside the throwaway container, the image is not changed). `/health` and a valid `/predict` answer 503 with `Model not available: FileNotFoundError: ... model.joblib`. `docker logs` shows `Model not loaded: ...` at start-up, then one line per request with `"outcome": "error"` and `"model_version": null`. The readiness `curl` exits 22. After `docker stop` nothing is left: `--rm` removes the container and its logs, and the image still contains `model.joblib`. Keep the logs before stopping. Raw output: [failure.txt](reports/lab5-evidence/failure.txt). | Corrupting the model file, or stopping the container mid-request. | A missing model is the most likely start-up fault, and it tests the "broken" answer above. A stranger can name the cause from the 503 detail and the log alone. |
+
+To reproduce the failure:
+
+```powershell
+docker run --rm -d --name bike-lab5-broken -e UVICORN_PORT=8080 -p 127.0.0.1:8000:8080 --entrypoint sh bike-demand:lab5 -c "rm artifacts/model.joblib && exec .venv/bin/uvicorn bike_demand.api:app --no-access-log"
+Start-Sleep 15   # wait until the process listens
+curl.exe -i http://127.0.0.1:8000/health
+docker logs bike-lab5-broken
+docker stop bike-lab5-broken
+```
+
+### Check from outside the container
+
+Axel's external check script will be run here, from the host, against the
+running container. It compares the observed model and code with the expected
+values recorded in [reports/lab5-evidence/image-id.txt](reports/lab5-evidence/image-id.txt).
+*Pending Axel's PR: the command and its output will be added when it is merged.*
 
 ## Lab 4 prediction input contract
 

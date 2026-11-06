@@ -1,0 +1,12 @@
+$ docker run --rm -d --name bike-lab5 -e UVICORN_PORT=8080 -p 127.0.0.1:8000:8080 bike-demand:lab5
+
+$ curl --fail --retry 60 --retry-all-errors --retry-delay 2 http://127.0.0.1:8000/health
+{"status":"ok","model_version":"baseline-462260e47aa9"} (exit 0)
+
+$ curl -i -X POST http://127.0.0.1:8000/predict  # valid README example
+{"prediction":146.59529728935132,"model_version":"baseline-462260e47aa9"}
+HTTP 200
+
+$ curl -X POST http://127.0.0.1:8000/predict  # invalid: same example with hr=24
+{"detail":[{"type":"less_than_equal","loc":["body","hr"],"msg":"Input should be less than or equal to 23","input":24,"ctx":{"le":23}}]}
+HTTP 422

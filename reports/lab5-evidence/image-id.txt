@@ -1,0 +1,5 @@
+commit: 461c86705930a81ac81951ddbed44c637239261e (main after PR #16)
+build: docker build -t bike-demand:lab5 .  (exit 0, clean checkout of that commit)
+image: sha256:76962f6103dab76d24a6b3d2d26705a41ea32cf10cc2367cb8879f166a3f88af
+docker: 28.5.1
+model_version (recorded after build, from GET /health of this image): baseline-462260e47aa9
