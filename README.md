@@ -242,7 +242,7 @@ The evidence for the Lab 5 run is in [reports/lab-05.md](reports/lab-05.md).
 | **Log line**: what must one request tell an operator? | One JSON line per request on stdout, read with `docker logs`: `event`, `method`, `route`, `status_code`, `outcome` (`accepted`, `rejected`, `error`), `duration_ms` and `model_version`. Uvicorn's access log is off, so there is exactly one line per request. | Uvicorn's default access log alone, or one line per processing step. | The access log has no model version and no outcome. Several lines per request are hard to read without a request id. |
 | **Secrets**: what must never appear in a log? | Never: request and response bodies (feature values, predictions), query strings, headers, client IP addresses, credentials, environment variables, and any metric on the July–December 2012 test rows. | Logging the request body "to debug". | The status, route and outcome are enough to separate a valid request from a rejected one. A body in a log is data we would then have to protect. |
 | **Identity**: which id shows which model is running? | `model_version` (from `model-metadata.json`, returned by `/health`, `/predict` and each log line) for the model. The image ID (`docker image inspect`) and the Git commit it was built from for the code. | Trusting the image tag `bike-demand:lab5`. | A tag can be moved to another build. The image ID and `model_version` are derived from the content. `.git` is not copied into the image, so the commit is recorded outside the image, in the report next to the image ID. |
-| **Expected**: who knows the expected model, and when? | The person who builds the image records the commit, the image ID and the `model_version` right after `docker build`, before any request. Axel's external check compares the running container against these values. | Reading the expected value from the running service itself. | A check that asks the service what to expect always passes. The expected values must be fixed before the run and come from outside the container. *(Check command: pending Axel's PR.)* |
+| **Expected**: who knows the expected model, and when? | The person who builds the image records the commit, the image ID and the `model_version` right after `docker build`, before any request. Axel's external check compares the running container against these values. | Reading the expected value from the running service itself. | A check that asks the service what to expect always passes. The expected values must be fixed before the run and come from outside the container. The command is in [Check from outside the container](#check-from-outside-the-container). |
 | **Promise**: what does "deployed" promise to others? | The image built from a named commit starts from this README, answers `/health` and `/predict` as in Lab 4, writes one log line per request, and the external check passes against the expected model and code. | "The container is running." | A running container is not a verified deployment. "Deployed" here is local to one laptop: it does not promise model quality, a CI run, or a cloud URL (Lab 6). |
 | **Failure**: break it once, what does it leave behind? | We start the same image without its model (the `rm` runs inside the throwaway container, the image is not changed). `/health` and a valid `/predict` answer 503 with `Model not available: FileNotFoundError: ... model.joblib`. `docker logs` shows `Model not loaded: ...` at start-up, then one line per request with `"outcome": "error"` and `"model_version": null`. The readiness `curl` exits 22. After `docker stop` nothing is left: `--rm` removes the container and its logs, and the image still contains `model.joblib`. Keep the logs before stopping. Raw output: [failure.txt](reports/lab5-evidence/failure.txt). | Corrupting the model file, or stopping the container mid-request. | A missing model is the most likely start-up fault, and it tests the "broken" answer above. A stranger can name the cause from the 503 detail and the log alone. |
 
@@ -258,10 +258,23 @@ docker stop bike-lab5-broken
 
 ### Check from outside the container
 
-Axel's external check script will be run here, from the host, against the
-running container. It compares the observed model and code with the expected
-values recorded in [reports/lab5-evidence/image-id.txt](reports/lab5-evidence/image-id.txt).
-*Pending Axel's PR: the command and its output will be added when it is merged.*
+From the host, not from inside the container and not with TestClient. Pass the
+expected model from the build output and the expected image from
+`docker image inspect bike-demand:lab5 --format "{{.Id}}"`. Do not read
+`model_version` from the live `/health` body and pass that value back in.
+
+```bash
+uv run --locked python scripts/check_deployment.py --container bike-lab5 --expect-model <model_version> --expect-image <image id>
+```
+
+The script inspects `--container` and sends `GET /health` and the README
+`POST /predict` example to that container's published `127.0.0.1` port. A
+stopped container exits 1 before any request. `--base-url` is optional; if you
+pass one, it must be that same binding, or the check names the endpoint and
+does not call another port. Exit 0 when the model and image claims match. A
+wrong `--expect-model` exits 1 and the output names the model claim. On Windows,
+`uv` must be at least 0.12.19. The recorded run is in
+[reports/lab-05.md](reports/lab-05.md).
 
 ## Lab 4 prediction input contract
 
