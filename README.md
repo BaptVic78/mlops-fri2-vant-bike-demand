@@ -167,6 +167,49 @@ To rerun training instead of serving, replace the command:
 docker run --rm --network none --entrypoint .venv/bin/python bike-demand:lab4 -m bike_demand.train --config configs/baseline.yaml
 ```
 
+## Deploy
+
+From the repository root, build the image and start the service. These commands
+use a POSIX shell and Docker with Linux containers.
+
+```sh
+docker build -t bike-demand:lab5 .
+docker run --rm -d --name bike-lab5 -e UVICORN_PORT=8080 -p 127.0.0.1:8000:8080 bike-demand:lab5
+```
+
+On a laptop, Uvicorn normally listens on loopback. Inside the image it listens
+on all container interfaces so Docker can forward traffic. The publish rule
+exposes the service only on the laptop's loopback address. The image defaults
+to port 8000. Setting `UVICORN_PORT` at startup lets the same image listen on
+8080 without a rebuild. The last port in the publish rule must match it.
+
+From the host, wait for the model to load, then send one prediction:
+
+```sh
+curl --fail --retry 15 --retry-connrefused --retry-delay 1 http://127.0.0.1:8000/health
+curl --fail -H 'Content-Type: application/json' -d '{"season":1,"yr":0,"mnth":1,"hr":8,"holiday":0,"weekday":1,"workingday":1,"weathersit":1,"temp":0.3,"atemp":0.3,"hum":0.6,"windspeed":0.2}' http://127.0.0.1:8000/predict
+```
+
+The Lab 4 build packages the trained model and its metadata in
+`/app/artifacts`. Keeping them in the image lets a teammate run it without
+mounting files from the training laptop. At startup the service checks the
+metadata, feature order and model checksum, then loads the model once.
+It is ready when `/health` returns HTTP 200 with `status: ok` and a
+`model_version`. The prediction must include that version and a finite,
+non-negative value. If the model is missing, the process stays up so the
+operator can see the cause: both health and a valid prediction return HTTP 503
+with a detail beginning `Model not available`. The service never retrains at
+startup or during a request.
+
+For this lab, “deployed” means a teammate can start the image from these
+instructions and the external check confirms that the expected model and code
+serve requests. Axel runs that final check from the host. A successful health
+response alone establishes readiness. After verification, stop the container:
+
+```sh
+docker stop bike-lab5
+```
+
 ## Lab 4 prediction input contract
 
 `src/bike_demand/schemas.py` defines `PredictionRequest`, the Pydantic request
