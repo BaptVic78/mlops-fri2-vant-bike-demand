@@ -276,6 +276,31 @@ wrong `--expect-model` exits 1 and the output names the model claim. On Windows,
 `uv` must be at least 0.12.19. The recorded run is in
 [reports/lab-05.md](reports/lab-05.md).
 
+## CI
+
+Workflow questions for Lab 6. The file is
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml). The test map, the image
+build and the Cloud Run deploy are later pull requests. This workflow does not
+do them.
+
+| Question | Kept | Rejected | Why |
+|---|---|---|---|
+| **Trigger**: which changes start which checks? | Every pull request to `main`, every push to `main`, and a manual `workflow_dispatch` start the same three jobs. | Path filters, and a shorter suite on pull requests than on `main`. | A pull request can change a test and a report together. A filter that skips `reports/` would skip the test. The merge commit must not be the first time the full suite runs. |
+| **Order**: which check fails first? | `lock`, then `style`, then `tests`. `lock` is `uv sync --locked` and `bike_demand.preflight`. `style` is `ruff check` and `ruff format --check`. `tests` is `pytest -q`. Each job is a new runner and installs from the lock again. `needs` only decides which job is allowed to start. | One job that runs every step, or `style` and `tests` in parallel. Also the old selection `pytest -q -m infra`, `pytest -q -m lab1` and `pytest -q tests/test_api.py`. | A bad lock should fail before Ruff, and a format error should fail before pytest. Parallel jobs can both be red. The old pytest commands left the other tests in this repository unrun. |
+| **Evidence**: what can CI claim about the model? | A green run claims that this commit, on `ubuntu-24.04`, installed from `uv.lock` and passed preflight, Ruff and pytest. | Treating that run as proof of the served model, of an image build, or of a Cloud Run revision. | The runner does not train, does not read a laptop `artifacts/` or MLflow store, and does not compute a July–December 2012 metric. Image build and the live URL are other checks. |
+
+Permissions are `contents: read`. Actions are pinned to a commit, not a moving tag: `actions/checkout` at `v6.1.0` (`d23441a48e516b6c34aea4fa41551a30e30af803`) and `astral-sh/setup-uv` at `bec219d24cd3e171d82865faccec33120bb574f4`. `uv` is `0.12.23`, Python is `3.12`. Timeouts are 10, 10 and 15 minutes. A newer push on a pull request cancels the run it replaces. A push to `main` does not cancel another run.
+
+The same order on a laptop, which is not a CI result:
+
+```bash
+uv sync --locked
+uv run --locked python -m bike_demand.preflight
+uv run --locked ruff check .
+uv run --locked ruff format --check .
+uv run --locked pytest -q
+```
+
 ## Lab 4 prediction input contract
 
 `src/bike_demand/schemas.py` defines `PredictionRequest`, the Pydantic request

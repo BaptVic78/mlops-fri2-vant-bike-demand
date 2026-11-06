@@ -1,4 +1,4 @@
-name: Week 1 checks
+name: CI
 
 on:
   push:
@@ -10,12 +10,18 @@ on:
 permissions:
   contents: read
 
+# A new push on a pull request replaces the run still in progress.
+# A push to main does not cancel another run, so a later deploy job is left alone.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
-  infrastructure:
+  lock:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
           persist-credentials: false
       - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4
@@ -24,8 +30,34 @@ jobs:
           python-version: "3.12"
       - run: uv sync --locked
       - run: uv run --locked python -m bike_demand.preflight
+
+  style:
+    needs: lock
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4
+        with:
+          version: "0.12.23"
+          python-version: "3.12"
+      - run: uv sync --locked
       - run: uv run --locked ruff check .
       - run: uv run --locked ruff format --check .
-      - run: uv run --locked pytest -q -m infra
-      - run: uv run --locked pytest -q -m lab1
-      - run: uv run --locked pytest -q tests/test_api.py
+
+  tests:
+    needs: style
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4
+        with:
+          version: "0.12.23"
+          python-version: "3.12"
+      - run: uv sync --locked
+      - run: uv run --locked pytest -q
