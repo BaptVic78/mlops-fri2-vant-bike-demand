@@ -210,6 +210,8 @@ response alone establishes readiness. After verification, stop the container:
 docker stop bike-lab5
 ```
 
+Each HTTP request produces one JSON log entry with the method, route template, HTTP status, outcome, duration in milliseconds, and loaded model version. The model version is null when no model is loaded. Request and response bodies, query strings, headers, client IP addresses, and credentials are excluded to protect sensitive data.
+
 ## Lab 4 prediction input contract
 
 `src/bike_demand/schemas.py` defines `PredictionRequest`, the Pydantic request

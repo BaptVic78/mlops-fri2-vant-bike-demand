@@ -3,8 +3,10 @@
 import json
 import logging
 import math
+import sys
 from contextlib import asynccontextmanager
 from pathlib import Path
+from time import perf_counter
 
 import joblib
 import pandas as pd
@@ -18,6 +20,10 @@ from bike_demand.schemas import PredictionRequest
 from bike_demand.validate import FEATURES
 
 logger = logging.getLogger(__name__)
+request_logger = logging.getLogger(f"{__name__}.requests")
+request_logger.addHandler(logging.StreamHandler(sys.stdout))
+request_logger.setLevel(logging.INFO)
+request_logger.propagate = False
 
 # Repository root from this file (src/bike_demand/api.py), not from the shell cwd.
 ROOT = Path(__file__).resolve().parents[2]
@@ -62,6 +68,37 @@ def create_app(
 
     app = FastAPI(title="Bike demand prediction", lifespan=lifespan)
 
+    @app.middleware("http")
+    async def log_request(request: Request, call_next):
+        started_at = perf_counter()
+        status_code = 500
+        try:
+            response = await call_next(request)
+            status_code = response.status_code
+            return response
+        finally:
+            outcome = "accepted"
+            if status_code >= 500:
+                outcome = "error"
+            elif status_code >= 400:
+                outcome = "rejected"
+
+            request_logger.info(
+                json.dumps(
+                    {
+                        "event": "http_request",
+                        "method": request.method,
+                        "route": getattr(request.scope.get("route"), "path", None),
+                        "status_code": status_code,
+                        "outcome": outcome,
+                        "duration_ms": round((perf_counter() - started_at) * 1000, 3),
+                        "model_version": getattr(
+                            request.app.state, "model_version", None
+                        ),
+                    }
+                )
+            )
+
     @app.exception_handler(RequestValidationError)
     async def validation_error(request: Request, error: RequestValidationError):
         # Overflowing JSON numbers become inf; keep the error body valid JSON.
@@ -94,10 +131,8 @@ def create_app(
         try:
             prediction = float(model.predict(row)[0])
         except Exception as error:
-            logger.exception("Inference failed")
             raise HTTPException(status_code=500, detail="Inference failed") from error
         if not math.isfinite(prediction) or prediction < 0:
-            logger.error("Invalid model output: %r", prediction)
             raise HTTPException(
                 status_code=500, detail="Model returned an invalid prediction"
             )
