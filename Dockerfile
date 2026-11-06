@@ -33,4 +33,5 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 RUN .venv/bin/python -m bike_demand.train --config configs/baseline.yaml
 
 EXPOSE 8000
-CMD [".venv/bin/uvicorn", "bike_demand.api:app", "--host", "0.0.0.0", "--port", "8000"]
+ENV UVICORN_HOST=0.0.0.0 UVICORN_PORT=8000
+CMD [".venv/bin/uvicorn", "bike_demand.api:app"]
