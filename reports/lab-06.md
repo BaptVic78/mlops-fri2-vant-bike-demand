@@ -1,6 +1,6 @@
-# Lab 6: workflow
+# Lab 6: workflow and regression tests
 
-Axel Alacache. This section is the workflow only. Tests, the image job, Cloud Run and the red-to-green repair are later pull requests.
+Axel Alacache owns the workflow and Victor Rouleau owns the regression tests.
 
 ## Run
 
@@ -20,6 +20,26 @@ The tests job printed:
 156 passed, 2 warnings in 14.14s
 ```
 
-That line is from the runner log of job `128017586991`, step `uv run --locked pytest -q`. It is not a laptop run. The runner did not train a model and did not build an image.
+That line is from the runner log of job `128017586991`, step `uv run --locked pytest -q`. The suite fitted fixture models on the runner. Image verification belongs to the separate build job.
 
 The choices are in the README, section [CI](../README.md#ci).
+
+## Victor's regression tests (PR #20)
+
+GitHub Actions ran `uv run --locked pytest -q` twice on the same PR:
+
+| Commit | CI run | Result |
+|---|---|---|
+| `267424d` | [Before the repair](https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/actions/runs/42256002361) | 3 failed, 157 passed, 2 warnings |
+| `81d6632` | [After the repair](https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/actions/runs/42256255529) | 160 passed, 2 warnings in 14.87 s |
+
+`test_boolean_csv_column_is_rejected` failed with `DID NOT RAISE ValueError`
+for `cnt`, `workingday` and `hum`. pandas inferred a boolean column from CSV
+literals, and numeric range checks accepted the values as zero and one.
+The repair rejects boolean columns before numeric conversion. Both commits
+use identical tests. The [failing pytest log](lab6-evidence/boolean-csv-red.txt)
+preserves the assertions and exit code.
+
+`test_naive_validation_mae_matches_lab2_record` recomputes the training mean
+and validation MAE from the frozen CSV and compares both to the Lab 2 record.
+The check uses only the training and validation targets.

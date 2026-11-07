@@ -100,7 +100,7 @@ uv run --locked mlflow server --backend-store-uri sqlite:///tracking/mlflow.db -
 
 `artifacts/`, `tracking/` and `.venv/` are ignored by Git. Team metrics may be
 committed as evidence; never commit credentials or individual private reports.
-CI currently checks only infrastructure/quality; expand it in Week 3.
+The CI section below describes the checks that run on pull requests and on main.
 
 ## Lab 3: build and rerun
 
@@ -279,15 +279,14 @@ wrong `--expect-model` exits 1 and the output names the model claim. On Windows,
 ## CI
 
 Workflow questions for Lab 6. The file is
-[`.github/workflows/ci.yml`](.github/workflows/ci.yml). The test map, the image
-build and the Cloud Run deploy are later pull requests. This workflow does not
-do them.
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml). Image build and Cloud Run
+deployment are separate parts of Lab 6.
 
 | Question | Kept | Rejected | Why |
 |---|---|---|---|
 | **Trigger**: which changes start which checks? | Every pull request to `main`, every push to `main`, and a manual `workflow_dispatch` start the same three jobs. | Path filters, and a shorter suite on pull requests than on `main`. | A pull request can change a test and a report together. A filter that skips `reports/` would skip the test. The merge commit must not be the first time the full suite runs. |
 | **Order**: which check fails first? | `lock`, then `style`, then `tests`. `lock` is `uv sync --locked` and `bike_demand.preflight`. `style` is `ruff check` and `ruff format --check`. `tests` is `pytest -q`. Each job is a new runner and installs from the lock again. `needs` only decides which job is allowed to start. | One job that runs every step, or `style` and `tests` in parallel. Also the old selection `pytest -q -m infra`, `pytest -q -m lab1` and `pytest -q tests/test_api.py`. | A bad lock should fail before Ruff, and a format error should fail before pytest. Parallel jobs can both be red. The old pytest commands left the other tests in this repository unrun. |
-| **Evidence**: what can CI claim about the model? | A green run claims that this commit, on `ubuntu-24.04`, installed from `uv.lock` and passed preflight, Ruff and pytest. | Treating that run as proof of the served model, of an image build, or of a Cloud Run revision. | The runner does not train, does not read a laptop `artifacts/` or MLflow store, and does not compute a July–December 2012 metric. Image build and the live URL are other checks. |
+| **Evidence**: what can CI claim about the model? | A green run claims that this commit, on `ubuntu-24.04`, installed from `uv.lock` and passed preflight, Ruff and pytest. | Treating that run as proof of the served model, of an image build, or of a Cloud Run revision. | Tests fit models on small fixtures. The baseline regression uses only training and validation targets from the frozen snapshot. Image build and the live URL are separate checks. |
 
 Permissions are `contents: read`. Actions are pinned to a commit, not a moving tag: `actions/checkout` at `v6.1.0` (`d23441a48e516b6c34aea4fa41551a30e30af803`) and `astral-sh/setup-uv` at `bec219d24cd3e171d82865faccec33120bb574f4`. `uv` is `0.12.23`, Python is `3.12`. Timeouts are 10, 10 and 15 minutes. A newer push on a pull request cancels the run it replaces. A push to `main` does not cancel another run.
 
@@ -300,6 +299,22 @@ uv run --locked ruff check .
 uv run --locked ruff format --check .
 uv run --locked pytest -q
 ```
+
+### Lab 6 regression tests
+
+Run `uv run --locked pytest -q tests/test_lab6_regressions.py`.
+
+| Test | Defect it catches | How to reproduce the failure |
+|---|---|---|
+| `test_naive_validation_mae_matches_lab2_record` | A change to the split, train mean or validation scoring that changes the recorded baseline. | In a disposable checkout, round the naive validation MAE in `reports/metrics.json` to two decimals and run the test. |
+| `test_boolean_csv_column_is_rejected` | A column containing only boolean literals passes numeric checks as zeros and ones. | Run at commit `267424d`, before the validator fix. The cases cover a count, a binary feature and a normalized weather feature. |
+
+The Lab 2 and Lab 3 records agree exactly on this deterministic baseline
+(validation MAE 154.23179306864967). The test uses exact equality with the
+Lab 2 record instead of a percentage tolerance that could hide small changes.
+The input snapshot and dependency lock are fixed. A new baseline requires
+reviewing the recorded value. The [Lab 6 report](reports/lab-06.md) preserves
+the failing assertion and both CI runs.
 
 ## Lab 4 prediction input contract
 

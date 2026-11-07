@@ -13,7 +13,7 @@ permissions:
 # A new push on a pull request replaces the run still in progress.
 # A push to main does not cancel another run, so a later deploy job is left alone.
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  group: ci-${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number || github.run_id }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
