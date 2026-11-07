@@ -61,3 +61,18 @@ jobs:
           python-version: "3.12"
       - run: uv sync --locked
       - run: uv run --locked pytest -q
+
+  image:
+    needs: tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+
+      - name: Build Docker image
+        run: docker build --progress=plain --tag bike-demand:ci-${{ github.sha }} .
+
+      - name: Record image identity
+        run: docker image inspect bike-demand:ci-${{ github.sha }} --format '{{.Id}}'
