@@ -43,3 +43,36 @@ preserves the assertions and exit code.
 `test_naive_validation_mae_matches_lab2_record` recomputes the training mean
 and validation MAE from the frozen CSV and compares both to the Lab 2 record.
 The check uses only the training and validation targets.
+
+## Planted defect in a believable PR (PR #22, Thomas)
+
+Thomas opened PR #22 with one believable defect, without telling Victor:
+`compare_mean` rounded the training mean to two decimals "to read reports
+more easily". The change looks cosmetic, but it changes the recorded naive
+baseline that later models are compared with.
+
+| Commit | CI run | Result |
+|---|---|---|
+| `185d15e` (defect) | [run 42511172980](https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/actions/runs/42511172980) | `lock` and `style` success, `tests` failure, `image` skipped |
+| repair, same PR | see the PR checks | see below |
+
+The failing job printed:
+
+```text
+E       assert 143.79 == 143.79444765760556
+tests/test_lab6_regressions.py:18: AssertionError
+FAILED tests/test_lab6_regressions.py::test_naive_validation_mae_matches_lab2_record - assert 143.79 == 143.79444765760556
+1 failed, 159 passed, 2 warnings in 14.90s
+```
+
+Raw runner log: [fault-pr-red.txt](lab6-evidence/fault-pr-red.txt).
+
+Diagnosis: the log names the training mean. The recorded value in
+`reports/metrics.json` is `143.79444765760556`, and the code now returned
+`143.79`. Victor's regression test caught the defect, so no test had to be
+added. Only this test failed: the other 159 tests do not look at the exact
+baseline value.
+
+Repair: the next commit on the same PR removes the rounding. The test and
+its exact equality are unchanged. Rounding belongs in how a value is
+displayed, not in the value that is recorded and compared.

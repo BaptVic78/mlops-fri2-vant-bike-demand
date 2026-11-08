@@ -54,7 +54,7 @@ def select_features(frame: pd.DataFrame, features: list[str]) -> pd.DataFrame:
 def compare_mean(
     train_target: pd.Series, validation_target: pd.Series
 ) -> tuple[float, float]:
-    mean = round(float(train_target.mean()), 2)
+    mean = float(train_target.mean())
     predictions = np.full(len(validation_target), mean)
     mae = float(mean_absolute_error(validation_target, predictions))
     return mean, mae
