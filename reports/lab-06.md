@@ -54,7 +54,7 @@ baseline that later models are compared with.
 | Commit | CI run | Result |
 |---|---|---|
 | `185d15e` (defect) | [run 42511172980](https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/actions/runs/42511172980) | `lock` and `style` success, `tests` failure, `image` skipped |
-| repair, same PR | see the PR checks | see below |
+| `9e44ad2` (repair) | [run 42511337831](https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/actions/runs/42511337831) | all four jobs success; `tests`: `160 passed, 2 warnings in 14.24s`; `image` built `sha256:46cad523…` |
 
 The failing job printed:
 
@@ -73,6 +73,6 @@ Diagnosis: the log names the training mean. The recorded value in
 added. Only this test failed: the other 159 tests do not look at the exact
 baseline value.
 
-Repair: the next commit on the same PR removes the rounding. The test and
+Repair: commit `9e44ad2` on the same PR removes the rounding. The test and
 its exact equality are unchanged. Rounding belongs in how a value is
 displayed, not in the value that is recorded and compared.
