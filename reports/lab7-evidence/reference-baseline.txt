@@ -1,0 +1,55 @@
+Lab 7 reference evidence, recorded by Thomas Soubagne on 2026-11-09,
+before any candidate was trained or evaluated.
+
+Goal: confirm which bytes are the accepted reference and that its validation
+MAE is reproducible under the current lock. This is the incumbent, not a candidate.
+
+Checkout: a clean detached worktree of origin/main
+  commit 5a4c6803cd4b77bc52e8710f992048eed583958a
+  uv 0.12.24, Windows 11, Docker 28.5.1 (Linux containers)
+  sha256 uv.lock              c6757e574dde004d437105cb70e3b60863e1a1ccebb064aba7b14932d94225f0
+  sha256 configs/baseline.yaml 88a909bd859977a82a032a99415ab03b4aa14d837aef7c9980090f110e8897d6
+
+--- 1. Laptop run (Windows, outside Docker)
+
+$ uv sync --locked
+$ uv run --locked python -m bike_demand.train --config configs/baseline.yaml
+exit 0
+training_commit     5a4c6803cd4b77bc52e8710f992048eed583958a
+working_tree_dirty  False
+data_sha256         e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f
+model_sha256        fd98ceafc57a5babce61ce703cbf9cb8d1f83c6820b0b34fe30ad1a0fc49c304
+validation_mae      {'naive_train_mean': 154.23179306864967, 'random_forest': 86.84685685591091}
+partitions          train 8645 (2011-01-01..2011-12-31), validation 4358 (2012-01-01..2012-06-30), test 4376 (2012-07-01..2012-12-31)
+artifacts/model.joblib 5243601 bytes
+
+--- 2. Image build (same checkout, artifacts/ and tracking/ removed first)
+
+$ docker build -q -t bike-demand:lab7-ref .
+sha256:f4177c160cff1b9e6233e77ca24b48a9e20bbe5ffb530c06217c15d44d7a0935
+$ docker run --rm --entrypoint sh bike-demand:lab7-ref -c "sha256sum artifacts/model.joblib; ls -l artifacts/model.joblib; <print model_version, model_sha256, training_commit from model-metadata.json>"
+d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07  artifacts/model.joblib
+-rw-r--r-- 1 root root 5243633 Nov  9 14:09 artifacts/model.joblib
+baseline-83202f56543b d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07 unavailable
+
+--- 3. Comparison with earlier records
+
+reports/metrics.json (Lab 2, commit c4ba182, working_tree_dirty true)
+  model_sha256 d24c050e...  random_forest MAE 86.84685685591091  naive MAE 154.23179306864967
+reports/lab3-evidence/train.json
+  model_sha256 d24c050e...
+reports/lab-05.md (Lab 5 image build)
+  model_sha256 d24c050e...  model_version baseline-bb0954a06404
+
+--- Observations used by the policy
+
+1. The image build reproduces the recorded bytes d24c050e... exactly.
+   These bytes are the reference in configs/gate-policy.yaml.
+2. The Windows laptop run gives different bytes (fd98ceaf...) with the same
+   validation MAE to the last digit. A rebuild on another platform is not the
+   same accepted version, even when the score matches.
+3. model_version changes at every build (bb0954a06404, then 83202f56543b) for
+   the same bytes. It cannot identify the accepted version.
+4. Inside the image training_commit is "unavailable" because .git is not
+   copied. The commit must be recorded outside the image, next to the image ID.
+5. No metric was computed on the July-December 2012 test rows.
