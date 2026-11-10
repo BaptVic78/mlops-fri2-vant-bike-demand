@@ -68,3 +68,16 @@ Full local verification at this implementation commit used
 The warnings concern Starlette's test client and SQLAlchemy's loader strategy.
 Docker verification is blocked locally because the Docker Desktop Linux
 engine pipe is unavailable. The PR image job provides separate runner evidence.
+
+## Second attempt during retry verification
+
+The duplicate-run probe was launched before the evidence commit, but its
+Python startup completed after that commit. It therefore read the new clean
+commit `b48f810` and produced run `26d505134be8`. The commit is part of the
+run identity, so this is a distinct attempt, even with the same model config.
+The [second evaluation](lab7-evidence/pipeline-evaluation-retry.json) and
+[tracking ID](lab7-evidence/pipeline-tracking-retry.json) retain its evidence.
+Count both attempts against policy version 1's budget of three.
+Both candidate MAEs equal the reference MAE. Gate decisions remain pending.
+The synthetic immutable-output test covers duplicate-run refusal. No further
+canonical candidate is needed for this pipeline implementation.

@@ -1,0 +1,105 @@
+{
+  "training_commit": "b48f810a87262840a79aa6a68c0485a4dc48d408",
+  "lock_sha256": "ceeaf045258cd3c4d872fa3ee03ec89ae676b8c8354038270f4e0a486e7a4d1c",
+  "data_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+  "config_sha256": "3dca0849b8c7ec3c55dbcde93a20cb35811dd2994b004dcb6c6d482e203684a2",
+  "policy_sha256": "74974c3fb4acd3e9ac550b784031a40243bfe2a5f509da2680eae102f77b0d00",
+  "run_id": "26d505134be8",
+  "timestamp": "2026-11-10T18:18:01.813746+00:00",
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python_version": "3.12.14",
+  "working_tree_dirty": false,
+  "features": [
+    "season",
+    "yr",
+    "mnth",
+    "hr",
+    "holiday",
+    "weekday",
+    "workingday",
+    "weathersit",
+    "temp",
+    "atemp",
+    "hum",
+    "windspeed"
+  ],
+  "partitions": {
+    "train": {
+      "rows": 8645,
+      "date_min": "2011-01-01",
+      "date_max": "2011-12-31"
+    },
+    "validation": {
+      "rows": 4358,
+      "date_min": "2012-01-01",
+      "date_max": "2012-06-30"
+    },
+    "test": {
+      "rows": 4376,
+      "date_min": "2012-07-01",
+      "date_max": "2012-12-31"
+    }
+  },
+  "config": {
+    "data": "data/raw/hour.csv",
+    "features": [
+      "season",
+      "yr",
+      "mnth",
+      "hr",
+      "holiday",
+      "weekday",
+      "workingday",
+      "weathersit",
+      "temp",
+      "atemp",
+      "hum",
+      "windspeed"
+    ],
+    "model": {
+      "n_estimators": 50,
+      "max_depth": 10,
+      "random_state": 42,
+      "n_jobs": 1,
+      "min_samples_leaf": 1,
+      "max_features": 1.0
+    }
+  },
+  "effective_model_settings": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": 10,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 50,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "model_version": "candidate-26d505134be8",
+  "model_sha256": "de2ccb247c32ade78dcd7c43be6209ca03b7065de42fe8578c1b6e25f93482c3",
+  "policy_version": 1,
+  "reference": {
+    "model_sha256": "d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07",
+    "model_version": "baseline-28fdf1958b8a",
+    "validation_mae": 86.84685685591091
+  },
+  "train_mean": 143.79444765760556,
+  "validation_mae": {
+    "naive_train_mean": 154.23179306864967,
+    "random_forest": 86.84685685591091
+  },
+  "model_bytes": 5243809,
+  "readback_mae": 86.84685685591091,
+  "loads_with_service_checks": true,
+  "predictions_finite_non_negative": true
+}
