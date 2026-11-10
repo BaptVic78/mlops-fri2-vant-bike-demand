@@ -1,0 +1,68 @@
+# Lab 7 gate policy, version 1. Owner: Thomas Soubagne. Reviewer: Axel Alacache.
+# Committed on main before any candidate is trained or evaluated with it.
+# Rationale for every value: README.md, section "Pipeline and gate".
+# Changing a value after a candidate was evaluated creates policy version 2,
+# with the reason written in the pull request. Earlier decisions keep version 1.
+policy_version: 1
+
+# Frozen evaluation context. Candidates change model settings only.
+evaluation:
+  data: data/raw/hour.csv
+  data_sha256: e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f
+  features: [season, yr, mnth, hr, holiday, weekday, workingday, weathersit, temp, atemp, hum, windspeed]
+  target: cnt
+  fit_partition: {name: train, date_min: "2011-01-01", date_max: "2011-12-31", rows: 8645}
+  score_partition: {name: validation, date_min: "2012-01-01", date_max: "2012-06-30", rows: 4358}
+  # The test partition is never scored, logged or compared in Weeks 1-4.
+  held_out_partition: {name: test, date_min: "2012-07-01", date_max: "2012-12-31", rows: 4376}
+  metric: mae  # mean absolute error on cnt, unit: rentals per hour, lower is better
+
+# The accepted version every candidate is compared with.
+# Identity is the SHA-256 of the model bytes. model_version is NOT an identity:
+# it is a random id drawn at each build (see reports/lab7-evidence/reference-baseline.txt).
+reference:
+  name: rf-week1-preset
+  model_sha256: d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07
+  settings: {n_estimators: 50, max_depth: 10, random_state: 42, n_jobs: 1}
+  recorded_validation_mae: 86.84685685591091
+  built_by: Dockerfile (python:3.12.12-slim, linux/amd64), uv.lock sha256 c6757e574dde004d437105cb70e3b60863e1a1ccebb064aba7b14932d94225f0
+  naive_train_mean: 143.79444765760556
+  naive_validation_mae: 154.23179306864967
+
+# What a candidate may change. Everything else in configs/baseline.yaml is fixed.
+candidate_settings:
+  estimator: sklearn.ensemble.RandomForestRegressor
+  fixed: {random_state: 42, n_jobs: 1}
+  may_vary:
+    n_estimators: {min: 10, max: 300}
+    max_depth: {min: 4, max: 30}  # integer only; no unbounded trees
+    min_samples_leaf: {min: 1, max: 20}
+    max_features: [1.0, 0.5, sqrt]
+  budget: 3  # candidates evaluated under this policy version, rejections included
+
+# ALL criteria are mandatory. A criterion that did not run is BLOCKED, never passed.
+criteria:
+  quality:
+    # Both MAEs are measured in the same run, on the same 4,358 validation rows.
+    beat_naive_by: 1.0  # candidate_mae <= naive_mae - 1.0
+    beat_reference_by: 1.0  # candidate_mae <= reference_mae - 1.0
+    reference_rescore_must_equal_record: true  # rescored reference MAE == recorded_validation_mae
+  operation:
+    max_model_bytes: 52428800  # 50 MiB; the reference is 5,243,633 bytes
+    loads_with_service_checks: true  # bike_demand.api.load_artifact accepts the bundle
+    predictions_finite_non_negative: true  # on every validation row
+  integrity:
+    data_sha256_matches: true
+    features_match_in_order: true
+    partitions_match: true  # rows and date bounds above
+    clean_working_tree: true  # training_commit recorded and working_tree_dirty is false
+    policy_on_training_commit: true  # this file at the same version exists in that commit
+    evaluated_bytes_are_decided_bytes: true  # sha256 of the scored file == model_sha256 in the decision
+    readback_mae_equals_measured: true  # reload from disk gives the same validation MAE
+
+decisions:
+  outcomes:
+    accept: 0  # every criterion measured and passed; eligible, promotion stays manual
+    reject: 1  # every criterion measured; at least one measured rule failed
+    blocked: 2  # a check is missing, invalid or did not run; nothing can be concluded
+  record_dir: reports/lab7-decisions  # one JSON per candidate, committed, never overwritten

@@ -324,6 +324,78 @@ The input snapshot and dependency lock are fixed. A new baseline requires
 reviewing the recorded value. The [Lab 6 report](reports/lab-06.md) preserves
 the failing assertion and both CI runs.
 
+## Pipeline and gate
+
+Lab 7 split: policy (Thomas), pipeline command (Axel), gate (Victor),
+promotion and Cloud Run (Nils). This section is the shared contract. It was
+written and merged before any candidate was trained.
+
+- Policy: [`configs/gate-policy.yaml`](configs/gate-policy.yaml), version 1.
+  The values are there and the reasons are below.
+- Reference evidence: [`reports/lab7-evidence/reference-baseline.txt`](reports/lab7-evidence/reference-baseline.txt).
+- Decision records: `reports/lab7-decisions/`, one JSON per candidate (gate PR).
+- Pipeline command: added by the pipeline PR. Until then, nothing below claims
+  that a command runs.
+
+Today `python -m bike_demand.train` always writes `artifacts/model.joblib`,
+and the service loads that same path. Running training is therefore already
+an unreviewed promotion on that machine. This is the overwrite risk that the
+pipeline must remove.
+
+### Pipeline boundary
+
+| Question | Kept | Rejected | Why |
+|---|---|---|---|
+| **Stage**: what does each stage consume and produce? | Four stages. `validate`: CSV and candidate config, produces the snapshot hash and partition summary. `train`: train rows and config, produces a candidate bundle (`model.joblib` and `model-metadata.json`) in `artifacts/candidates/<run_id>/`. `evaluate`: candidate bundle, reference bundle and validation rows, produces `evaluation.json`. `gate`: `evaluation.json` and the policy, produces the decision record. Promotion is a fifth, manual step outside the pipeline. | One script that trains, scores and replaces `artifacts/model.joblib`. | Each stage leaves a file a reviewer can open. The gate reads evidence, not a live model, so a rejection cannot have already replaced anything. |
+| **Entry point**: what does a clean checkout need? | One command run with `uv run --locked` after `uv sync --locked`, given a candidate config file. It needs the frozen CSV (tracked), the policy (tracked) and the reference bytes `d24c050e…` fetched from the accepted store and checked against their SHA-256. | Needing the author's `artifacts/` or `tracking/` folder. | A clean runner does not inherit laptop models or the local MLflow store. If the reference bytes cannot be fetched, the run is blocked rather than compared with nothing. |
+| **Failure**: what can safely be retried? | `validate`, `train` and `evaluate` can be rerun as often as needed: they write only inside their own run directory, and the same inputs on the same platform give the same bytes (`random_state=42`, `n_jobs=1`). An existing decision record is never overwritten. Promotion is never retried automatically. | Retrying the whole pipeline, decision included, until it passes. | Retrying training cannot change the outcome. Retrying a decision would let someone retry until the result is accepted. |
+| **Partial**: what happens to incomplete output? | A stage writes to `artifacts/candidates/.tmp-<run_id>/` and renames it only after the metadata and checksum are written. A run directory without a complete `model-metadata.json` is incomplete: the gate answers `blocked` and the directory is deleted before the rerun. | Reusing a half-written bundle, or trusting that a file exists. | A truncated `model.joblib` can still exist and even load. Only the recorded checksum shows that the evaluated bytes are complete. |
+| **Identity**: which inputs determine this run? | `run_id` = first 12 hex characters of a SHA-256 over: training commit, `uv.lock` hash, `data_sha256`, candidate config hash and policy hash. The record also stores the platform (image ID or OS) because bytes depend on it. The output identity is `model_sha256`. | `model_version` (`baseline-<random>`), or a timestamp. | `model_version` is drawn at random at each build: the same bytes got `bb0954a06404` in Lab 5 and `83202f56543b` today. Two runs with identical inputs should share an id, and different inputs must not. |
+
+### Fair comparison
+
+| Question | Kept | Rejected | Why |
+|---|---|---|---|
+| **Reference**: which accepted version is frozen? | The Week 1 RF preset (`n_estimators=50, max_depth=10, random_state=42, n_jobs=1`), identified by `model_sha256` `d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07`. The Docker build reproduces these exact bytes (Lab 3, Lab 5 and the reference evidence above). | Whatever `artifacts/model.joblib` holds on a laptop. | On Windows the same config gave other bytes (`fd98ceaf…`) with the same MAE. A file named `model.joblib` is not a version; the hash is. |
+| **Observations**: same rows and labels for both? | Yes. Candidate, reference and the train-mean baseline are scored in the same run on the same 4,358 validation rows (2012-01-01 to 2012-06-30), `cnt` as label. The run checks the row count and date bounds before scoring. | Reusing the reference MAE from an old report without rescoring. | A score from another run only compares if nothing in its context changed. Rescoring the reference bytes costs a few seconds. |
+| **Metric**: what does the score mean, in what unit? | Validation MAE on `cnt`, in rentals per hour: on average, how far a prediction is from the observed hourly count. Lower is better. Reference 86.85, train-mean baseline 154.23. | RMSE or R². | MAE is in the same unit as the prediction the API returns, so a difference reads directly as bikes per hour. It is the metric already recorded since Lab 2. |
+| **Margin**: what size of change matters, and why? | A candidate must be at least **1.0 rental/hour** better than the reference and than the train-mean baseline. | Any improvement (`<`), or a percentage. | The service predicts a count of bikes: an average gain below one bike per hour changes no operational decision. Without a margin, a model that is equivalent but has different bytes would replace the reference and add a promotion with no benefit. A fixed number is simple to check and does not depend on the reference score. |
+| **Provenance**: what makes an old score reusable? | Only as a cross-check: the rescored reference MAE must equal `recorded_validation_mae` (86.84685685591091) exactly. If not, the run is `blocked`: data, lock or bytes changed and must be explained first. | Treating a stored number as the reference result. | The Lab 2 record, the Lab 3 rerun and today's rebuild all give exactly 86.84685685591091. A difference means that the evaluation context moved, and then no comparison is fair. |
+
+### Gate criteria
+
+All criteria are mandatory. A better MAE cannot make up for a missing check.
+
+| Claim | Criteria (policy keys) | Why this form and threshold |
+|---|---|---|
+| **Quality** | `beat_naive_by`, `beat_reference_by`, `reference_rescore_must_equal_record` | Two references measured on the same rows: the baseline any model must beat, and the version currently accepted. The margin is explained above. |
+| **Operation** | `max_model_bytes` 50 MiB, `loads_with_service_checks`, `predictions_finite_non_negative` | The reference file is 5.0 MiB and loading already takes 6 s to 40 s on our laptops. 50 MiB (10 times the reference) still fits easily in Cloud Run's default 512 MiB memory with the Python process. The bundle must pass the same `load_artifact` checks as the service, otherwise it would start with a 503. A count cannot be negative or infinite. |
+| **Integrity** | `data_sha256_matches`, `features_match_in_order`, `partitions_match`, `clean_working_tree`, `policy_on_training_commit`, `evaluated_bytes_are_decided_bytes`, `readback_mae_equals_measured` | These are the Lecture 7 data checks, plus a link from the decision to the exact bytes. A dirty tree means that the code that trained the model is unknown (the Lab 2 record has `working_tree_dirty: true`). The policy must already exist in the training commit. |
+
+**Settings guard.** A candidate may change only `n_estimators` (10 to 300),
+`max_depth` (4 to 30), `min_samples_leaf` (1 to 20) and `max_features`
+(`1.0`, `0.5`, `sqrt`). `random_state=42` and `n_jobs=1` stay fixed, as do the
+CSV, the twelve ordered features and the split. `load_config` in `train.py`
+already rejects any other `data` and `features`. The pipeline PR must keep
+these checks and allow only these keys. Budget: **3 candidates** under policy
+version 1, rejections included. Every attempt gets a decision record.
+
+### What failure means
+
+| Question | Kept | Rejected | Why |
+|---|---|---|---|
+| **Invalid**: what evidence must never count as pass? | A score on rows other than the 4,358 validation rows, any metric on the July–December 2012 test rows, a bundle whose SHA-256 differs from the decided one, a run from a dirty tree, a laptop result presented as a CI result. | Accepting "close enough" evidence. | Each of these changes what the score means. The gate would then decide on something other than the bytes it promotes. |
+| **Missing**: what if a required check did not run? | The outcome is `blocked` (exit 2). The record lists the missing check by name. | Skipping it, or counting it as passed. | An unavailable check is not a passed check. |
+| **Reject**: which measured rule failed? | `reject` (exit 1) only when every check ran. The record names each failed rule with the measured value and the threshold, for example `beat_reference_by: candidate 86.20, needed <= 85.85`. | One message such as "quality too low". | A reviewer must be able to check the reason from the numbers without rerunning the pipeline. |
+| **Blocked**: what must be repaired before deciding? | The cause in the record: unreachable or mismatched reference bytes, an incomplete run directory, a changed data hash, a dirty tree. After the repair, a new run gets a new record. The blocked record stays. | Editing the old record so that it shows a decision. | Records are evidence. A blocked run that becomes "accept" in the same file hides what happened. |
+| **Status**: how does CI observe the outcome? | Exit code: `0` accept, `1` reject, `2` blocked, and the `decision` field in the record. `accept` only means eligible: promotion stays a reviewed manual step from `main`. | Exit 0 for every outcome, with the decision in a log line. | A job that is green whatever the decision would hide a blocked gate. The three codes let CI tell a measured rejection from an evaluation that did not finish. |
+
+**What the gate cannot know.** It sees six months of 2012 validation data,
+not the July–December rows nor live traffic, so it cannot promise accuracy in
+production. It compares MAE averages, not errors at peak hours. Its operating
+check is file size, not latency measured on Cloud Run. Promotion and the
+revision serving the accepted bytes are checked separately (promotion PR).
+
 ## Lab 4 prediction input contract
 
 `src/bike_demand/schemas.py` defines `PredictionRequest`, the Pydantic request
