@@ -39,8 +39,32 @@ candidate output, wrong reference bytes, dirty source, disallowed model
 settings and failed-training cleanup. They use a six-row synthetic fixture
 and a fixture policy. They consume no real candidate attempts.
 
+## Canonical candidate attempt 1
+
+The candidate command ran from clean commit `5957a2f` on Linux under WSL,
+using the existing trusted bundle at
+`/home/victor/mlops-fri2-vant-bike-demand/artifacts`. Its reference model
+checksum matched the policy. The command exited 0 and produced run
+`06c4291bb9bc`. The [evaluation record](lab7-evidence/pipeline-evaluation.json)
+and [tracking ID](lab7-evidence/pipeline-tracking.json) preserve the results.
+
+- Reference validation MAE: 86.84685685591091.
+- Candidate validation MAE: 86.84685685591091.
+- Training-mean validation MAE: 154.23179306864967.
+- Candidate checksum: `de2ccb247c32ade78dcd7c43be6209ca03b7065de42fe8578c1b6e25f93482c3`.
+- Candidate size: 5,243,809 bytes.
+- Saved model readback MAE: 86.84685685591091.
+- The accepted reference model checksum remained
+  `d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07`.
+
+This is the first canonical candidate attempt under policy version 1. Retain
+it in the gate's three-candidate budget. The quality evidence shows zero
+improvement; the gate must record its formal decision in the subsequent PR.
+The candidate model bytes remain in the ignored candidate directory.
+
+Full local verification at this implementation commit used
+`uv sync --locked`, locked Ruff lint and formatting, then
+`uv run --locked pytest -q`: 168 passed, 2 warnings in 147.19 seconds.
+The warnings concern Starlette's test client and SQLAlchemy's loader strategy.
 Docker verification is blocked locally because the Docker Desktop Linux
-engine pipe is unavailable. The local team checkout does contain model bytes
-matching the policy reference checksum, but a canonical candidate run from
-the final clean commit remains to be recorded after commit attribution is
-settled. No real candidate was evaluated by this preparation.
+engine pipe is unavailable. The PR image job provides separate runner evidence.
