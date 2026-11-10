@@ -17,6 +17,26 @@ from bike_demand.validate import FEATURES, load_data
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def test_policy_checkout_matches_git_bytes_with_autocrlf(tmp_path):
+    subprocess.run(["git", "init", "--quiet", str(tmp_path)], check=True)
+    git = ["git", "-C", str(tmp_path), "-c", "core.autocrlf=true"]
+    (tmp_path / ".gitattributes").write_bytes((ROOT / ".gitattributes").read_bytes())
+    policy_path = tmp_path / "configs/gate-policy.yaml"
+    policy_path.parent.mkdir()
+    policy_path.write_bytes(
+        (ROOT / "configs/gate-policy.yaml").read_bytes().replace(b"\r\n", b"\n")
+    )
+    subprocess.run(
+        git + ["add", ".gitattributes", "configs/gate-policy.yaml"], check=True
+    )
+    policy_path.unlink()
+    subprocess.run(git + ["checkout-index", "--all", "--force"], check=True)
+    indexed_policy = subprocess.run(
+        git + ["show", ":configs/gate-policy.yaml"], check=True, capture_output=True
+    ).stdout
+    assert policy_path.read_bytes() == indexed_policy
+
+
 @pytest.fixture
 def workspace(tmp_path, monkeypatch):
     (tmp_path / "configs").mkdir()
