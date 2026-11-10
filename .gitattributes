@@ -4,6 +4,3 @@
 data/raw/hour.csv -text
 data/UCI-original-Readme.txt -text
 tests/fixtures/*.csv -text
-
-# The pipeline compares the checked-out policy with its committed bytes.
-configs/gate-policy.yaml text eol=lf

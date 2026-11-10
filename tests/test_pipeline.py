@@ -17,26 +17,6 @@ from bike_demand.validate import FEATURES, load_data
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def test_policy_checkout_matches_git_bytes_with_autocrlf(tmp_path):
-    subprocess.run(["git", "init", "--quiet", str(tmp_path)], check=True)
-    git = ["git", "-C", str(tmp_path), "-c", "core.autocrlf=true"]
-    (tmp_path / ".gitattributes").write_bytes((ROOT / ".gitattributes").read_bytes())
-    policy_path = tmp_path / "configs/gate-policy.yaml"
-    policy_path.parent.mkdir()
-    policy_path.write_bytes(
-        (ROOT / "configs/gate-policy.yaml").read_bytes().replace(b"\r\n", b"\n")
-    )
-    subprocess.run(
-        git + ["add", ".gitattributes", "configs/gate-policy.yaml"], check=True
-    )
-    policy_path.unlink()
-    subprocess.run(git + ["checkout-index", "--all", "--force"], check=True)
-    indexed_policy = subprocess.run(
-        git + ["show", ":configs/gate-policy.yaml"], check=True, capture_output=True
-    ).stdout
-    assert policy_path.read_bytes() == indexed_policy
-
-
 @pytest.fixture
 def workspace(tmp_path, monkeypatch):
     (tmp_path / "configs").mkdir()
@@ -162,3 +142,32 @@ def test_failed_training_removes_partial_bundle(workspace, monkeypatch):
     with pytest.raises(ValueError, match="training interrupted"):
         pipeline.produce_candidate(root, config, reference)
     assert list((root / "artifacts/candidates").iterdir()) == []
+
+
+def test_crlf_policy_matches_committed_lf(workspace, monkeypatch):
+    root, config, reference = workspace
+    policy_path = root / "configs/gate-policy.yaml"
+    committed_policy = policy_path.read_bytes().replace(b"\r\n", b"\n")
+    policy_path.write_bytes(committed_policy.replace(b"\n", b"\r\n"))
+    monkeypatch.setattr(
+        subprocess,
+        "run",
+        lambda *args, **kwargs: SimpleNamespace(stdout=committed_policy),
+    )
+    result = pipeline.produce_candidate(root, config, reference)
+    assert (result / "evaluation.json").is_file()
+
+
+def test_changed_policy_is_blocked(workspace, monkeypatch):
+    root, config, reference = workspace
+    policy_path = root / "configs/gate-policy.yaml"
+    committed_policy = policy_path.read_bytes()
+    policy_path.write_bytes(committed_policy + b"\n# Changed policy\n")
+    monkeypatch.setattr(
+        subprocess,
+        "run",
+        lambda *args, **kwargs: SimpleNamespace(stdout=committed_policy),
+    )
+    with pytest.raises(ValueError, match="policy: differs"):
+        pipeline.produce_candidate(root, config, reference)
+    assert not (root / "artifacts/candidates").exists()

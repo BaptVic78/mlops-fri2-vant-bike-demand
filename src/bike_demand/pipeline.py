@@ -79,7 +79,11 @@ def produce_candidate(root: Path, config_path: Path, reference: Path) -> Path:
         check=True,
         capture_output=True,
     ).stdout
-    if committed_policy != policy_path.read_bytes():
+    # A clean Git checkout may convert LF to CRLF on Windows.
+    checked_out_policy = policy_path.read_bytes()
+    if committed_policy.replace(b"\r\n", b"\n") != checked_out_policy.replace(
+        b"\r\n", b"\n"
+    ):
         raise ValueError("policy: differs from the training commit")
     config = candidate_config(config_path, policy)
     snapshot = check_snapshot(root)
