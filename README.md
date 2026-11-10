@@ -334,8 +334,53 @@ written and merged before any candidate was trained.
   The values are there and the reasons are below.
 - Reference evidence: [`reports/lab7-evidence/reference-baseline.txt`](reports/lab7-evidence/reference-baseline.txt).
 - Decision records: `reports/lab7-decisions/`, one JSON per candidate (gate PR).
-- Pipeline command: added by the pipeline PR. Until then, nothing below claims
-  that a command runs.
+- Pipeline command: `uv run --locked python -m bike_demand.pipeline`.
+
+### Produce a candidate
+
+Start from a clean checkout and install with `uv sync --locked`. Supply a trusted
+accepted bundle containing `model.joblib` and `model-metadata.json`. Its model
+checksum must match the reference in the policy. For the initial reference,
+the builder can recover these files from the retained Lab 7 reference image:
+
+```sh
+docker create --name lab7-reference bike-demand:lab7-ref
+mkdir -p artifacts/reference
+docker cp lab7-reference:/app/artifacts/model.joblib artifacts/reference/model.joblib
+docker cp lab7-reference:/app/artifacts/model-metadata.json artifacts/reference/model-metadata.json
+docker rm lab7-reference
+sha256sum artifacts/reference/model.joblib
+uv run --locked python -m bike_demand.pipeline --config configs/baseline.yaml --reference artifacts/reference
+```
+
+The retained image must have ID
+`sha256:f4177c160cff1b9e6233e77ca24b48a9e20bbe5ffb530c06217c15d44d7a0935`.
+Ask its builder for that image or the trusted bundle if it is unavailable locally.
+The reference checksum is checked before loading its bytes. Keep downloaded
+joblib files restricted to trusted sources.
+
+The command prints `artifacts/candidates/<run_id>/`. This contains the model,
+metadata, effective config, policy copy, MLflow run ID and `evaluation.json`.
+The evaluation includes rescored reference, train-mean and candidate MAEs on the
+same validation rows. Model readback uses the service's loading checks.
+Exit 0 means candidate evidence is complete. Pass that evidence to the gate
+for its accept/reject/blocked decision and candidate-budget accounting.
+
+A repeat with identical inputs refuses to overwrite the completed directory.
+For an interrupted run, partial output is removed. A stale `.tmp-<run_id>`
+left by a killed process requires confirming the process has stopped before
+removing that partial directory and retrying. Completed candidates stay intact.
+The legacy baseline command keeps its Week 1 behavior. Use the pipeline command
+for Lab 7 candidates so training leaves `artifacts/model.joblib` untouched.
+
+To exercise a blocked run, supply an empty reference directory. The command
+exits 2 and names the missing model file. Synthetic regression tests cover
+reference mismatch, dirty source, invalid settings, interruption cleanup and
+preservation of accepted model bytes:
+
+```sh
+uv run --locked pytest -q tests/test_pipeline.py
+```
 
 Today `python -m bike_demand.train` always writes `artifacts/model.joblib`,
 and the service loads that same path. Running training is therefore already
