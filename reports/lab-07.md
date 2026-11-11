@@ -147,3 +147,27 @@ config and serializes decisions/promotions with an exclusive filesystem lock.
 Nils's Cloud Run deployment and retained revision remain the next handoff.
 The accepted bundle and its metadata are recoverable from the reference
 package used above. Docker Desktop's Linux engine remains unavailable locally.
+
+### Verification and screenshots
+
+At `4496195`, [CI run 42995781526](https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/actions/runs/42995781526)
+passed lock, style, the full test suite and the Docker image build.
+The [runner's test summary](lab7-evidence/gate-ci-tests.txt) preserves the
+test count and warnings. The focused gate suite passed 16 cases locally.
+Source provenance checks allow Git LF/CRLF conversion for the dependency
+lock while rejecting changed lock content.
+
+![Measured rejection](images/LAB7/lab7-rejection.jpg)
+
+The third candidate's saved decision names the observed MAE and required limit.
+Screenshot of the real record published in commit `4496195`.
+
+![Accepted reference preservation](images/LAB7/lab7-preservation.jpg)
+
+The model and metadata hashes match before and after the rejection checks.
+Screenshot of the recorded preservation result in commit `4496195`.
+
+![Passing CI](images/LAB7/lab7-ci.jpg)
+
+The four jobs passed on `4496195`, run 42995781526. These screenshots
+supplement the raw decision, preservation and test records.
