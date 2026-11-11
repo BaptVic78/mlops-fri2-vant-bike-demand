@@ -452,6 +452,54 @@ linked from [the Lab 7 report](reports/lab-07.md).
 uv run --locked pytest -q tests/test_gate.py tests/test_pipeline.py
 ```
 
+### Recover the accepted reference for the deployment handoff
+
+All three canonical candidates were rejected under policy version 1. Keep the
+accepted reference checksum `d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07`.
+The three-attempt budget is exhausted. The handoff uses the retained reference
+and its metadata.
+
+Obtain the trusted image or bundle from its builder. Restore a saved image with
+`docker load --input artifacts/accepted-image.tar`. Use the independently
+recorded image ID when extracting the files. The local recovery check used
+the retained Lab 6 image in
+[accepted-handoff.json](reports/lab7-evidence/accepted-handoff.json), whose model
+checksum matches the policy. These PowerShell commands recover that bundle:
+
+```powershell
+$AcceptedImage = 'sha256:13594e76dc0fcd196df50b3f21c9a707e92a1cdca11aad759be25a7430a7f369'
+New-Item -ItemType Directory -Force artifacts/reference | Out-Null
+docker create --name lab7-reference-recovery $AcceptedImage
+docker cp lab7-reference-recovery:/app/artifacts/model.joblib artifacts/reference/model.joblib
+docker cp lab7-reference-recovery:/app/artifacts/model-metadata.json artifacts/reference/model-metadata.json
+docker rm lab7-reference-recovery
+uv sync --locked
+uv run --locked python -m bike_demand.reference_bundle --source artifacts/reference
+```
+
+The command verifies the model checksum before loading, applies the existing
+service-loader checks and retains the package under
+`artifacts/accepted/versions/<model_sha256>/`. It prints the model version,
+model checksum, metadata checksum and recovery path. Repeating the command
+reuses the verified retained package. It leaves the accepted pointer in place.
+Keep bundles, saved images and the virtual environment outside Git.
+
+The deployment owner must supply the approved project, region, service URL,
+image registry location and current Cloud Run revision. Record the existing
+revision before deployment, deploy the retained accepted bytes from reviewed
+main, and compare the live image digest and model version with independently
+retained expectations. Verify health, a valid prediction and an invalid-hour
+rejection. Keep the earlier revision available and record fresh results after
+any traffic change. Save the service URL, serving revision, previous revision
+and observation time in the Lab 7 evidence.
+
+The [handoff record](reports/lab7-evidence/accepted-handoff.json) currently marks
+Cloud Run verification as blocked pending this service information. The
+[Lab 7 report](reports/lab-07.md) records the completed local checks and owner.
+Deployment and traffic changes follow the official
+[Cloud Run deployment guide](https://cloud.google.com/run/docs/deploying) and
+[revision rollback guide](https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration).
+
 ### Fair comparison
 
 | Question | Kept | Rejected | Why |

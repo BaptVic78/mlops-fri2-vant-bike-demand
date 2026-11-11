@@ -1,0 +1,27 @@
+{
+  "status": "blocked",
+  "owner": "Nils Giraud",
+  "verified_at": "2026-11-11T17:39:37.120469+00:00",
+  "verification_commit": "80f31dbb63503e618ee65450962f85e76466c8e4",
+  "source_image_id": "sha256:13594e76dc0fcd196df50b3f21c9a707e92a1cdca11aad759be25a7430a7f369",
+  "policy_version": 1,
+  "accepted_model_sha256": "d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07",
+  "recovered_model_sha256": "d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07",
+  "model_version": "baseline-f4459fc6e2a4",
+  "metadata_sha256": "4d69941c480a157230610abba93dc657c1fba82ce2b85be7430001f174f13598",
+  "retained_bundle": "artifacts/accepted/versions/d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07",
+  "service_loader_check": "passed",
+  "canonical_candidate_attempts_used": 3,
+  "canonical_candidates_accepted": 0,
+  "canonical_promotion_performed": false,
+  "cloud_run": {
+    "project": null,
+    "region": null,
+    "service": null,
+    "url": null,
+    "serving_revision": null,
+    "previous_revision": null,
+    "verification": "pending service handoff"
+  },
+  "blocker_source": "https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/pull/23"
+}

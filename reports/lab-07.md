@@ -171,3 +171,41 @@ Screenshot of the recorded preservation result in commit `4496195`.
 
 The four jobs passed on `4496195`, run 42995781526. These screenshots
 supplement the raw decision, preservation and test records.
+
+
+## Nils's accepted reference preparation
+
+Nils Giraud owns the accepted-package recovery and Cloud Run handoff for Lab 7.
+The three canonical gate decisions remain rejected, so the accepted reference
+is retained. This preparation creates no candidate and consumes no attempt.
+
+The [handoff record](lab7-evidence/accepted-handoff.json) records local recovery
+from image `sha256:13594e76dc0fcd196df50b3f21c9a707e92a1cdca11aad759be25a7430a7f369`.
+Its model checksum matches the policy reference, and the real service loader
+accepted the model and metadata. The package is retained under
+`artifacts/accepted/versions/d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07/`.
+The recovered metadata identifies `baseline-f4459fc6e2a4`.
+
+The recovery command is:
+
+```sh
+uv run --locked python -m bike_demand.reference_bundle --source artifacts/reference
+```
+
+It validates the checksum before loading and reuses the gate's retention and
+locking logic. The accepted pointer stays in place. Regression tests cover
+repeat recovery, source and pointer preservation, mismatched source bytes and
+corruption of an already retained model. Recovery instructions are in the README.
+
+### Deployment blocker and next owner
+
+Thomas's [policy PR #23](https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/pull/23)
+states that the Lab 6 Cloud Run prerequisite remains incomplete. The repository
+contains the CI workflow and no Cloud Run deployment configuration. The local
+machine also has no configured gcloud command. The project, region, service URL,
+serving revision and previous revision are unavailable in the inspected evidence.
+
+Thomas owns the Lab 6 Cloud Run setup under the updated team split. He must
+provide the existing service and access details. Nils can then verify the
+accepted identity at the live URL, preserve the previous revision and complete
+the deployment evidence. These live checks remain pending.
