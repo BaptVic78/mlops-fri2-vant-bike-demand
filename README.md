@@ -535,7 +535,7 @@ uv run --locked python scripts/check_cloud_run.py --base-url https://bike-demand
 
 Restoring the current revision uses the same traffic command with
 `bike-demand-lab7-refcurrent80f31db=100`. No traffic was changed during Nils's
-verification. A rollback exercise belongs to Lab 8 after its runbook is ready.
+verification. The Lab 8 rollback procedure is in [RUNBOOK.md](RUNBOOK.md).
 
 #### Earlier local recovery
 
@@ -613,6 +613,19 @@ not the July–December rows nor live traffic, so it cannot promise accuracy in
 production. It compares MAE averages, not errors at peak hours. Its operating
 check is file size, not latency measured on Cloud Run. Promotion and the
 revision serving the accepted bytes are checked separately (promotion PR).
+
+## Operate and recover
+
+Lab 8 split: runbook (Thomas), injector (Victor), operator (Nils), recorder
+(Axel). The runbook was merged before any fault was injected.
+
+- Runbook: [RUNBOOK.md](RUNBOOK.md). It covers the last verified context,
+  signal definitions, baseline, first checks by boundary, rollback target,
+  the single traffic change, fresh verification and escalation.
+- Incident evidence: `reports/lab8-evidence/`. This folder holds the raw
+  checker output, `gcloud` describes and Cloud Run log exports for the
+  baseline, incident and recovery periods, plus the timeline. The recorder
+  links it from the Lab 8 section of the team report.
 
 ## Lab 4 prediction input contract
 
