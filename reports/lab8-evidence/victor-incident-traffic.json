@@ -1,0 +1,27 @@
+{
+  "status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-11-11T22:46:59.320059Z",
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T22:46:58.019591Z",
+        "status": "True",
+        "type": "ConfigurationsReady"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T22:46:59.289797Z",
+        "status": "True",
+        "type": "RoutesReady"
+      }
+    ],
+    "traffic": [
+      {
+        "percent": 100,
+        "revisionName": "bike-demand-lab7-lab8-victor-01"
+      }
+    ]
+  }
+}

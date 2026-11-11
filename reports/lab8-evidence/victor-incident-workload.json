@@ -1,0 +1,384 @@
+{
+  "started_at": "2026-11-11T22:47:02.397980+00:00",
+  "finished_at": "2026-11-11T22:47:03.811297+00:00",
+  "base_url": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app",
+  "expected_model_version": "baseline-28fdf1958b8a",
+  "workload": "5 rounds of 8 concurrent valid README predictions; no retries",
+  "warmup": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "model_version": "baseline-28fdf1958b8a"
+    }
+  },
+  "n": 40,
+  "good": 7,
+  "good_fraction": 0.175,
+  "status_counts": {
+    "503": 33,
+    "200": 7
+  },
+  "events": [
+    {
+      "round": 1,
+      "request": 1,
+      "at": "2026-11-11T22:47:02.399983+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 189.42
+    },
+    {
+      "round": 1,
+      "request": 2,
+      "at": "2026-11-11T22:47:02.399983+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 197.056
+    },
+    {
+      "round": 1,
+      "request": 3,
+      "at": "2026-11-11T22:47:02.399983+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 200.486
+    },
+    {
+      "round": 1,
+      "request": 4,
+      "at": "2026-11-11T22:47:02.399983+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 203.708
+    },
+    {
+      "round": 1,
+      "request": 5,
+      "at": "2026-11-11T22:47:02.400979+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 197.495
+    },
+    {
+      "round": 1,
+      "request": 6,
+      "at": "2026-11-11T22:47:02.400979+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 189.294
+    },
+    {
+      "round": 1,
+      "request": 7,
+      "at": "2026-11-11T22:47:02.400979+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 199.444
+    },
+    {
+      "round": 1,
+      "request": 8,
+      "at": "2026-11-11T22:47:02.399983+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 361.499
+    },
+    {
+      "round": 2,
+      "request": 1,
+      "at": "2026-11-11T22:47:02.763400+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 198.825
+    },
+    {
+      "round": 2,
+      "request": 2,
+      "at": "2026-11-11T22:47:02.763400+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 192.299
+    },
+    {
+      "round": 2,
+      "request": 3,
+      "at": "2026-11-11T22:47:02.763400+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 198.198
+    },
+    {
+      "round": 2,
+      "request": 4,
+      "at": "2026-11-11T22:47:02.763400+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 201.896
+    },
+    {
+      "round": 2,
+      "request": 5,
+      "at": "2026-11-11T22:47:02.763400+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 200.339
+    },
+    {
+      "round": 2,
+      "request": 6,
+      "at": "2026-11-11T22:47:02.763400+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 194.273
+    },
+    {
+      "round": 2,
+      "request": 7,
+      "at": "2026-11-11T22:47:02.763400+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 202.578
+    },
+    {
+      "round": 2,
+      "request": 8,
+      "at": "2026-11-11T22:47:02.762400+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 202.183
+    },
+    {
+      "round": 3,
+      "request": 1,
+      "at": "2026-11-11T22:47:02.968331+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 200.546
+    },
+    {
+      "round": 3,
+      "request": 2,
+      "at": "2026-11-11T22:47:02.968331+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 198.656
+    },
+    {
+      "round": 3,
+      "request": 3,
+      "at": "2026-11-11T22:47:02.968331+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 202.952
+    },
+    {
+      "round": 3,
+      "request": 4,
+      "at": "2026-11-11T22:47:02.968331+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 185.06
+    },
+    {
+      "round": 3,
+      "request": 5,
+      "at": "2026-11-11T22:47:02.968331+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 402.341
+    },
+    {
+      "round": 3,
+      "request": 6,
+      "at": "2026-11-11T22:47:02.968331+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 197.553
+    },
+    {
+      "round": 3,
+      "request": 7,
+      "at": "2026-11-11T22:47:02.968331+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 200.186
+    },
+    {
+      "round": 3,
+      "request": 8,
+      "at": "2026-11-11T22:47:02.968331+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 185.143
+    },
+    {
+      "round": 4,
+      "request": 1,
+      "at": "2026-11-11T22:47:03.373235+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 188.584
+    },
+    {
+      "round": 4,
+      "request": 2,
+      "at": "2026-11-11T22:47:03.373235+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 205.846
+    },
+    {
+      "round": 4,
+      "request": 3,
+      "at": "2026-11-11T22:47:03.373235+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 182.82
+    },
+    {
+      "round": 4,
+      "request": 4,
+      "at": "2026-11-11T22:47:03.373235+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 221.938
+    },
+    {
+      "round": 4,
+      "request": 5,
+      "at": "2026-11-11T22:47:03.374236+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 203.038
+    },
+    {
+      "round": 4,
+      "request": 6,
+      "at": "2026-11-11T22:47:03.374236+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 213.604
+    },
+    {
+      "round": 4,
+      "request": 7,
+      "at": "2026-11-11T22:47:03.374236+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 201.934
+    },
+    {
+      "round": 4,
+      "request": 8,
+      "at": "2026-11-11T22:47:03.373235+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 218.142
+    },
+    {
+      "round": 5,
+      "request": 1,
+      "at": "2026-11-11T22:47:03.597303+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 189.415
+    },
+    {
+      "round": 5,
+      "request": 2,
+      "at": "2026-11-11T22:47:03.597303+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 213.085
+    },
+    {
+      "round": 5,
+      "request": 3,
+      "at": "2026-11-11T22:47:03.597303+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 207.632
+    },
+    {
+      "round": 5,
+      "request": 4,
+      "at": "2026-11-11T22:47:03.598302+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 209.062
+    },
+    {
+      "round": 5,
+      "request": 5,
+      "at": "2026-11-11T22:47:03.598302+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 210.885
+    },
+    {
+      "round": 5,
+      "request": 6,
+      "at": "2026-11-11T22:47:03.598302+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 205.341
+    },
+    {
+      "round": 5,
+      "request": 7,
+      "at": "2026-11-11T22:47:03.598302+00:00",
+      "status": 503,
+      "model_version": null,
+      "good": false,
+      "client_duration_ms": 210.438
+    },
+    {
+      "round": 5,
+      "request": 8,
+      "at": "2026-11-11T22:47:03.597303+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 213.811
+    }
+  ],
+  "result": "failed"
+}
