@@ -1,0 +1,84 @@
+{
+  "verified_at": "2026-11-11T23:22:36.315008+00:00",
+  "incident": {
+    "client_window": [
+      "2026-11-11T23:16:16.653431+00:00",
+      "2026-11-11T23:16:17.130013+00:00"
+    ],
+    "workload_requests": 16,
+    "status_counts": {
+      "503": 13,
+      "200": 3
+    },
+    "workload_availability": 0.1875,
+    "client_median_success_ms": 120.726,
+    "log_window": [
+      "2026-11-11T23:14:20.460356Z",
+      "2026-11-11T23:16:23.428073Z"
+    ],
+    "application_eligible_events": 6,
+    "application_5xx": 0,
+    "application_422": 1,
+    "application_median_prediction_ms": 24.156,
+    "application_max_prediction_ms": 168.07,
+    "platform_eligible_status_counts": {
+      "200": 5,
+      "503": 13
+    },
+    "concurrency_warning_count": 13,
+    "model_load_error_count": 0,
+    "application_revisions": [
+      "bike-demand-lab7-lab8-victor-01"
+    ],
+    "application_model_versions": [
+      "baseline-28fdf1958b8a"
+    ]
+  },
+  "recovery": {
+    "client_window": [
+      "2026-11-11T23:20:17.468358+00:00",
+      "2026-11-11T23:20:18.034842+00:00"
+    ],
+    "workload_requests": 16,
+    "status_counts": {
+      "200": 16
+    },
+    "workload_availability": 1.0,
+    "client_median_success_ms": 132.1945,
+    "log_window": [
+      "2026-11-11T23:19:44.703522Z",
+      "2026-11-11T23:20:24.327182Z"
+    ],
+    "application_eligible_events": 27,
+    "application_5xx": 0,
+    "application_422": 5,
+    "application_median_prediction_ms": 44.456,
+    "application_max_prediction_ms": 148.47,
+    "platform_eligible_status_counts": {
+      "200": 26
+    },
+    "concurrency_warning_count": 0,
+    "model_load_error_count": 0,
+    "application_revisions": [
+      "bike-demand-lab7-refcurrent80f31db"
+    ],
+    "application_model_versions": [
+      "baseline-28fdf1958b8a"
+    ],
+    "contract_checks_passed": 5,
+    "traffic": [
+      {
+        "percent": 100,
+        "revisionName": "bike-demand-lab7-refcurrent80f31db"
+      }
+    ],
+    "target_ready": "True"
+  },
+  "limitations": [
+    "No fresh operator baseline before injection; use historical Lab 7 identity evidence.",
+    "The serial checker did not detect the concurrency fault.",
+    "Application logs omit Uvicorn-level rejections; platform logs and external checks are required.",
+    "Client and server clocks are separate; no exact per-request timestamp joins are claimed.",
+    "This small fixed workload does not establish a production capacity guarantee."
+  ]
+}

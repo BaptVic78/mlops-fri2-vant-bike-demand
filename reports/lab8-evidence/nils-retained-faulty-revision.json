@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "name": "bike-demand-lab7-lab8-victor-01"
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-11-11T23:19:45.673663Z",
+        "message": "Deploying revision succeeded in 22.39s.",
+        "reason": "Retired",
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T23:19:45.673663Z",
+        "message": "Revision retired.",
+        "reason": "Retired",
+        "severity": "Info",
+        "status": "False",
+        "type": "Active"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T22:46:57.930426Z",
+        "message": "Containers became healthy in 20.23s.",
+        "status": "True",
+        "type": "ContainerHealthy"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T22:46:35.990206Z",
+        "message": "Container image import completed.",
+        "status": "True",
+        "type": "ContainerReady"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T23:19:45.673663Z",
+        "message": "Revision retired.",
+        "reason": "Retired",
+        "status": "Unknown",
+        "type": "ResourcesAvailable"
+      }
+    ],
+    "imageDigest": "europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff"
+  }
+}

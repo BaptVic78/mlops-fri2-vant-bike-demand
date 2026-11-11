@@ -1,0 +1,383 @@
+{
+  "started_at": "2026-11-11T23:24:29.390563+00:00",
+  "finished_at": "2026-11-11T23:24:30.508985+00:00",
+  "base_url": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app",
+  "expected_model_version": "baseline-28fdf1958b8a",
+  "workload": "5 rounds of 8 concurrent valid README predictions; no retries",
+  "warmup": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "model_version": "baseline-28fdf1958b8a"
+    }
+  },
+  "n": 40,
+  "good": 40,
+  "good_fraction": 1.0,
+  "status_counts": {
+    "200": 40
+  },
+  "events": [
+    {
+      "round": 1,
+      "request": 1,
+      "at": "2026-11-11T23:24:29.392550+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 147.715
+    },
+    {
+      "round": 1,
+      "request": 2,
+      "at": "2026-11-11T23:24:29.392550+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 148.109
+    },
+    {
+      "round": 1,
+      "request": 3,
+      "at": "2026-11-11T23:24:29.399550+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 141.141
+    },
+    {
+      "round": 1,
+      "request": 4,
+      "at": "2026-11-11T23:24:29.393554+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 195.267
+    },
+    {
+      "round": 1,
+      "request": 5,
+      "at": "2026-11-11T23:24:29.393554+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 195.416
+    },
+    {
+      "round": 1,
+      "request": 6,
+      "at": "2026-11-11T23:24:29.392550+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 195.962
+    },
+    {
+      "round": 1,
+      "request": 7,
+      "at": "2026-11-11T23:24:29.393554+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 199.357
+    },
+    {
+      "round": 1,
+      "request": 8,
+      "at": "2026-11-11T23:24:29.392550+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 196.448
+    },
+    {
+      "round": 2,
+      "request": 1,
+      "at": "2026-11-11T23:24:29.594174+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 223.417
+    },
+    {
+      "round": 2,
+      "request": 2,
+      "at": "2026-11-11T23:24:29.594174+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 193.763
+    },
+    {
+      "round": 2,
+      "request": 3,
+      "at": "2026-11-11T23:24:29.595175+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 219.595
+    },
+    {
+      "round": 2,
+      "request": 4,
+      "at": "2026-11-11T23:24:29.594174+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 223.996
+    },
+    {
+      "round": 2,
+      "request": 5,
+      "at": "2026-11-11T23:24:29.594174+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 193.479
+    },
+    {
+      "round": 2,
+      "request": 6,
+      "at": "2026-11-11T23:24:29.594174+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 220.346
+    },
+    {
+      "round": 2,
+      "request": 7,
+      "at": "2026-11-11T23:24:29.595175+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 220.116
+    },
+    {
+      "round": 2,
+      "request": 8,
+      "at": "2026-11-11T23:24:29.594174+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 197.97
+    },
+    {
+      "round": 3,
+      "request": 1,
+      "at": "2026-11-11T23:24:29.821011+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 223.889
+    },
+    {
+      "round": 3,
+      "request": 2,
+      "at": "2026-11-11T23:24:29.821011+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 218.926
+    },
+    {
+      "round": 3,
+      "request": 3,
+      "at": "2026-11-11T23:24:29.821011+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 223.816
+    },
+    {
+      "round": 3,
+      "request": 4,
+      "at": "2026-11-11T23:24:29.821011+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 223.574
+    },
+    {
+      "round": 3,
+      "request": 5,
+      "at": "2026-11-11T23:24:29.822007+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 228.365
+    },
+    {
+      "round": 3,
+      "request": 6,
+      "at": "2026-11-11T23:24:29.821011+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 229.264
+    },
+    {
+      "round": 3,
+      "request": 7,
+      "at": "2026-11-11T23:24:29.821011+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 223.558
+    },
+    {
+      "round": 3,
+      "request": 8,
+      "at": "2026-11-11T23:24:29.821011+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 187.361
+    },
+    {
+      "round": 4,
+      "request": 1,
+      "at": "2026-11-11T23:24:30.052600+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 230.295
+    },
+    {
+      "round": 4,
+      "request": 2,
+      "at": "2026-11-11T23:24:30.052600+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 156.013
+    },
+    {
+      "round": 4,
+      "request": 3,
+      "at": "2026-11-11T23:24:30.052600+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 233.203
+    },
+    {
+      "round": 4,
+      "request": 4,
+      "at": "2026-11-11T23:24:30.052600+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 230.125
+    },
+    {
+      "round": 4,
+      "request": 5,
+      "at": "2026-11-11T23:24:30.053600+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 154.798
+    },
+    {
+      "round": 4,
+      "request": 6,
+      "at": "2026-11-11T23:24:30.052600+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 219.145
+    },
+    {
+      "round": 4,
+      "request": 7,
+      "at": "2026-11-11T23:24:30.052600+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 229.933
+    },
+    {
+      "round": 4,
+      "request": 8,
+      "at": "2026-11-11T23:24:30.052600+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 230.273
+    },
+    {
+      "round": 5,
+      "request": 1,
+      "at": "2026-11-11T23:24:30.287886+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 214.572
+    },
+    {
+      "round": 5,
+      "request": 2,
+      "at": "2026-11-11T23:24:30.287886+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 171.141
+    },
+    {
+      "round": 5,
+      "request": 3,
+      "at": "2026-11-11T23:24:30.287886+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 214.576
+    },
+    {
+      "round": 5,
+      "request": 4,
+      "at": "2026-11-11T23:24:30.287886+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 218.099
+    },
+    {
+      "round": 5,
+      "request": 5,
+      "at": "2026-11-11T23:24:30.289891+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 218.519
+    },
+    {
+      "round": 5,
+      "request": 6,
+      "at": "2026-11-11T23:24:30.287886+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 171.04
+    },
+    {
+      "round": 5,
+      "request": 7,
+      "at": "2026-11-11T23:24:30.287886+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 207.52
+    },
+    {
+      "round": 5,
+      "request": 8,
+      "at": "2026-11-11T23:24:30.287886+00:00",
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "good": true,
+      "client_duration_ms": 207.926
+    }
+  ],
+  "result": "passed"
+}

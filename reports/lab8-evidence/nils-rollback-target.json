@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "creationTimestamp": "2026-11-11T20:30:10.111587Z",
+    "name": "bike-demand-lab7-refcurrent80f31db"
+  },
+  "spec": {
+    "containerConcurrency": 8,
+    "containers": [
+      {
+        "image": "europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff",
+        "name": "service-1",
+        "ports": [
+          {
+            "containerPort": 8080,
+            "name": "http1"
+          }
+        ],
+        "resources": {
+          "limits": {
+            "cpu": "1",
+            "memory": "512Mi"
+          }
+        },
+        "startupProbe": {
+          "failureThreshold": 24,
+          "httpGet": {
+            "path": "/health",
+            "port": 8080
+          },
+          "periodSeconds": 10,
+          "timeoutSeconds": 5
+        }
+      }
+    ],
+    "serviceAccountName": "bike-demand-runtime@fourth-eon-424715-k1.iam.gserviceaccount.com",
+    "timeoutSeconds": 60
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-11-11T22:46:59.344170Z",
+        "message": "Deploying revision succeeded in 22.33s.",
+        "reason": "Retired",
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T22:46:59.344170Z",
+        "message": "Revision retired.",
+        "reason": "Retired",
+        "severity": "Info",
+        "status": "False",
+        "type": "Active"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T20:30:59.400964Z",
+        "message": "Containers became healthy in 20.19s.",
+        "status": "True",
+        "type": "ContainerHealthy"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T20:30:37.576912Z",
+        "message": "Container image import completed.",
+        "status": "True",
+        "type": "ContainerReady"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T22:46:59.344170Z",
+        "message": "Revision retired.",
+        "reason": "Retired",
+        "status": "Unknown",
+        "type": "ResourcesAvailable"
+      }
+    ],
+    "imageDigest": "europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff"
+  }
+}

@@ -1,0 +1,1109 @@
+[
+  {
+    "jsonPayload": {
+      "duration_ms": 45.295,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.327182Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 45.158,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.326987Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 44.897,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.326682Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 30.153,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.313298Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.035488746s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.278603Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.048714855s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.277465Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.049149505s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.276883Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.048954485s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.276773Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 45.509,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.180507Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 44.76,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.179702Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 44.456,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.179121Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 43.929,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.178845Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.049810335s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.129771Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.048615725s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.129595Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.049259825s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.129580Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.049170984s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.129191Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 47.693,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.052194Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 36.631,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.051945Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 44.306,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.049578Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 43.484,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.047941Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.039689246s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.011769Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.047300175s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.002142Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.050328305s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.001132Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.046407115s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:24.001118Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 48.405,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:23.924367Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 47.957,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:23.923783Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 47.353,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:23.923308Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 44.295,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:23.920101Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.051088725s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:23.871826Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.051039335s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:23.871710Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.051906905s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:23.870853Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.048277945s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:23.870771Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0s",
+      "requestMethod": "GET",
+      "status": 403
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "textPayload": "The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Empty Authorization header value. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client",
+    "timestamp": "2026-11-11T23:20:22.322302Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 0.908,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": "/predict",
+      "status_code": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:22.244790Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003031390s",
+      "requestMethod": "POST",
+      "status": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:22.240761Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 7.44,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:22.159819Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.009867979s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:22.149330Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 2.526,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:22.074040Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.005495340s",
+      "requestMethod": "GET",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:22.068010Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0s",
+      "requestMethod": "GET",
+      "status": 403
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "textPayload": "The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Empty Authorization header value. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client",
+    "timestamp": "2026-11-11T23:20:20.713966Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 0.846,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": "/predict",
+      "status_code": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:20.656176Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.002787170s",
+      "requestMethod": "POST",
+      "status": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:20.652178Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 7.704,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:20.595365Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.009747770s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:20.584668Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 1.003,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:20.515283Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003283140s",
+      "requestMethod": "GET",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:20.510760Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0s",
+      "requestMethod": "GET",
+      "status": 403
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "textPayload": "The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Empty Authorization header value. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client",
+    "timestamp": "2026-11-11T23:20:19.117904Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 0.897,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": "/predict",
+      "status_code": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:19.042562Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003083420s",
+      "requestMethod": "POST",
+      "status": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:19.038469Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 7.412,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:18.961323Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.009441940s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:18.951062Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 1.302,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:18.875363Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003513450s",
+      "requestMethod": "GET",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:18.870669Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0s",
+      "requestMethod": "GET",
+      "status": 403
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "textPayload": "The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Empty Authorization header value. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client",
+    "timestamp": "2026-11-11T23:20:17.267849Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 1.727,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": "/predict",
+      "status_code": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:17.182459Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.004346930s",
+      "requestMethod": "POST",
+      "status": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:17.177505Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 8.137,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:17.115655Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.010244249s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:17.104674Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 1.281,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:16.964970Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.004874639s",
+      "requestMethod": "GET",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:16.959329Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0s",
+      "requestMethod": "GET",
+      "status": 403
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "textPayload": "The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Empty Authorization header value. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client",
+    "timestamp": "2026-11-11T23:20:15.343978Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 1.287,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": "/predict",
+      "status_code": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:15.285652Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003197239s",
+      "requestMethod": "POST",
+      "status": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:15.281570Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 148.47,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:15.220690Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.150825446s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:15.068974Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 0.954,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:14.985075Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003862620s",
+      "requestMethod": "GET",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:14.970579Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "textPayload": "STARTUP HTTP probe succeeded after 3 attempts for container \"service-1\" on port 8080 path \"/health\".",
+    "timestamp": "2026-11-11T23:20:05.551665Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 7.247,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:20:05.551108Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "textPayload": "INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)",
+    "timestamp": "2026-11-11T23:19:55.508172Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "textPayload": "INFO:     Application startup complete.",
+    "timestamp": "2026-11-11T23:19:55.507225Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "textPayload": "INFO:     Waiting for application startup.",
+    "timestamp": "2026-11-11T23:19:50.309672Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "textPayload": "INFO:     Started server process [1]",
+    "timestamp": "2026-11-11T23:19:50.309620Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "INFO:     Finished server process [1]",
+    "timestamp": "2026-11-11T23:19:49.747307Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "INFO:     Application shutdown complete.",
+    "timestamp": "2026-11-11T23:19:49.746811Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "INFO:     Waiting for application shutdown.",
+    "timestamp": "2026-11-11T23:19:49.746478Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "INFO:     Shutting down",
+    "timestamp": "2026-11-11T23:19:49.645146Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "timestamp": "2026-11-11T23:19:44.703522Z"
+  }
+]

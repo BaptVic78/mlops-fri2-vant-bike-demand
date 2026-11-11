@@ -1,0 +1,26 @@
+LAB 8 - INCIDENT OBSERVATION
+Operator: Nils Giraud
+Observation started (UTC): 2026-11-11T23:14:09Z
+Diagnostic recorded (UTC): 2026-11-11T23:17:25.9078553Z
+Service: bike-demand-lab7 / europe-west1 / fourth-eon-424715-k1
+URL: https://bike-demand-lab7-obot7iy6yq-ew.a.run.app
+
+Observed revision: bike-demand-lab7-lab8-victor-01
+Traffic: 100% on this unexpected revision; service Ready=True
+Serial checks: health 200; predict 200; invalid hour 422; anonymous 403
+Expected and observed version: baseline-28fdf1958b8a
+
+Concurrent test: 4 batches x 4 valid README predictions
+Client window (UTC): 2026-11-11T23:16:16.653431Z to 23:16:17.130013Z
+HTTP 200: 3 / 16
+HTTP 503: 13 / 16
+Availability: 18.75%
+Result: failed
+
+Live configuration: UVICORN_LIMIT_CONCURRENCY=2
+Cloud Run container concurrency: 8
+Server log: WARNING: Exceeded concurrency limit.
+The suspect and accepted revisions use the same immutable image.
+Diagnosis: runtime concurrency limit rejects simultaneous valid requests.
+Model-change and invalid-input hypotheses rejected for this symptom.
+No traffic or configuration change made before this record.

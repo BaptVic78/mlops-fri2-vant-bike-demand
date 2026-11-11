@@ -663,6 +663,29 @@ Example valid input:
 body. The handlers live in `src/bike_demand/api.py` and load the artifact saved
 by `bike_demand.train`.
 
+## Lab 8: incident diagnosis and recovery
+
+Follow [RUNBOOK.md](RUNBOOK.md) to observe the private service, record hypotheses
+before recovery and verify a named accepted traffic target. Nils's
+[operator report](reports/lab-08.md) links the timeline and raw observations
+under `reports/lab8-evidence/nils-*`. Axel remains the incident recorder.
+
+The serial checker passed during this drill, while a bounded concurrent
+workload exposed 503 responses. After one traffic rollback, the same workload
+passed. Application middleware logs omit Uvicorn-level rejections; inspect
+platform request logs and server warnings as well.
+
+```powershell
+uv run --locked python scripts/check_operator_workload.py --base-url https://bike-demand-lab7-obot7iy6yq-ew.a.run.app --expect-model baseline-28fdf1958b8a
+```
+
+This sends four batches of four valid README predictions, without retries.
+It prints statuses and durations, keeps the identity token in memory, and
+exits 0 only when every response meets the contract. Use `--gcloud` for a CLI
+outside PATH. A passing small workload does not establish production capacity.
+The report separately compares Victor's original five-by-eight baseline and
+incident with Nils's fresh recovery on that unchanged workload.
+
 ## Support and individual reports
 
 If setup remains blocked after five minutes, contact the instructor using the

@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "creationTimestamp": "2026-11-11T22:46:07.037250Z",
+    "name": "bike-demand-lab7-lab8-victor-01"
+  },
+  "spec": {
+    "containerConcurrency": 8,
+    "containers": [
+      {
+        "env": [
+          {
+            "name": "UVICORN_LIMIT_CONCURRENCY",
+            "value": "2"
+          }
+        ],
+        "image": "europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff",
+        "name": "service-1",
+        "ports": [
+          {
+            "containerPort": 8080,
+            "name": "http1"
+          }
+        ],
+        "resources": {
+          "limits": {
+            "cpu": "1",
+            "memory": "512Mi"
+          }
+        },
+        "startupProbe": {
+          "failureThreshold": 24,
+          "httpGet": {
+            "path": "/health",
+            "port": 8080
+          },
+          "periodSeconds": 10,
+          "timeoutSeconds": 5
+        }
+      }
+    ],
+    "serviceAccountName": "bike-demand-runtime@fourth-eon-424715-k1.iam.gserviceaccount.com",
+    "timeoutSeconds": 60
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-11-11T22:46:57.982707Z",
+        "message": "Deploying revision succeeded in 22.39s.",
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T22:46:58.088292Z",
+        "severity": "Info",
+        "status": "True",
+        "type": "Active"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T22:46:57.930426Z",
+        "message": "Containers became healthy in 20.23s.",
+        "status": "True",
+        "type": "ContainerHealthy"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T22:46:35.990206Z",
+        "message": "Container image import completed.",
+        "status": "True",
+        "type": "ContainerReady"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T22:46:37.251905Z",
+        "message": "Provisioning imported containers completed in 1.67s. Checking container health. This will wait for up to 4m for the configured startup probe, including an initial delay of 0s.",
+        "status": "True",
+        "type": "ResourcesAvailable"
+      }
+    ],
+    "imageDigest": "europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff"
+  }
+}
