@@ -397,6 +397,61 @@ pipeline must remove.
 | **Partial**: what happens to incomplete output? | A stage writes to `artifacts/candidates/.tmp-<run_id>/` and renames it only after the metadata and checksum are written. A run directory without a complete `model-metadata.json` is incomplete: the gate answers `blocked` and the directory is deleted before the rerun. | Reusing a half-written bundle, or trusting that a file exists. | A truncated `model.joblib` can still exist and even load. Only the recorded checksum shows that the evaluated bytes are complete. |
 | **Identity**: which inputs determine this run? | `run_id` = first 12 hex characters of a SHA-256 over: training commit, `uv.lock` hash, `data_sha256`, candidate config hash and policy hash. The record also stores the platform (image ID or OS) because bytes depend on it. The output identity is `model_sha256`. | `model_version` (`baseline-<random>`), or a timestamp. | `model_version` is drawn at random at each build: the same bytes got `bb0954a06404` in Lab 5 and `83202f56543b` today. Two runs with identical inputs should share an id, and different inputs must not. |
 
+### Decide and retain accepted versions
+
+After producing a complete candidate, run:
+
+```sh
+uv run --locked python -m bike_demand.gate --candidate artifacts/candidates/<run_id>
+```
+
+The gate writes `reports/lab7-decisions/<run_id>.json` once. It exits 0 for
+accept, 1 for a measured rejection, and 2 for missing or invalid evidence.
+The record names failed claims with observations and thresholds. Repeating a
+decision refuses to replace its record. A missing bundle or changed checksum
+blocks the decision before model loading.
+
+The gate checks the training commit's policy and lock, the input identity,
+saved model bytes and metadata, ordered features, frozen data, date partitions,
+finite scores and readback evidence. The pipeline now retains the original
+config bytes in `input-config.yaml`; earlier baseline runs are checked against
+the preset in their training commit. Recorded and locally completed candidates
+count toward the policy budget, including attempts awaiting a decision.
+Evaluation scores remain claims produced by the pipeline, whose code is reviewed.
+
+After an accept decision, a reviewed manual operation can prepare the local
+accepted package for the deployment owner:
+
+```sh
+uv run --locked python -m bike_demand.gate --candidate artifacts/candidates/<run_id> --promote --previous artifacts/reference
+```
+
+Both the previous and new trusted bundles are retained under
+`artifacts/accepted/versions/<model_sha256>/`. A promotion record is saved in
+`artifacts/accepted/promotions/`, then `artifacts/accepted/current.json` is
+atomically replaced. Use the pointer's `bundle` and `previous_bundle` paths
+to recover either package. Nils uses these retained bytes for the Cloud Run
+handoff. The original `artifacts/model.joblib` is kept intact during gate work.
+Subsequent promotions must supply the bundle currently named by the pointer.
+
+One exclusive `artifacts/.gate-lock` serializes decisions and promotions.
+After a hard kill, confirm the owning process has stopped before removing a
+stale lock. An interrupted promotion retains the old pointer and can resume
+with the same inputs. Model versions are archived before advancing the pointer.
+Promotion refuses rejected decisions or changed policy, evidence and model bytes.
+
+For the final remaining canonical attempt, `configs/candidate-lab7.yaml`
+declares 150 trees, depth 20, minimum leaf size 2, and all features at each split.
+The hypothesis is that deeper trees can capture calendar/weather interactions
+while a two-observation leaf and more trees reduce unstable predictions.
+The fixed seed and single worker follow policy version 1. Both earlier attempts
+and this one count toward its budget of three. Results and gate records are
+linked from [the Lab 7 report](reports/lab-07.md).
+
+```sh
+uv run --locked pytest -q tests/test_gate.py tests/test_pipeline.py
+```
+
 ### Fair comparison
 
 | Question | Kept | Rejected | Why |

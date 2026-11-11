@@ -173,6 +173,7 @@ def produce_candidate(root: Path, config_path: Path, reference: Path) -> Path:
         }
         write_json(temporary / "evaluation.json", evaluation)
         write_json(temporary / "config.json", config)
+        shutil.copyfile(config_path, temporary / "input-config.yaml")
         shutil.copyfile(policy_path, temporary / "gate-policy.yaml")
         tracking = Tracking(root)
         tracking_id = tracking.start_run("candidate", context, model.get_params())
