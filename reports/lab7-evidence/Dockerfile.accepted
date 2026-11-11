@@ -1,0 +1,16 @@
+FROM python:3.12.12-slim
+COPY --from=ghcr.io/astral-sh/uv:0.12.24 /uv /uvx /bin/
+ENV UV_PYTHON_DOWNLOADS=never UV_LINK_MODE=copy PYTHONUNBUFFERED=1
+WORKDIR /app
+COPY pyproject.toml uv.lock .python-version README.md ./
+RUN uv sync --locked --no-dev --no-install-project
+COPY src ./src
+RUN uv sync --locked --no-dev
+COPY accepted/model.joblib accepted/model-metadata.json ./artifacts/
+RUN echo "d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07  artifacts/model.joblib" | sha256sum -c -
+RUN .venv/bin/python -c "from pathlib import Path; from bike_demand.api import load_artifact; print(load_artifact(Path('artifacts/model.joblib'), Path('artifacts/model-metadata.json'))[1])"
+LABEL org.opencontainers.image.revision=80f31dbb63503e618ee65450962f85e76466c8e4
+LABEL accepted.model.sha256=d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07
+ENV UVICORN_HOST=0.0.0.0 UVICORN_PORT=8080
+EXPOSE 8080
+CMD [".venv/bin/uvicorn", "bike_demand.api:app", "--no-access-log"]

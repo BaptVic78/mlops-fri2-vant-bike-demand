@@ -4,3 +4,7 @@
 data/raw/hour.csv -text
 data/UCI-original-Readme.txt -text
 tests/fixtures/*.csv -text
+
+# Preserve the supplied deployment build records for checksum verification.
+reports/lab7-evidence/Dockerfile.accepted text eol=lf
+reports/lab7-evidence/cloudbuild-accepted.yaml text eol=lf

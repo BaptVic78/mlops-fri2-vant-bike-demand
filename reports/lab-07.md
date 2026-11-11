@@ -171,3 +171,82 @@ Screenshot of the recorded preservation result in commit `4496195`.
 
 The four jobs passed on `4496195`, run 42995781526. These screenshots
 supplement the raw decision, preservation and test records.
+
+
+## Nils's accepted reference preparation
+
+Nils Giraud owns the accepted-package recovery and Cloud Run handoff for Lab 7.
+The three canonical gate decisions remain rejected, so the accepted reference
+is retained. This preparation creates no candidate and consumes no attempt.
+
+The [handoff record](lab7-evidence/accepted-handoff.json) records local recovery
+from image `sha256:13594e76dc0fcd196df50b3f21c9a707e92a1cdca11aad759be25a7430a7f369`.
+Its model checksum matches the policy reference, and the real service loader
+accepted the model and metadata. The package is retained under
+`artifacts/accepted/versions/d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07/`.
+The recovered metadata identifies `baseline-f4459fc6e2a4`.
+
+The recovery command is:
+
+```sh
+uv run --locked python -m bike_demand.reference_bundle --source artifacts/reference
+```
+
+It validates the checksum before loading and reuses the gate's retention and
+locking logic. The accepted pointer stays in place. Regression tests cover
+repeat recovery, source and pointer preservation, mismatched source bytes and
+corruption of an already retained model. Recovery instructions are in the README.
+
+### Live service and retained revision
+
+Victor completed the Cloud Run prerequisite and supplied the deployment handoff
+on 11 November 2026. Nils connected with his own Google account and independently
+checked the service, both revisions, registry access and the filtered service logs.
+
+| Check | Observed result |
+|---|---|
+| Project / region / service | `fourth-eon-424715-k1` / `europe-west1` / `bike-demand-lab7` |
+| URL | `https://bike-demand-lab7-obot7iy6yq-ew.a.run.app` |
+| Health | HTTP 200, `status: ok`, `baseline-28fdf1958b8a` |
+| README prediction | HTTP 200, `146.59529728935132`, same expected version |
+| Invalid hour `24` | HTTP 422 naming `body.hr` |
+| Anonymous health | HTTP 403 |
+| Current revision | `bike-demand-lab7-refcurrent80f31db`, Ready, 100% traffic |
+| Previous revision | `bike-demand-lab7-refbase80f31db`, retained and Ready, zero traffic |
+
+The [HTTP record](lab7-evidence/cloud-run-nils-http.json),
+[revision record](lab7-evidence/cloud-run-nils-revisions.json) and
+[request logs](lab7-evidence/cloud-run-nils-logs.json) preserve the observations.
+The previous revision is inactive/retired because it receives no traffic; it
+still exists and its Ready condition is true. Both revisions use immutable image
+`sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff`.
+
+Nils pulled that exact image and extracted its bundle into ignored
+`artifacts/cloud-reference/`. Its model SHA-256 equals the policy reference
+`d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07`.
+Its metadata SHA-256 is
+`bef55cb388d8d784f41b029269fc41a1d7e555a820714d46429d3fcd66fdc8bc`.
+The real service loader accepted both files and returned the expected deployed
+version. The version label differs from the earlier local archive, while the
+model bytes are identical. No candidate was accepted or promoted.
+
+The image labels identify reviewed source `80f31db` and the accepted checksum.
+Victor supplied Cloud Build ID `8fdde224-e448-4ba2-8d2e-93a8fcdf7f86`, reported
+successful, and the [deployment Dockerfile](lab7-evidence/Dockerfile.accepted)
+and [build configuration](lab7-evidence/cloudbuild-accepted.yaml).
+Nils checked the supplied Dockerfile checksum and inspected its copy/check/load
+steps; it does not train. The Cloud Build logs were not independently read.
+
+The reproducible check is:
+
+```sh
+uv run --locked python scripts/check_cloud_run.py --base-url https://bike-demand-lab7-obot7iy6yq-ew.a.run.app --expect-model baseline-28fdf1958b8a
+```
+
+It exited 0. A [negative control](lab7-evidence/cloud-run-negative-control.json)
+with `--expect-model deliberately-wrong-version` exited 1, as required.
+Tokens stay in memory and are excluded from output. README instructions cover
+private invocation, exact-package recovery and traffic rollback. No training,
+candidate evaluation or traffic change occurred during this verification.
+The two retained revisions contain the same accepted reference; a rollback
+between different accepted models was not performed.

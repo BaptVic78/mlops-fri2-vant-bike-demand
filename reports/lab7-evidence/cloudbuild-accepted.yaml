@@ -1,0 +1,14 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -f
+      - Dockerfile.accepted
+      - -t
+      - europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service:ref-80f31db-d24c050e
+      - .
+images:
+  - europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service:ref-80f31db-d24c050e
+options:
+  logging: CLOUD_LOGGING_ONLY
+timeout: 1200s

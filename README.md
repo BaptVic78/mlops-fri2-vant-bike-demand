@@ -452,6 +452,124 @@ linked from [the Lab 7 report](reports/lab-07.md).
 uv run --locked pytest -q tests/test_gate.py tests/test_pipeline.py
 ```
 
+### Serve and recover the accepted reference
+
+All three canonical candidates were rejected under policy version 1. Keep the
+accepted reference checksum `d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07`.
+The three-attempt budget is exhausted. Victor deployed the retained reference
+from reviewed main `80f31db`, and Nils independently verified the private service.
+
+| Deployment | Observed value |
+|---|---|
+| Project / region / service | `fourth-eon-424715-k1` / `europe-west1` / `bike-demand-lab7` |
+| Authenticated URL | `https://bike-demand-lab7-obot7iy6yq-ew.a.run.app` |
+| Serving revision, 100% traffic | `bike-demand-lab7-refcurrent80f31db` |
+| Previous revision, retained and Ready | `bike-demand-lab7-refbase80f31db` |
+| Expected model version | `baseline-28fdf1958b8a` |
+| Immutable image | `europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff` |
+
+The [HTTP results](reports/lab7-evidence/cloud-run-nils-http.json) show 200 for
+health and prediction, 422 for `hr=24`, and 403 without authentication.
+The [revision record](reports/lab7-evidence/cloud-run-nils-revisions.json) links
+both Ready revisions to this image. The previous revision receives no traffic;
+its inactive/retired state is normal at zero traffic and it remains available.
+Both revisions contain the same accepted model; this is retention of the
+reference, not a promotion of a rejected candidate.
+
+Authenticate with your own authorized account, then run from the repository:
+
+```powershell
+gcloud auth login
+uv sync --locked
+uv run --locked python scripts/check_cloud_run.py --base-url https://bike-demand-lab7-obot7iy6yq-ew.a.run.app --expect-model baseline-28fdf1958b8a
+gcloud run services describe bike-demand-lab7 --project=fourth-eon-424715-k1 --region=europe-west1 --format="yaml(status.traffic,status.conditions)"
+gcloud run revisions describe bike-demand-lab7-refbase80f31db --project=fourth-eon-424715-k1 --region=europe-west1 --format="yaml(metadata.name,status.conditions,status.imageDigest)"
+```
+
+Use `--gcloud <absolute-path-to-gcloud.cmd>` if the CLI is outside PATH.
+The checker keeps the identity token in memory, refuses HTTP redirects and
+prints no credentials. It checks the independently supplied model version,
+finite nonnegative prediction, invalid-hour rejection and anonymous denial.
+Exit 0 means all HTTP checks passed; an incorrect expected version exits 1.
+This checks the API contract, not predictive quality on unseen data.
+
+Recover the exact deployed package from the digest above:
+
+```powershell
+gcloud auth configure-docker europe-west1-docker.pkg.dev
+$AcceptedImage = 'europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff'
+docker pull $AcceptedImage
+New-Item -ItemType Directory -Force artifacts/cloud-reference | Out-Null
+docker create --name lab7-cloud-recovery $AcceptedImage
+docker cp lab7-cloud-recovery:/app/artifacts/model.joblib artifacts/cloud-reference/model.joblib
+docker cp lab7-cloud-recovery:/app/artifacts/model-metadata.json artifacts/cloud-reference/model-metadata.json
+docker rm lab7-cloud-recovery
+Get-FileHash artifacts/cloud-reference/model.joblib,artifacts/cloud-reference/model-metadata.json -Algorithm SHA256
+```
+
+Before loading, compare the model checksum with the policy above and metadata
+checksum with `bef55cb388d8d784f41b029269fc41a1d7e555a820714d46429d3fcd66fdc8bc`.
+The deployed metadata uses `baseline-28fdf1958b8a`; the earlier local archive
+below uses `baseline-f4459fc6e2a4` for identical model bytes. Retention is keyed
+by model checksum and reuses an existing verified package's metadata. Keep the
+separate `artifacts/cloud-reference` directory to preserve the exact deployed
+metadata alongside the immutable registry image.
+
+The accepted-image build copies the existing bundle, checks its checksum and
+calls the service loader. Victor supplied the archived
+[Dockerfile](reports/lab7-evidence/Dockerfile.accepted) and
+[Cloud Build configuration](reports/lab7-evidence/cloudbuild-accepted.yaml),
+used from a build context at `80f31db` with an `accepted/` bundle directory.
+These are deployment records, not the root CI Dockerfile, which still trains
+at build time. Do not use a fresh training run to replace accepted bytes.
+The [handoff record](reports/lab7-evidence/accepted-handoff.json) separates
+Victor's reported Cloud Build result from Nils's independent image and API checks.
+
+Keep both revisions and their registry image. If a later live deployment fails,
+return traffic to the retained revision and rerun the HTTP checker:
+
+```powershell
+gcloud run services update-traffic bike-demand-lab7 --project=fourth-eon-424715-k1 --region=europe-west1 --to-revisions=bike-demand-lab7-refbase80f31db=100
+uv run --locked python scripts/check_cloud_run.py --base-url https://bike-demand-lab7-obot7iy6yq-ew.a.run.app --expect-model baseline-28fdf1958b8a
+```
+
+Restoring the current revision uses the same traffic command with
+`bike-demand-lab7-refcurrent80f31db=100`. No traffic was changed during Nils's
+verification. A rollback exercise belongs to Lab 8 after its runbook is ready.
+
+#### Earlier local recovery
+
+Obtain the trusted image or bundle from its builder. Restore a saved image with
+`docker load --input artifacts/accepted-image.tar`. Use the independently
+recorded image ID when extracting the files. The local recovery check used
+the retained Lab 6 image in
+[accepted-handoff.json](reports/lab7-evidence/accepted-handoff.json), whose model
+checksum matches the policy. These PowerShell commands recover that bundle:
+
+```powershell
+$AcceptedImage = 'sha256:13594e76dc0fcd196df50b3f21c9a707e92a1cdca11aad759be25a7430a7f369'
+New-Item -ItemType Directory -Force artifacts/reference | Out-Null
+docker create --name lab7-reference-recovery $AcceptedImage
+docker cp lab7-reference-recovery:/app/artifacts/model.joblib artifacts/reference/model.joblib
+docker cp lab7-reference-recovery:/app/artifacts/model-metadata.json artifacts/reference/model-metadata.json
+docker rm lab7-reference-recovery
+uv sync --locked
+uv run --locked python -m bike_demand.reference_bundle --source artifacts/reference
+```
+
+The command verifies the model checksum before loading, applies the existing
+service-loader checks and retains the package under
+`artifacts/accepted/versions/<model_sha256>/`. It prints the model version,
+model checksum, metadata checksum and recovery path. Repeating the command
+reuses the verified retained package. It leaves the accepted pointer in place.
+Keep bundles, saved images and the virtual environment outside Git.
+
+The [Lab 7 report](reports/lab-07.md) records both local recovery and the live
+verification completed after Victor's deployment handoff.
+Deployment and traffic changes follow the official
+[Cloud Run deployment guide](https://cloud.google.com/run/docs/deploying) and
+[revision rollback guide](https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration).
+
 ### Fair comparison
 
 | Question | Kept | Rejected | Why |
