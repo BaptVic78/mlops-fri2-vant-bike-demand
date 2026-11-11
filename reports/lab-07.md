@@ -81,3 +81,69 @@ Count both attempts against policy version 1's budget of three.
 Both candidate MAEs equal the reference MAE. Gate decisions remain pending.
 The synthetic immutable-output test covers duplicate-run refusal. No further
 canonical candidate is needed for this pipeline implementation.
+
+## Victor's gate and retained-version handoff (PR #25)
+
+The gate implementation and final candidate config were committed as
+`baad28a`, after the pipeline was merged at `fd844e8`.
+The third and final canonical candidate is `c898c95692c8`.
+It used 150 trees, depth 20 and minimum leaf size 2. The hypothesis was
+declared in the README before the candidate ran. All twelve predictors,
+the data snapshot, time partitions, policy margins, seed and worker count
+kept their policy values.
+
+| Attempt | Candidate validation MAE | Decision |
+|---|---:|---|
+| `06c4291bb9bc` | 86.84685685591091 | [reject](lab7-decisions/06c4291bb9bc.json), exit 1 |
+| `26d505134be8` | 86.84685685591091 | [reject](lab7-decisions/26d505134be8.json), exit 1 |
+| `c898c95692c8` | 86.20153023925847 | [reject](lab7-decisions/c898c95692c8.json), exit 1 |
+
+The policy requires a candidate MAE at most 85.84685685591091.
+The last attempt improved by 0.64532661665244 rentals/hour, below the
+required 1.0. The budget of three evaluated candidates is exhausted.
+All decisions retain the `beat_reference_by` failure, observation and limit.
+The [third evaluation](lab7-evidence/gate-candidate-evaluation.json) and
+[tracking record](lab7-evidence/gate-candidate-tracking.json) preserve its
+model checksum, size, environment, validation scores and readback.
+
+```sh
+uv run --locked python -m bike_demand.gate --candidate artifacts/candidates/06c4291bb9bc
+uv run --locked python -m bike_demand.gate --candidate artifacts/candidates/26d505134be8
+uv run --locked python -m bike_demand.gate --candidate artifacts/candidates/c898c95692c8
+```
+
+The first command returned exit 1. The subsequent two returned exit 1 as well.
+For an incomplete evidence probe, directory `ffffffffffff` lacked
+`evaluation.json`. The gate recorded
+[blocked](lab7-decisions/ffffffffffff.json), exit 2, naming the missing file.
+That probe produced no model and consumes no evaluated-candidate budget.
+Raw subsequent executions are in
+[gate-execution.txt](lab7-evidence/gate-execution.txt).
+
+The [preservation check](lab7-evidence/gate-preservation.json) records
+identical accepted model and metadata checksums before and after the
+second and third decisions. The accepted model remains
+`d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07`.
+No canonical promotion was performed because no candidate qualified.
+
+### Promotion mechanism and limits
+
+Synthetic tests exercise acceptance and promotion using a fixture-specific
+policy and six rows. They verify two distinct retained model checksums,
+the previous package's presence, atomic pointer replacement and rejection
+of post-decision tampering. A simulated interruption before pointer
+replacement retains the old state and resumes with the same inputs.
+The [test output](lab7-evidence/gate-tests.txt) includes the synthetic
+promotion paths and hashes. These fixture outputs are local test evidence.
+The production policy and canonical observations above govern real promotion.
+
+The shared pipeline fixture was moved into `tests/conftest.py` so both
+suites exercise the same candidate-bundle format. Existing assertions,
+including the clean CRLF-checkout regression, were retained.
+The pipeline now saves original config bytes for later hash verification.
+The gate supports the two earlier bundles through their committed baseline
+config and serializes decisions/promotions with an exclusive filesystem lock.
+
+Nils's Cloud Run deployment and retained revision remain the next handoff.
+The accepted bundle and its metadata are recoverable from the reference
+package used above. Docker Desktop's Linux engine remains unavailable locally.

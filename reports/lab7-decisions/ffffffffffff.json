@@ -1,0 +1,18 @@
+{
+  "run_id": "ffffffffffff",
+  "policy_version": 1,
+  "policy_sha256": "74974c3fb4acd3e9ac550b784031a40243bfe2a5f509da2680eae102f77b0d00",
+  "gate_commit": "baad28aff92fc70f38523a86cc74f0c8683a806f",
+  "timestamp": "2026-11-11T09:24:58.200655+00:00",
+  "decision": "blocked",
+  "exit_code": 2,
+  "evaluation_sha256": null,
+  "model_sha256": null,
+  "missing": [
+    {
+      "claim": "evaluation.json",
+      "reason": "[Errno 2] No such file or directory: '/mnt/c/Users/victo/Documents/Codex/2026-11-06/https-github-com-baptvic78-mlops-fri2/work/lab5/artifacts/candidates/ffffffffffff/evaluation.json'"
+    }
+  ],
+  "failed": []
+}

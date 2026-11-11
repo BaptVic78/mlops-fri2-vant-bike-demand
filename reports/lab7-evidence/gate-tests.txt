@@ -1,0 +1,3 @@
+..........Synthetic promotion: {"bundle": "versions/8b5a4439783dbb123d7bcdb9289b1fd5121be6646bf5cb085afd6780b888727f", "decision_sha256": "0b4080bd4c461e631e14842f0ba5ade561436b3310f74cfe0082f9f5321e299f", "model_sha256": "8b5a4439783dbb123d7bcdb9289b1fd5121be6646bf5cb085afd6780b888727f", "previous_bundle": "versions/e8521d4b4fcef9b8b2a37fb3ce79bc0f87978b14775ceaadab8d90d631aba678", "previous_model_sha256": "e8521d4b4fcef9b8b2a37fb3ce79bc0f87978b14775ceaadab8d90d631aba678", "run_id": "54ae42ce14bd"}
+......
+16 passed in 3.05s

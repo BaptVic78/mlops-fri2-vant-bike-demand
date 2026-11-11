@@ -1,5 +1,6 @@
 import json
 
+import joblib
 import pandas as pd
 import pytest
 import yaml
@@ -36,6 +37,13 @@ def make_candidate(workspace, accept=False):
         model, _ = gate.load_artifact(
             reference / "model.joblib", reference / "model-metadata.json"
         )
+        model.fixture_reference = True
+        joblib.dump(model, reference / "model.joblib")
+        metadata_path = reference / "model-metadata.json"
+        metadata = json.loads(metadata_path.read_text())
+        metadata["model_sha256"] = sha256(reference / "model.joblib")
+        metadata_path.write_text(json.dumps(metadata))
+        policy["reference"]["model_sha256"] = metadata["model_sha256"]
         parts = pipeline.split_data(pipeline.load_data(data))
         _, mae = pipeline.score(model, parts["validation"])
         policy["reference"]["recorded_validation_mae"] = mae
@@ -119,6 +127,8 @@ def test_promotion_retains_previous_and_detects_post_decision_tampering(gate_wor
     assert decision["failed"] == []
     assert decision["decision"] == "accept", decision
     result = gate.promote(root, candidate, reference)
+    assert result["model_sha256"] != result["previous_model_sha256"]
+    print("Synthetic promotion:", json.dumps(result, sort_keys=True))
     store = root / "artifacts/accepted"
     assert sha256(store / result["previous_bundle"] / "model.joblib") == sha256(
         reference / "model.joblib"
@@ -140,3 +150,72 @@ def test_concurrent_gate_is_refused(gate_workspace):
     with gate.gate_lock(root):
         with pytest.raises(FileExistsError):
             gate.decide(root, candidate)
+
+
+def test_incomplete_blocked_record_does_not_consume_evaluated_budget(gate_workspace):
+    root, _, _ = gate_workspace
+    candidate = make_candidate(gate_workspace)
+    incomplete = root / "artifacts/candidates/ffffffffffff"
+    incomplete.mkdir()
+    assert gate.decide(root, incomplete)["decision"] == "blocked"
+    # The existing fixture budget remains three. Add two measured historic runs.
+    history = root / "reports/lab7-evidence"
+    history.mkdir(parents=True)
+    for i in range(2):
+        (history / f"evaluation-{i}.json").write_text(
+            json.dumps({"policy_version": 1, "run_id": str(i)})
+        )
+    assert gate.decide(root, candidate)["decision"] == "reject"
+
+
+def test_interrupted_promotion_keeps_pointer_and_can_resume(
+    gate_workspace, monkeypatch
+):
+    root, _, reference = gate_workspace
+    candidate = make_candidate(gate_workspace, accept=True)
+    assert gate.decide(root, candidate)["decision"] == "accept"
+    replace = gate.os.replace
+
+    def interrupted(*args):
+        raise OSError("interrupted before pointer replacement")
+
+    monkeypatch.setattr(gate.os, "replace", interrupted)
+    with pytest.raises(OSError, match="interrupted"):
+        gate.promote(root, candidate, reference)
+    store = root / "artifacts/accepted"
+    assert not (store / "current.json").exists()
+    assert (
+        store / "versions" / sha256(reference / "model.joblib") / "model.joblib"
+    ).is_file()
+    monkeypatch.setattr(gate.os, "replace", replace)
+    result = gate.promote(root, candidate, reference)
+    assert json.loads((store / "current.json").read_text()) == result
+
+
+def test_crlf_lock_matches_git_blob_but_changed_lock_is_blocked(
+    gate_workspace, monkeypatch
+):
+    root, _, _ = gate_workspace
+    lock = root / "uv.lock"
+    lock.write_bytes(b"fixture lock\r\n")
+    candidate = make_candidate(gate_workspace)
+    monkeypatch.setattr(
+        gate,
+        "committed_bytes",
+        lambda root, commit, path: (root / path).read_bytes().replace(b"\r\n", b"\n"),
+    )
+    assert gate.decide(root, candidate)["decision"] == "reject"
+    assert not gate.checkout_hash_matches(b"different lock\n", sha256(lock))
+
+
+def test_model_loading_failure_is_blocked(gate_workspace, monkeypatch):
+    root, _, _ = gate_workspace
+    candidate = make_candidate(gate_workspace)
+
+    def incompatible(*args):
+        raise RuntimeError("incompatible model environment")
+
+    monkeypatch.setattr(gate, "load_artifact", incompatible)
+    result = gate.decide(root, candidate)
+    assert result["decision"] == "blocked"
+    assert result["missing"][0]["claim"] == "loads_with_service_checks"

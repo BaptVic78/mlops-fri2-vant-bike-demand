@@ -63,6 +63,21 @@ def committed_bytes(root: Path, commit: str, path: str) -> bytes:
     ).stdout
 
 
+def checkout_hash_matches(committed: bytes, expected: str) -> bool:
+    lf = committed.replace(b"\r\n", b"\n")
+    return expected in {
+        hashlib.sha256(value).hexdigest()
+        for value in (committed, lf, lf.replace(b"\n", b"\r\n"))
+    }
+
+
+def check_bundle(directory: Path) -> None:
+    try:
+        load_artifact(directory / "model.joblib", directory / "model-metadata.json")
+    except Exception as error:
+        raise ValueError(f"loads_with_service_checks: {error}") from error
+
+
 def assess(root: Path, candidate: Path, policy: dict) -> tuple[dict, list, list]:
     evidence = json.loads((candidate / "evaluation.json").read_text())
     missing, failed = [], []
@@ -90,7 +105,7 @@ def assess(root: Path, candidate: Path, policy: dict) -> tuple[dict, list, list]
     if yaml.safe_load(old_policy) != policy:
         raise ValueError("policy_on_training_commit: policy differs")
     old_lock = committed_bytes(root, evidence["training_commit"], "uv.lock")
-    if hashlib.sha256(old_lock).hexdigest() != evidence["lock_sha256"]:
+    if not checkout_hash_matches(old_lock, evidence["lock_sha256"]):
         raise ValueError("lock_sha256: differs from the training commit")
     if evidence["policy_version"] != policy["policy_version"]:
         raise ValueError("policy_version: mismatch")
@@ -108,10 +123,7 @@ def assess(root: Path, candidate: Path, policy: dict) -> tuple[dict, list, list]
         original = committed_bytes(
             root, evidence["training_commit"], "configs/baseline.yaml"
         )
-        variants = (original, original.replace(b"\r\n", b"\n").replace(b"\n", b"\r\n"))
-        if evidence["config_sha256"] not in {
-            hashlib.sha256(value).hexdigest() for value in variants
-        }:
+        if not checkout_hash_matches(original, evidence["config_sha256"]):
             raise ValueError("config_sha256: original configuration is unavailable")
     if sha256(root / policy["evaluation"]["data"]) != evidence["data_sha256"]:
         raise ValueError("data_sha256_matches: local snapshot differs")
@@ -144,7 +156,7 @@ def assess(root: Path, candidate: Path, policy: dict) -> tuple[dict, list, list]
         raise ValueError("evaluated_bytes_are_decided_bytes: checksum mismatch")
     if model.stat().st_size != evidence["model_bytes"]:
         raise ValueError("model_bytes: evidence differs from saved bytes")
-    load_artifact(model, candidate / "model-metadata.json")
+    check_bundle(candidate)
     values = {
         "candidate_mae": evidence["validation_mae"]["random_forest"],
         "naive_mae": evidence["validation_mae"]["naive_train_mean"],
@@ -238,6 +250,11 @@ def decide(root: Path, candidate: Path) -> dict:
             paths += list(record_dir.glob("*.json"))
             for path in paths:
                 previous = json.loads(path.read_text())
+                if (
+                    previous.get("decision") == "blocked"
+                    and previous.get("model_sha256") is None
+                ):
+                    continue
                 if previous["policy_version"] == policy["policy_version"]:
                     attempts.add(previous["run_id"])
             if len(attempts) > policy["candidate_settings"]["budget"]:
@@ -278,13 +295,13 @@ def decide(root: Path, candidate: Path) -> dict:
 def retain_bundle(source: Path, store: Path) -> str:
     model = source / "model.joblib"
     digest = sha256(model)
-    load_artifact(model, source / "model-metadata.json")
+    check_bundle(source)
     target = store / "versions" / digest
     target.parent.mkdir(parents=True, exist_ok=True)
     if target.exists():
         if sha256(target / "model.joblib") != digest:
             raise ValueError("accepted_store: corrupted retained version")
-        load_artifact(target / "model.joblib", target / "model-metadata.json")
+        check_bundle(target)
         return digest
     temporary = Path(tempfile.mkdtemp(prefix=".tmp-", dir=target.parent))
     try:
@@ -294,7 +311,7 @@ def retain_bundle(source: Path, store: Path) -> str:
         )
         if sha256(temporary / "model.joblib") != digest:
             raise ValueError("accepted_store: model changed during copy")
-        load_artifact(temporary / "model.joblib", temporary / "model-metadata.json")
+        check_bundle(temporary)
         temporary.rename(target)
     finally:
         if temporary.exists():

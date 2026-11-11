@@ -1,0 +1,22 @@
+{
+  "reference_before": {
+    "model.joblib": "d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07",
+    "model-metadata.json": "bef55cb388d8d784f41b029269fc41a1d7e555a820714d46429d3fcd66fdc8bc"
+  },
+  "decisions": [
+    {
+      "run_id": "26d505134be8",
+      "exit_code": 1
+    },
+    {
+      "run_id": "c898c95692c8",
+      "exit_code": 1
+    }
+  ],
+  "reference_after": {
+    "model.joblib": "d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07",
+    "model-metadata.json": "bef55cb388d8d784f41b029269fc41a1d7e555a820714d46429d3fcd66fdc8bc"
+  },
+  "accepted_reference_unchanged": true,
+  "production_promotion": "none; no candidate meets the frozen policy"
+}
