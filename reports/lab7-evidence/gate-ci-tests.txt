@@ -1,0 +1,1 @@
+tests	Run uv run --locked pytest -q	2026-11-11T09:31:44.6272353Z 186 passed, 2 warnings in 9.72s

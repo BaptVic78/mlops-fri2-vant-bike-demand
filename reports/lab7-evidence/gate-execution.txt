@@ -1,0 +1,63 @@
+{
+  "run_id": "26d505134be8",
+  "policy_version": 1,
+  "policy_sha256": "74974c3fb4acd3e9ac550b784031a40243bfe2a5f509da2680eae102f77b0d00",
+  "gate_commit": "baad28aff92fc70f38523a86cc74f0c8683a806f",
+  "timestamp": "2026-11-11T09:24:57.180846+00:00",
+  "decision": "reject",
+  "exit_code": 1,
+  "evaluation_sha256": "d4a4ef1528ef0e6e40ccd5c0fa37afb50a906ce7532a887c64b2e3c6985769c5",
+  "model_sha256": "de2ccb247c32ade78dcd7c43be6209ca03b7065de42fe8578c1b6e25f93482c3",
+  "missing": [],
+  "failed": [
+    {
+      "claim": "beat_reference_by",
+      "observed": 86.84685685591091,
+      "expected": {
+        "maximum_mae": 85.84685685591091
+      }
+    }
+  ]
+}
+Observed exit code: 1
+{
+  "run_id": "c898c95692c8",
+  "policy_version": 1,
+  "policy_sha256": "74974c3fb4acd3e9ac550b784031a40243bfe2a5f509da2680eae102f77b0d00",
+  "gate_commit": "baad28aff92fc70f38523a86cc74f0c8683a806f",
+  "timestamp": "2026-11-11T09:24:58.149564+00:00",
+  "decision": "reject",
+  "exit_code": 1,
+  "evaluation_sha256": "a2cb84265c7be1ed65df4f43d79b90b891a618bb2a1bcb524a333da62fe5bebf",
+  "model_sha256": "13024a1be8afd441b5c655cbbb6421600defb0511c4e188c9416cbbadf583d03",
+  "missing": [],
+  "failed": [
+    {
+      "claim": "beat_reference_by",
+      "observed": 86.20153023925847,
+      "expected": {
+        "maximum_mae": 85.84685685591091
+      }
+    }
+  ]
+}
+Observed exit code: 1
+{
+  "run_id": "ffffffffffff",
+  "policy_version": 1,
+  "policy_sha256": "74974c3fb4acd3e9ac550b784031a40243bfe2a5f509da2680eae102f77b0d00",
+  "gate_commit": "baad28aff92fc70f38523a86cc74f0c8683a806f",
+  "timestamp": "2026-11-11T09:24:58.200655+00:00",
+  "decision": "blocked",
+  "exit_code": 2,
+  "evaluation_sha256": null,
+  "model_sha256": null,
+  "missing": [
+    {
+      "claim": "evaluation.json",
+      "reason": "[Errno 2] No such file or directory: '/mnt/c/Users/victo/Documents/Codex/2026-11-06/https-github-com-baptvic78-mlops-fri2/work/lab5/artifacts/candidates/ffffffffffff/evaluation.json'"
+    }
+  ],
+  "failed": []
+}
+Accepted model and metadata unchanged.
