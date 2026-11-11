@@ -1,0 +1,87 @@
+[
+  {
+    "jsonPayload": {
+      "duration_ms": 1.215,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": "/predict",
+      "status_code": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T21:03:33.972314Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 151.959,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T21:03:33.897664Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 0.899,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T21:03:33.662546Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 5.665,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T21:03:33.659347Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 0.32,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": null,
+      "status_code": 404
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T20:43:40.325915Z"
+  }
+]

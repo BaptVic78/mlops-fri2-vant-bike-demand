@@ -1,0 +1,110 @@
+{
+  "verified_at": "2026-11-11T21:03:27.765612+00:00",
+  "verifier": "Nils Giraud",
+  "project": "fourth-eon-424715-k1",
+  "region": "europe-west1",
+  "service": "bike-demand-lab7",
+  "url": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app",
+  "service_conditions": [
+    {
+      "lastTransitionTime": "2026-11-11T20:31:00.839767Z",
+      "status": "True",
+      "type": "Ready"
+    },
+    {
+      "lastTransitionTime": "2026-11-11T20:30:59.523051Z",
+      "status": "True",
+      "type": "ConfigurationsReady"
+    },
+    {
+      "lastTransitionTime": "2026-11-11T20:31:00.816195Z",
+      "status": "True",
+      "type": "RoutesReady"
+    }
+  ],
+  "traffic": [
+    {
+      "percent": 100,
+      "revisionName": "bike-demand-lab7-refcurrent80f31db"
+    }
+  ],
+  "serving_revision": {
+    "name": "bike-demand-lab7-refcurrent80f31db",
+    "created_at": "2026-11-11T20:30:10.111587Z",
+    "image_digest": "europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff",
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-11-11T20:30:59.468276Z",
+        "message": "Deploying revision succeeded in 22.33s.",
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T20:30:59.593343Z",
+        "severity": "Info",
+        "status": "True",
+        "type": "Active"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T20:30:59.400964Z",
+        "message": "Containers became healthy in 20.19s.",
+        "status": "True",
+        "type": "ContainerHealthy"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T20:30:37.576912Z",
+        "message": "Container image import completed.",
+        "status": "True",
+        "type": "ContainerReady"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T20:30:38.853964Z",
+        "message": "Provisioning imported containers completed in 1.71s. Checking container health. This will wait for up to 4m for the configured startup probe, including an initial delay of 0s.",
+        "status": "True",
+        "type": "ResourcesAvailable"
+      }
+    ]
+  },
+  "previous_revision": {
+    "name": "bike-demand-lab7-refbase80f31db",
+    "created_at": "2026-11-11T20:28:27.231001Z",
+    "image_digest": "europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff",
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-11-11T20:31:00.879829Z",
+        "message": "Deploying revision succeeded in 33.79s.",
+        "reason": "Retired",
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T20:31:00.879829Z",
+        "message": "Revision retired.",
+        "reason": "Retired",
+        "severity": "Info",
+        "status": "False",
+        "type": "Active"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T20:29:00.874536Z",
+        "message": "Containers became healthy in 10.13s.",
+        "status": "True",
+        "type": "ContainerHealthy"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T20:28:49.022435Z",
+        "message": "Container image import completed in 21.05s.",
+        "status": "True",
+        "type": "ContainerReady"
+      },
+      {
+        "lastTransitionTime": "2026-11-11T20:31:00.879829Z",
+        "message": "Revision retired.",
+        "reason": "Retired",
+        "status": "Unknown",
+        "type": "ResourcesAvailable"
+      }
+    ]
+  },
+  "traffic_changed_during_verification": false
+}

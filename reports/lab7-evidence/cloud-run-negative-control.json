@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-11-11T21:05:21.448568+00:00",
+  "command": "uv run --locked python scripts/check_cloud_run.py --base-url https://bike-demand-lab7-obot7iy6yq-ew.a.run.app --expect-model deliberately-wrong-version",
+  "expected_exit": 1,
+  "observed_exit": 1,
+  "observed_model_version": "baseline-28fdf1958b8a",
+  "result": "failed",
+  "interpretation": "The checker correctly rejected an incorrect expected version; the deployed service remained healthy."
+}
