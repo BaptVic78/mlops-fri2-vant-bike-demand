@@ -622,7 +622,7 @@ Lab 8 split: runbook (Thomas), injector (Victor), operator (Nils), recorder
 - Runbook: [RUNBOOK.md](RUNBOOK.md). It covers the last verified context,
   signal definitions, baseline, first checks by boundary, rollback target,
   the single traffic change, fresh verification and escalation.
-- Incident evidence: `reports/lab8-evidence/`. This folder holds the raw
+- Incident evidence: [Lab 8 handoff and raw records](reports/lab8-evidence/README.md). This folder holds the raw
   checker output, `gcloud` describes and Cloud Run log exports for the
   baseline, incident and recovery periods, plus the timeline. The recorder
   links it from the Lab 8 section of the team report.
