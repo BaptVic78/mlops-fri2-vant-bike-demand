@@ -698,6 +698,24 @@ outside PATH. A passing small workload does not establish production capacity.
 The report separately compares Victor's original five-by-eight baseline and
 incident with Nils's fresh recovery on that unchanged workload.
 
+## Release v1.0.0
+
+The Lab 7 gate rejected `06c4291bb9bc`, `26d505134be8` and `c898c95692c8`.
+The accepted model stays the Week 1 reference, identified by SHA-256
+`d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07`, not by a
+`model_version` label. The held-out test is scored once, after that choice,
+and the score is not used to pick another model.
+
+```bash
+uv run --locked python -m bike_demand.held_test
+```
+
+The command refits the Week 1 preset only to recover those bytes, checks the
+checksum and the recorded validation MAE, then scores July–December 2012.
+A second run refuses to overwrite `reports/final-held-test.json`. The release
+notes are in [reports/release-v1.0.0.md](reports/release-v1.0.0.md). The oral
+guide is in [reports/oral-guide.md](reports/oral-guide.md).
+
 ## Support and individual reports
 
 ### Week 4 checkpoint and final release
