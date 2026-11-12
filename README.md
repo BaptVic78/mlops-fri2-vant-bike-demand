@@ -707,11 +707,13 @@ The accepted model stays the Week 1 reference, identified by SHA-256
 and the score is not used to pick another model.
 
 ```bash
-uv run --locked python -m bike_demand.held_test
+uv run --locked python -m bike_demand.held_test --model <accepted model.joblib>
 ```
 
-The command refits the Week 1 preset only to recover those bytes, checks the
-checksum and the recorded validation MAE, then scores July–December 2012.
+Pass the accepted file, the one whose SHA-256 is the reference above. A local
+refit is a different file and is refused before the test rows are scored. The
+command checks the checksum and the recorded validation MAE, then scores
+July–December 2012.
 A second run refuses to overwrite `reports/final-held-test.json`. The release
 notes are in [reports/release-v1.0.0.md](reports/release-v1.0.0.md). The oral
 guide is in [reports/oral-guide.md](reports/oral-guide.md).
