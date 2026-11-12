@@ -1,0 +1,43 @@
+{
+  "source_commit": "703e09acb6901324f33ceb7bc4deee941f98913d",
+  "read_only_after_operator_diagnosis": true,
+  "workload": "5 rounds of 8 concurrent valid README predictions; no retries",
+  "baseline": {
+    "owner": "Victor Rouleau",
+    "started_at": "2026-11-11T22:45:48.856064+00:00",
+    "finished_at": "2026-11-11T22:45:50.274142+00:00",
+    "n": 40,
+    "good": 40,
+    "good_fraction": 1,
+    "status_counts": {
+      "200": 40
+    },
+    "source": "https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/blob/703e09acb6901324f33ceb7bc4deee941f98913d/reports/lab8-evidence/victor-baseline-workload.json"
+  },
+  "incident": {
+    "owner": "Victor Rouleau",
+    "started_at": "2026-11-11T22:47:02.397980+00:00",
+    "finished_at": "2026-11-11T22:47:03.811297+00:00",
+    "n": 40,
+    "good": 7,
+    "good_fraction": 0.175,
+    "status_counts": {
+      "200": 7,
+      "503": 33
+    },
+    "source": "https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/blob/703e09acb6901324f33ceb7bc4deee941f98913d/reports/lab8-evidence/victor-incident-workload.json"
+  },
+  "recovery": {
+    "owner": "Nils Giraud",
+    "source": "nils-recovery-original-workload.json",
+    "started_at": "2026-11-11T23:24:29.390563+00:00",
+    "finished_at": "2026-11-11T23:24:30.508985+00:00",
+    "n": 40,
+    "good": 40,
+    "good_fraction": 1,
+    "status_counts": {
+      "200": 40
+    }
+  },
+  "comparison_limit": "The same 40-request workload is used across these records; operators and observation windows differ. This is a bounded incident drill, not a production availability estimate."
+}

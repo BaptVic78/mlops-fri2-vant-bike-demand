@@ -1,0 +1,6 @@
+Updating traffic...
+Routing traffic........................................done
+Done.
+URL: https://bike-demand-lab7-obot7iy6yq-ew.a.run.app
+Traffic:
+  100% bike-demand-lab7-refcurrent80f31db

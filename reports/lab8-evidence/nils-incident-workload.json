@@ -1,0 +1,161 @@
+{
+  "started_at": "2026-11-11T23:16:16.653431+00:00",
+  "finished_at": "2026-11-11T23:16:17.130013+00:00",
+  "base_url": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app",
+  "expected_model_version": "baseline-28fdf1958b8a",
+  "workload": "README valid example; 4 batches of 4 simultaneous POST /predict",
+  "requests": [
+    {
+      "batch": 1,
+      "request": 1,
+      "sent_at": "2026-11-11T23:16:16.655431+00:00",
+      "duration_ms": 123.339,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    },
+    {
+      "batch": 1,
+      "request": 2,
+      "sent_at": "2026-11-11T23:16:16.655431+00:00",
+      "duration_ms": 151.289,
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "passed": true
+    },
+    {
+      "batch": 1,
+      "request": 3,
+      "sent_at": "2026-11-11T23:16:16.655431+00:00",
+      "duration_ms": 123.677,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    },
+    {
+      "batch": 1,
+      "request": 4,
+      "sent_at": "2026-11-11T23:16:16.654430+00:00",
+      "duration_ms": 137.252,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    },
+    {
+      "batch": 2,
+      "request": 1,
+      "sent_at": "2026-11-11T23:16:16.807431+00:00",
+      "duration_ms": 97.387,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    },
+    {
+      "batch": 2,
+      "request": 2,
+      "sent_at": "2026-11-11T23:16:16.807431+00:00",
+      "duration_ms": 83.256,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    },
+    {
+      "batch": 2,
+      "request": 3,
+      "sent_at": "2026-11-11T23:16:16.807431+00:00",
+      "duration_ms": 97.409,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    },
+    {
+      "batch": 2,
+      "request": 4,
+      "sent_at": "2026-11-11T23:16:16.807431+00:00",
+      "duration_ms": 83.467,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    },
+    {
+      "batch": 3,
+      "request": 1,
+      "sent_at": "2026-11-11T23:16:16.906711+00:00",
+      "duration_ms": 90.3,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    },
+    {
+      "batch": 3,
+      "request": 2,
+      "sent_at": "2026-11-11T23:16:16.906711+00:00",
+      "duration_ms": 90.298,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    },
+    {
+      "batch": 3,
+      "request": 3,
+      "sent_at": "2026-11-11T23:16:16.906711+00:00",
+      "duration_ms": 100.831,
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "passed": true
+    },
+    {
+      "batch": 3,
+      "request": 4,
+      "sent_at": "2026-11-11T23:16:16.906711+00:00",
+      "duration_ms": 86.714,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    },
+    {
+      "batch": 4,
+      "request": 1,
+      "sent_at": "2026-11-11T23:16:17.008715+00:00",
+      "duration_ms": 120.726,
+      "status": 200,
+      "model_version": "baseline-28fdf1958b8a",
+      "passed": true
+    },
+    {
+      "batch": 4,
+      "request": 2,
+      "sent_at": "2026-11-11T23:16:17.008715+00:00",
+      "duration_ms": 100.127,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    },
+    {
+      "batch": 4,
+      "request": 3,
+      "sent_at": "2026-11-11T23:16:17.008715+00:00",
+      "duration_ms": 100.22,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    },
+    {
+      "batch": 4,
+      "request": 4,
+      "sent_at": "2026-11-11T23:16:17.008715+00:00",
+      "duration_ms": 108.052,
+      "status": 503,
+      "model_version": null,
+      "passed": false
+    }
+  ],
+  "count": 16,
+  "status_counts": {
+    "503": 13,
+    "200": 3
+  },
+  "good_count": 3,
+  "availability": 0.1875,
+  "result": "failed"
+}

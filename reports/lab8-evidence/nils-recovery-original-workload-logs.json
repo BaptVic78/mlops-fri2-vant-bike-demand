@@ -1,0 +1,1232 @@
+[
+  {
+    "jsonPayload": {
+      "duration_ms": 73.495,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.795909Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 72.357,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.793434Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 110.603,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.793420Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 103.174,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.785583Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 93.616,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.776428Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 85.995,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.767915Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 59.853,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.742413Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 56.87,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.738175Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.103509433s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.688754Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.112455363s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.679280Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.068964862s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.676129Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.114144833s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.675997Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.068087352s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.675748Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.112281383s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.675224Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.106776903s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.675223Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.105484303s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.674984Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 97.093,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.573584Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 95.436,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.567485Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 94.794,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.567024Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 94.515,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.566912Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 93.435,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.565731Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 89.347,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.561442Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 52.439,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.495261Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 48.782,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.494409Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.111527334s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.459641Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.109324133s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.458920Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.111581643s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.457820Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.111677893s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.457330Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.102347843s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.456952Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.110601083s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.456871Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.055048781s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.437753Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.056794741s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.437413Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 116.08,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.336007Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 106.423,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.331929Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 113.763,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.331924Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 113.298,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.331918Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 112.889,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.331906Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 112.443,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.330887Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 109.868,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.329426Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 65.249,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.283508Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.112678543s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.217099Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.122623883s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.209051Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.123359103s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.208364Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.120759153s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.208082Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.123756803s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.207859Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.083741722s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.207746Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.125162373s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.207590Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.123730553s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.207236Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 49.517,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.107454Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 117.724,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.105407Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 112.153,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.100658Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 111.512,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.099755Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 101.325,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.089393Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 87.654,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.075972Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 86.464,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.074508Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 83.181,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.070905Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.104418484s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:36.001114Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.117610693s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.982185Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.093154963s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.982150Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.118554343s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.982036Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.090557903s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.981953Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.122852044s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.981863Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.118276073s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.981716Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.096797683s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.981603Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 57.589,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.882825Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 54.566,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.879424Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 54.407,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.879419Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 54.202,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.879404Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 48.158,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.873703Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 40.931,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.827400Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 40.428,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.826907Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 39.883,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.826410Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.071550602s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.809762Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.079222783s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.798111Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.078967753s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.796969Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.088488303s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.789719Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.088927483s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.789606Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.044879071s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.781162Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.043007901s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.779964Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.045210371s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.779572Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 3.487,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.669770Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.010990650s",
+      "requestMethod": "GET",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-refcurrent80f31db"
+      }
+    },
+    "timestamp": "2026-11-11T23:24:35.644449Z"
+  }
+]

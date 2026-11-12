@@ -1,0 +1,26 @@
+LAB 8 - RECOVERY VERIFICATION
+Operator: Nils Giraud
+Verified at (UTC): 2026-11-11T23:22:36.315008+00:00
+Service: bike-demand-lab7 / europe-west1 / fourth-eon-424715-k1
+
+Single recovery action: traffic rollback; no deployment or retraining
+Serving revision: bike-demand-lab7-refcurrent80f31db
+Traffic: 100% / Ready: True
+Faulty revision retained: bike-demand-lab7-lab8-victor-01 (0% traffic)
+Accepted image: sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff
+Expected model: baseline-28fdf1958b8a
+
+Fresh serial contract checks: 5 / 5 passed
+Each check: health 200; predict 200; invalid hour 422; anonymous 403
+Identical concurrent test: 4 batches x 4 valid README predictions
+HTTP 200: 16 / 16
+HTTP 503: 0 / 16
+Availability: 100% (incident: 18.75%)
+Result: passed
+
+Fresh service application logs: 27 eligible successful events
+Intentional 422 responses: 5 (excluded from availability)
+Concurrency warnings: 0
+Model-load errors: 0
+Observed model version: baseline-28fdf1958b8a
+Observation records and raw logs saved in reports/lab8-evidence/.

@@ -1,0 +1,589 @@
+[
+  {
+    "jsonPayload": {
+      "duration_ms": 14.981,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.428073Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.410035Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.408738Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.407873Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.020869668s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.404167Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.006619009s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.403404Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.004013330s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.402892Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.004988200s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.402877Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 18.751,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.304448Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.292117Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.291819Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.289148Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.007869859s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.281662Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.006471509s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.280914Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.023092068s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.280729Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.006866839s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.280391Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.202176Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.201499Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.004204390s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.197223Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.004269580s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.196926Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.189732Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.189669Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003797709s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.184854Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003764439s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.184597Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 29.561,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.101156Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.084036Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.075439Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "WARNING:  Exceeded concurrency limit.",
+    "timestamp": "2026-11-11T23:16:23.072779Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.017412258s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.071791Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.005994169s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.067064Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.010126559s",
+      "requestMethod": "POST",
+      "status": 503
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.048934Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.039731246s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:16:23.047625Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0s",
+      "requestMethod": "GET",
+      "status": 403
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Empty Authorization header value. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client",
+    "timestamp": "2026-11-11T23:14:41.141525Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 1.765,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": "/predict",
+      "status_code": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:14:41.077457Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.004632909s",
+      "requestMethod": "POST",
+      "status": 422
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:14:41.072116Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 168.07,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:14:41.009268Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.171160190s",
+      "requestMethod": "POST",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:14:40.832125Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 1.325,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:14:40.726504Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "STARTUP HTTP probe succeeded after 3 attempts for container \"service-1\" on port 8080 path \"/health\".",
+    "timestamp": "2026-11-11T23:14:40.722800Z"
+  },
+  {
+    "jsonPayload": {
+      "duration_ms": 7.889,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:14:40.722181Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)",
+    "timestamp": "2026-11-11T23:14:33.206532Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "INFO:     Application startup complete.",
+    "timestamp": "2026-11-11T23:14:33.205527Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "INFO:     Waiting for application startup.",
+    "timestamp": "2026-11-11T23:14:26.799938Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "INFO:     Started server process [1]",
+    "timestamp": "2026-11-11T23:14:26.799844Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "timestamp": "2026-11-11T23:14:20.487012Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "20.150854820s",
+      "requestMethod": "GET",
+      "status": 200
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "timestamp": "2026-11-11T23:14:20.460356Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "INFO:     Finished server process [1]",
+    "timestamp": "2026-11-11T23:02:45.102829Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "INFO:     Application shutdown complete.",
+    "timestamp": "2026-11-11T23:02:45.102087Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "INFO:     Waiting for application shutdown.",
+    "timestamp": "2026-11-11T23:02:45.101647Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "bike-demand-lab7-lab8-victor-01"
+      }
+    },
+    "textPayload": "INFO:     Shutting down",
+    "timestamp": "2026-11-11T23:02:44.999487Z"
+  }
+]
