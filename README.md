@@ -670,8 +670,12 @@ by `bike_demand.train`.
 The [shared timeline](reports/lab8-timeline.md), recorded by Axel, links
 Victor's baseline and incident, Nils's diagnosis and rollback, and fresh
 recorder verification. The accepted revision serves 100% of traffic; the
-incident revision is retained at zero traffic. The latest template still
-contains the fault setting and must be corrected before another deployment.
+incident revision is retained at zero traffic. On 2026-11-12 the latest
+template was replaced by `bike-demand-lab7-00004-bmn` with `--no-traffic` and
+without `UVICORN_LIMIT_CONCURRENCY`. That revision receives no traffic. The
+earlier revisions remain, including the incident revision, which still carries
+the override. A fresh check still sees `baseline-28fdf1958b8a`. Record:
+[template cleanup](reports/lab8-evidence/template-cleanup-2026-11-12.json).
 
 The recorder kept raw JSON and log exports with a SHA-256 index. A single
 linked timeline keeps each result with its source and owner; screenshots alone
@@ -714,9 +718,14 @@ Pass the accepted file, the one whose SHA-256 is the reference above. A local
 refit is a different file and is refused before the test rows are scored. The
 command checks the checksum and the recorded validation MAE, then scores
 July–December 2012.
-A second run refuses to overwrite `reports/final-held-test.json`. The release
-notes are in [reports/release-v1.0.0.md](reports/release-v1.0.0.md). The oral
-guide is in [reports/oral-guide.md](reports/oral-guide.md).
+A second run refuses to overwrite `reports/final-held-test.json`.
+The one recorded score is **93.73505906420367** rentals/hour, on commit
+`93ed51e`, from the accepted file. Details:
+[reports/final-held-test.json](reports/final-held-test.json).
+The release notes are in [reports/release-v1.0.0.md](reports/release-v1.0.0.md).
+The oral guide is in [reports/oral-guide.md](reports/oral-guide.md).
+The latest Cloud Run template no longer sets `UVICORN_LIMIT_CONCURRENCY`.
+Traffic stayed on the accepted revision.
 
 ## Support and individual reports
 

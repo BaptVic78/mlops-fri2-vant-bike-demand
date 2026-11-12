@@ -24,6 +24,8 @@ incident.
 | URL (authenticated only) | `https://bike-demand-lab7-obot7iy6yq-ew.a.run.app` | same |
 | Accepted serving revision (100 %) | `bike-demand-lab7-refcurrent80f31db` | [revisions record](reports/lab7-evidence/cloud-run-nils-revisions.json) |
 | Retained previous revision (0 %, Ready) | `bike-demand-lab7-refbase80f31db` | same |
+| Latest template revision (0 %, no concurrency override) | `bike-demand-lab7-00004-bmn` | [template cleanup](reports/lab8-evidence/template-cleanup-2026-11-12.json) |
+| Retained incident revision (0 %, still has `UVICORN_LIMIT_CONCURRENCY=2`) | `bike-demand-lab7-lab8-victor-01` | same |
 | Image digest (both revisions) | `europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff` | same |
 | Expected `model_version` | `baseline-28fdf1958b8a` | [handoff record](reports/lab7-evidence/accepted-handoff.json) |
 | Model SHA-256 | `d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07` | [`configs/gate-policy.yaml`](configs/gate-policy.yaml) |
@@ -33,7 +35,14 @@ incident.
 
 Last verified on 2026-11-11 at 21:03 UTC by Nils Giraud. He ran
 `check_cloud_run.py` and `gcloud run services describe`, with no traffic
-change. If this context is out of date (a new promotion, a new revision),
+change. On 2026-11-12 Axel removed `UVICORN_LIMIT_CONCURRENCY` from the latest
+template with `--no-traffic`. Traffic stayed at 100% on
+`bike-demand-lab7-refcurrent80f31db`. The new revision
+`bike-demand-lab7-00004-bmn` has no traffic and no concurrency override. The
+earlier revisions remain. `check_cloud_run.py` passed with
+`baseline-28fdf1958b8a`. Record:
+[template cleanup](reports/lab8-evidence/template-cleanup-2026-11-12.json).
+If this context is out of date (a new promotion, a new revision),
 update this table in a reviewed pull request before the next incident.
 
 Set these once per PowerShell session. The commands below use them:

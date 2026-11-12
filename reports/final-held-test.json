@@ -1,0 +1,23 @@
+{
+  "selected_model": "reference retained",
+  "used_to_choose_a_model": false,
+  "rejected_candidates": [
+    "06c4291bb9bc",
+    "26d505134be8",
+    "c898c95692c8"
+  ],
+  "model_sha256": "d24c050e3631d5b4c2feb8cb571bef6382d8c975c42a5c11edd28de78a0b8c07",
+  "data_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+  "commit": "93ed51e14eadc49783283bfab3e6ae59e5ebbe21",
+  "working_tree_dirty": false,
+  "command": "uv run --locked python -m bike_demand.held_test --model <accepted model.joblib>",
+  "recorded_validation_mae": 86.84685685591091,
+  "validation_rescore_mae": 86.84685685591091,
+  "test": {
+    "rows": 4376,
+    "date_min": "2012-07-01",
+    "date_max": "2012-12-31"
+  },
+  "test_mae": 93.73505906420367,
+  "unit": "rentals/hour"
+}

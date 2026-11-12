@@ -1,0 +1,49 @@
+{
+  "recorded_at": "2026-11-12T11:26:27Z",
+  "project": "fourth-eon-424715-k1",
+  "region": "europe-west1",
+  "service": "bike-demand-lab7",
+  "command": "gcloud run services update bike-demand-lab7 --region europe-west1 --remove-env-vars UVICORN_LIMIT_CONCURRENCY --no-traffic",
+  "new_revision": "bike-demand-lab7-00004-bmn",
+  "new_revision_traffic_percent": 0,
+  "new_revision_env": null,
+  "image": "europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff",
+  "traffic": [
+    {
+      "percent": 100,
+      "revisionName": "bike-demand-lab7-refcurrent80f31db"
+    }
+  ],
+  "revisions_retained": [
+    {
+      "name": "bike-demand-lab7-00004-bmn",
+      "ready": true,
+      "UVICORN_LIMIT_CONCURRENCY": null
+    },
+    {
+      "name": "bike-demand-lab7-lab8-victor-01",
+      "ready": true,
+      "UVICORN_LIMIT_CONCURRENCY": "2"
+    },
+    {
+      "name": "bike-demand-lab7-refcurrent80f31db",
+      "ready": true,
+      "UVICORN_LIMIT_CONCURRENCY": null
+    },
+    {
+      "name": "bike-demand-lab7-refbase80f31db",
+      "ready": true,
+      "UVICORN_LIMIT_CONCURRENCY": null
+    }
+  ],
+  "check_cloud_run": {
+    "result": "passed",
+    "expected_model_version": "baseline-28fdf1958b8a",
+    "health_status": 200,
+    "health_model_version": "baseline-28fdf1958b8a",
+    "prediction_status": 200,
+    "prediction_model_version": "baseline-28fdf1958b8a",
+    "invalid_hour_status": 422,
+    "anonymous_status": 403
+  }
+}
