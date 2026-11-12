@@ -1,0 +1,20 @@
+{
+  "commands": [
+    "gcloud run services describe bike-demand-lab7 --project=fourth-eon-424715-k1 --region=europe-west1",
+    "gcloud run revisions list --service=bike-demand-lab7 --project=fourth-eon-424715-k1 --region=europe-west1",
+    "python scripts/check_cloud_run.py --base-url https://bike-demand-lab7-obot7iy6yq-ew.a.run.app --expect-model baseline-28fdf1958b8a (five executions; --gcloud points to local gcloud.cmd)",
+    "python scripts/check_incident_workload.py --base-url https://bike-demand-lab7-obot7iy6yq-ew.a.run.app --expect-model baseline-28fdf1958b8a (--gcloud points to local gcloud.cmd)"
+  ],
+  "contract_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "started_at": "2026-11-12T08:33:46.2095710Z",
+  "finished_at": "2026-11-12T08:34:19.5738621Z",
+  "changes_made": [],
+  "workload_exit_code": 0,
+  "source_commit": "600225210f28ca5dccbfe64a09bedfdd35e6eb5d"
+}

@@ -1,0 +1,180 @@
+{
+  "description": "SHA-256 of raw records and summaries at recorder handoff; excludes this index.",
+  "files": [
+    {
+      "path": "axel-contract-checks.json",
+      "sha256": "e92a4213ba2ee0af3e9a6e26516da5ac021294e4ab8be83b09f21c35df5884e9",
+      "bytes": 4965
+    },
+    {
+      "path": "axel-coordination-record.json",
+      "sha256": "95c3d8684c8f3bafa9569e26c275672313a85a1963a0b20b595dcced42e5420e",
+      "bytes": 450
+    },
+    {
+      "path": "axel-injector-merge.json",
+      "sha256": "4d8065d8ec376ead97817195d5625c13fa1186b411cf341a4491c905b9014220",
+      "bytes": 262
+    },
+    {
+      "path": "axel-live-logs.json",
+      "sha256": "4aa7d4e1fea18a9f9f9d94138a1b825f8815e3f793d4362d9aa23bc7dcf2ff8d",
+      "bytes": 192930
+    },
+    {
+      "path": "axel-operator-merge.json",
+      "sha256": "97e31f1a7aaa663c7dd1b75f81905f4d98ff577137e0fb58ecd60b898faaca14",
+      "bytes": 262
+    },
+    {
+      "path": "axel-recovery-workload.json",
+      "sha256": "1ac47cf887fe3a5a0fca84952ad8bbd44d71bd48299ce51ef6b4e063aaf98d82",
+      "bytes": 9900
+    },
+    {
+      "path": "axel-retained-revisions.json",
+      "sha256": "34fecfb89ba58b636a5639be6fa16f85f2c00a8b74bd9d5ccc27767e4d06425f",
+      "bytes": 4412
+    },
+    {
+      "path": "axel-runbook-merge.json",
+      "sha256": "6350c61bcf5405c5a723f4123c7592e88334e61f351f5569a3a0828ce44dd8f8",
+      "bytes": 271
+    },
+    {
+      "path": "axel-service-state.json",
+      "sha256": "0c2a632fe4fe48f6f81be5c95d1d49002ad80c0b4c8ff3891ddb49de960fd9bd",
+      "bytes": 1121
+    },
+    {
+      "path": "axel-verification-run.json",
+      "sha256": "5fd7411fb470e7586a7eed0d8d8c40f22059a62ac19fad49bf7c3f38f8d578c4",
+      "bytes": 914
+    },
+    {
+      "path": "axel-verification-summary.json",
+      "sha256": "ecafed56f42b03fde38257d0201d4bd649b43c6f9505eb31e65487b540fcdc39",
+      "bytes": 2455
+    },
+    {
+      "path": "nils-first-contract-check.json",
+      "sha256": "4e85882ab6044f4105c4ff273d8e2c7efedee5271b955c154eb9c32358b95f98",
+      "bytes": 865
+    },
+    {
+      "path": "nils-incident-logs.json",
+      "sha256": "827bf8206d4d305c8fdb2a93cd02bf184bf2c7ab8a2f51ac1514b2bb1311234c",
+      "bytes": 14217
+    },
+    {
+      "path": "nils-incident-observation.txt",
+      "sha256": "9038485361fb9d422ea9a7e4c3cffd4e58c1e4277acadbf37f53e5db1292df11",
+      "bytes": 1110
+    },
+    {
+      "path": "nils-incident-revision.json",
+      "sha256": "be2b96d6c6e3ca8ab47f979484526eaa0e4dbafeb02407aa5b431ef913eef0db",
+      "bytes": 2398
+    },
+    {
+      "path": "nils-incident-workload.json",
+      "sha256": "252dd148c9e10eddbe8a6f4ac2218338efe6984041dac2dac7d44565e37bbddf",
+      "bytes": 3804
+    },
+    {
+      "path": "nils-observation-summary.json",
+      "sha256": "d1723391df74e4286cddb9f49e29f0e9da6336372f089c8c2670413d4a36b892",
+      "bytes": 2446
+    },
+    {
+      "path": "nils-original-workload-comparison.json",
+      "sha256": "2c4dad3acd66a12bc9c3b3c79ca0b8ef972f92cf1ec82e03b3397bc1fb38402c",
+      "bytes": 1582
+    },
+    {
+      "path": "nils-recovery-contract-checks.json",
+      "sha256": "b273b336609fd4768d54aab3c904fa9410c1c9cdc87e8afc9adabf2f4cd27507",
+      "bytes": 5458
+    },
+    {
+      "path": "nils-recovery-logs.json",
+      "sha256": "a8384d0d8539346da4c46af1c4af94e103d8d3f9a184a6c1f882e076daa79200",
+      "bytes": 27537
+    },
+    {
+      "path": "nils-recovery-original-workload-logs.json",
+      "sha256": "90580eda4925379cefde5ae6e3caaafc542600c8da7bb7212b97f1631510d5a0",
+      "bytes": 28341
+    },
+    {
+      "path": "nils-recovery-original-workload.json",
+      "sha256": "ca4abba551cfa4d29d9729c0f85efd038c3303b7ca5c7bf3a100ca3b7f5e8990",
+      "bytes": 9519
+    },
+    {
+      "path": "nils-recovery-service.json",
+      "sha256": "4b74e7c69ff9b29933c2820b4d86693be4287033ec98f17f4e75711621254a4d",
+      "bytes": 785
+    },
+    {
+      "path": "nils-recovery-target.json",
+      "sha256": "1ad165c87ae912e57e2928895a02aac95107eaa693dee2eceb57768f4289b0ca",
+      "bytes": 1356
+    },
+    {
+      "path": "nils-recovery-verification.txt",
+      "sha256": "9243dbcb3ee9dfceaedeb08769d8a24731150b7d77d6d0e98488bf5b280d6946",
+      "bytes": 1062
+    },
+    {
+      "path": "nils-recovery-workload.json",
+      "sha256": "d8c08cb3f1dc4fc8d67606b7fbe724723b5da810e977062d6124ef464256f119",
+      "bytes": 4029
+    },
+    {
+      "path": "nils-retained-faulty-revision.json",
+      "sha256": "c1475009e00ffabee597e9398811ca6e66877a72bb21722ba40e70c55ce0152a",
+      "bytes": 1327
+    },
+    {
+      "path": "nils-rollback-command.txt",
+      "sha256": "f0f00c536e95f2addd4d33e25fdd5e1e390355383af10e57defccee66c7cf616",
+      "bytes": 191
+    },
+    {
+      "path": "nils-rollback-start.txt",
+      "sha256": "d9e01da0c87f226871e3269ed850047f82f8183cd35f6e8299efb5244ee12cf1",
+      "bytes": 29
+    },
+    {
+      "path": "nils-rollback-target.json",
+      "sha256": "8588f8b4e5efb19d15c765e5ed11dccd591e764450539a8acff2bec53e856e84",
+      "bytes": 2248
+    },
+    {
+      "path": "victor-baseline-workload.json",
+      "sha256": "00c7eaae4722eed2d68caf3f508d88e6050205d45dfa90b7231ec6c31235f44a",
+      "bytes": 9900
+    },
+    {
+      "path": "victor-incident-contract-check.json",
+      "sha256": "9c6155f338a452a0eabb93414b655a7dc55059732c6ca75964b1e9fa94259719",
+      "bytes": 907
+    },
+    {
+      "path": "victor-incident-traffic.json",
+      "sha256": "c6c70edb12cb0108e31341ecb4c652d334a77389a0c26a52f013dc833be2bf3c",
+      "bytes": 600
+    },
+    {
+      "path": "victor-incident-workload.json",
+      "sha256": "a71d388469fc65598cda75c1a5fdbf75acad84e1e9aa3ecb9aa408bf91e42363",
+      "bytes": 9324
+    },
+    {
+      "path": "victor-request-logs.json",
+      "sha256": "d2c32ee6fde1aa420f01d2073dee3f794f3b51cf0bd2db9d9a58e390c8ee32a5",
+      "bytes": 264290
+    }
+  ]
+}

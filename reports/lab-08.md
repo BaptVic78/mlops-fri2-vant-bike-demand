@@ -1,5 +1,9 @@
 # Lab 8 — operator diagnosis and verified rollback
 
+The [shared recorder timeline](lab8-timeline.md) joins the first signal,
+diagnosis, traffic rollback and fresh verification with links to the raw
+records. It also records the later recorder checks and the remaining handoff.
+
 Operator: Nils Giraud. Injector: Victor Rouleau. Recorder: Axel Alacache.
 Thomas Soubagne owns the [runbook](../RUNBOOK.md), merged before the incident.
 All timestamps below are UTC (the operator session was on 12 November in Paris).

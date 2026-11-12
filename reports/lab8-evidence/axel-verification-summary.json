@@ -1,0 +1,76 @@
+{
+  "recorder": "axou947",
+  "source_commit": "600225210f28ca5dccbfe64a09bedfdd35e6eb5d",
+  "verification_window": [
+    "2026-11-12T08:33:46.2095710Z",
+    "2026-11-12T08:34:19.5738621Z"
+  ],
+  "traffic": [
+    {
+      "percent": 100,
+      "revisionName": "bike-demand-lab7-refcurrent80f31db"
+    }
+  ],
+  "retained_revisions": {
+    "bike-demand-lab7-lab8-victor-01": {
+      "ready": "True",
+      "image_digest": "europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff"
+    },
+    "bike-demand-lab7-refcurrent80f31db": {
+      "ready": "True",
+      "image_digest": "europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff"
+    },
+    "bike-demand-lab7-refbase80f31db": {
+      "ready": "True",
+      "image_digest": "europe-west1-docker.pkg.dev/fourth-eon-424715-k1/bike-demand/service@sha256:6dd4148b94859b21b05769af5971892e604fee3c2a3f201c411910a080f932ff"
+    }
+  },
+  "contract_checks_passed": 5,
+  "original_workload": {
+    "started_at": "2026-11-12T08:34:16.505315+00:00",
+    "finished_at": "2026-11-12T08:34:19.531282+00:00",
+    "n": 40,
+    "good": 40,
+    "status_counts": {
+      "200": 40
+    },
+    "expected_model_version": "baseline-28fdf1958b8a",
+    "result": "passed"
+  },
+  "raw_log_export_entries": 149,
+  "post_start_log_window": [
+    "2026-11-12T08:33:55.506489Z",
+    "2026-11-12T08:34:18.570182Z"
+  ],
+  "platform_eligible_count": 51,
+  "platform_eligible_status_counts": {
+    "200": 51
+  },
+  "application_event_count": 56,
+  "intentional_422_count": 5,
+  "concurrency_or_model_load_warnings": 0,
+  "latest_template": {
+    "metadata": {
+      "name": "bike-demand-lab7-lab8-victor-01"
+    },
+    "spec": {
+      "containers": [
+        {
+          "env": [
+            {
+              "name": "UVICORN_LIMIT_CONCURRENCY",
+              "value": "2"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "changes_made": [],
+  "limits": [
+    "Raw export covers a wider window; summary selects events after verification start.",
+    "Client and server timestamps are not exact request joins.",
+    "Traffic rollback does not remove the override from the latest template.",
+    "Bounded checks establish observed recovery, not production capacity or model quality."
+  ]
+}

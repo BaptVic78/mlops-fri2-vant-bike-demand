@@ -1,5 +1,10 @@
 # Lab 8 incident handoff
 
+> Historical injector handoff from PR #28. The statements below describe the
+> injection-time state. Recovery has since been recorded in PR #29; use the
+> [shared timeline and latest verification](../lab8-timeline.md) for current
+> status. Original request and log files have not been changed.
+
 Owner: Victor Rouleau (injector). Operator: Nils Giraud. Recorder: Axel.
 
 Thomas's runbook [PR #27](https://github.com/BaptVic78/mlops-fri2-vant-bike-demand/pull/27)
