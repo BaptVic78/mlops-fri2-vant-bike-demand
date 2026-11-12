@@ -53,7 +53,9 @@ The validator checks that:
 
 An additional test checks that an invalid hour is rejected while a valid control dataset is accepted.
 
-Data SHA-256: [copy data_sha256 from reports/metrics.json]
+Data SHA-256: `e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f`.
+
+This is `data_sha256` in `reports/metrics.json` and in the first line of `reports/metrics-history.jsonl`. The same digest is produced by SHA-256 of `data/raw/hour.csv` (1,156,736 bytes).
 
 ## Partition counts, boundaries and held test rows
 
@@ -75,15 +77,15 @@ We compared a training-mean baseline with a random forest.
 
 | Model | Validation MAE (rentals/hour) |
 |---|---:|
-| Training-mean comparator | 154.23 |
-| Random forest | 86.85 |
+| Training-mean comparator | 154.23179306864967 |
+| Random forest | 86.84685685591091 |
 
 The comparator predicts the mean rental count calculated from the training data. The random forest uses the ordered predictors defined in the configuration, excluding the target.
 
 The random forest achieved a lower validation error than the comparator. It used 50 trees, a maximum depth of 10 and a random seed of 42.
 
-- Comparator run ID: [copy naive_run_id from reports/metrics.json]
-- Random forest run ID: [copy model_run_id from reports/metrics.json]
+- Comparator run ID: `9226418acc914919b61a5640300d6da7` (`naive_run_id`)
+- Random forest run ID: `ba0ece8cf43541edb4da633481c1f3c5` (`model_run_id`)
 
 After reloading the saved model, the validation MAE and predictions matched the original results, with a difference of 0.0. The metadata checks also matched.
 
@@ -121,7 +123,7 @@ For Lab 2, Victor and Axel worked on the validation, splitting and training task
 
 The Lab 2 implementation was merged and the reported checks passed.
 
-The remaining tasks are to complete the run IDs and data hash, add the screenshots, and complete the Lab 2 review record.
+The data hash and both run IDs above are the values stored in `reports/metrics.json`. Lab 2 screenshots and a detailed review comment for PR #6 are still absent.
 
 A further improvement would be to repeat the training from a clean committed version so that the results can be linked to an exact code state.
 

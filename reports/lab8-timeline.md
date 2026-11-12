@@ -121,6 +121,12 @@ records directly; screenshots are optional support under the three-image limit.
 - Traffic recovery leaves the faulty override in the latest revision template.
   Before a future deployment, its owner must remove that override in reviewed
   work. This recorder PR does not deploy or change configuration.
+- On 2026-11-12, after `m4`, that override was removed from the latest template
+  without moving traffic. Revision `bike-demand-lab7-00004-bmn` has no
+  `UVICORN_LIMIT_CONCURRENCY` and receives no traffic. Traffic stayed at 100%
+  on `bike-demand-lab7-refcurrent80f31db`. The incident revision
+  `bike-demand-lab7-lab8-victor-01` is still Ready at zero traffic and still
+  has the override. [Record](lab8-evidence/template-cleanup-2026-11-12.json).
 - A new valid-request 5xx, unexpected version, concurrency warning or traffic
   on the incident revision would challenge the recovery claim. Small samples
   do not prove production capacity or predictive quality. No held-test metric
