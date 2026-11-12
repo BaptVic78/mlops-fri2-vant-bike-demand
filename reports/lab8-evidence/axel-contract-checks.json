@@ -1,0 +1,212 @@
+[
+  {
+    "verified_at": "2026-11-12T09:33:57.044648+01:00",
+    "base_url": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app",
+    "expected_model_version": "baseline-28fdf1958b8a",
+    "health": {
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "model_version": "baseline-28fdf1958b8a"
+      }
+    },
+    "prediction": {
+      "status": 200,
+      "body": {
+        "prediction": 146.59529728935132,
+        "model_version": "baseline-28fdf1958b8a"
+      }
+    },
+    "invalid_hour": {
+      "status": 422,
+      "body": {
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "body",
+              "hr"
+            ],
+            "msg": "Input should be less than or equal to 23",
+            "input": 24,
+            "ctx": {
+              "le": 23
+            }
+          }
+        ]
+      }
+    },
+    "anonymous": {
+      "status": 403
+    },
+    "result": "passed"
+  },
+  {
+    "verified_at": "2026-11-12T09:34:00.429797+01:00",
+    "base_url": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app",
+    "expected_model_version": "baseline-28fdf1958b8a",
+    "health": {
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "model_version": "baseline-28fdf1958b8a"
+      }
+    },
+    "prediction": {
+      "status": 200,
+      "body": {
+        "prediction": 146.59529728935132,
+        "model_version": "baseline-28fdf1958b8a"
+      }
+    },
+    "invalid_hour": {
+      "status": 422,
+      "body": {
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "body",
+              "hr"
+            ],
+            "msg": "Input should be less than or equal to 23",
+            "input": 24,
+            "ctx": {
+              "le": 23
+            }
+          }
+        ]
+      }
+    },
+    "anonymous": {
+      "status": 403
+    },
+    "result": "passed"
+  },
+  {
+    "verified_at": "2026-11-12T09:34:03.615663+01:00",
+    "base_url": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app",
+    "expected_model_version": "baseline-28fdf1958b8a",
+    "health": {
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "model_version": "baseline-28fdf1958b8a"
+      }
+    },
+    "prediction": {
+      "status": 200,
+      "body": {
+        "prediction": 146.59529728935132,
+        "model_version": "baseline-28fdf1958b8a"
+      }
+    },
+    "invalid_hour": {
+      "status": 422,
+      "body": {
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "body",
+              "hr"
+            ],
+            "msg": "Input should be less than or equal to 23",
+            "input": 24,
+            "ctx": {
+              "le": 23
+            }
+          }
+        ]
+      }
+    },
+    "anonymous": {
+      "status": 403
+    },
+    "result": "passed"
+  },
+  {
+    "verified_at": "2026-11-12T09:34:07.239718+01:00",
+    "base_url": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app",
+    "expected_model_version": "baseline-28fdf1958b8a",
+    "health": {
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "model_version": "baseline-28fdf1958b8a"
+      }
+    },
+    "prediction": {
+      "status": 200,
+      "body": {
+        "prediction": 146.59529728935132,
+        "model_version": "baseline-28fdf1958b8a"
+      }
+    },
+    "invalid_hour": {
+      "status": 422,
+      "body": {
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "body",
+              "hr"
+            ],
+            "msg": "Input should be less than or equal to 23",
+            "input": 24,
+            "ctx": {
+              "le": 23
+            }
+          }
+        ]
+      }
+    },
+    "anonymous": {
+      "status": 403
+    },
+    "result": "passed"
+  },
+  {
+    "verified_at": "2026-11-12T09:34:11.591289+01:00",
+    "base_url": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app",
+    "expected_model_version": "baseline-28fdf1958b8a",
+    "health": {
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "model_version": "baseline-28fdf1958b8a"
+      }
+    },
+    "prediction": {
+      "status": 200,
+      "body": {
+        "prediction": 146.59529728935132,
+        "model_version": "baseline-28fdf1958b8a"
+      }
+    },
+    "invalid_hour": {
+      "status": 422,
+      "body": {
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "body",
+              "hr"
+            ],
+            "msg": "Input should be less than or equal to 23",
+            "input": 24,
+            "ctx": {
+              "le": 23
+            }
+          }
+        ]
+      }
+    },
+    "anonymous": {
+      "status": 403
+    },
+    "result": "passed"
+  }
+]

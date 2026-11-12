@@ -622,7 +622,9 @@ Lab 8 split: runbook (Thomas), injector (Victor), operator (Nils), recorder
 - Runbook: [RUNBOOK.md](RUNBOOK.md). It covers the last verified context,
   signal definitions, baseline, first checks by boundary, rollback target,
   the single traffic change, fresh verification and escalation.
-- Incident evidence: [Lab 8 handoff and raw records](reports/lab8-evidence/README.md). This folder holds the raw
+- Incident evidence: [shared timeline and fresh recovery verification](reports/lab8-timeline.md).
+  The [original injector handoff](reports/lab8-evidence/README.md) is kept as a historical record.
+  The evidence folder holds the raw
   checker output, `gcloud` describes and Cloud Run log exports for the
   baseline, incident and recovery periods, plus the timeline. The recorder
   links it from the Lab 8 section of the team report.
@@ -665,6 +667,16 @@ by `bike_demand.train`.
 
 ## Lab 8: incident diagnosis and recovery
 
+The [shared timeline](reports/lab8-timeline.md), recorded by Axel, links
+Victor's baseline and incident, Nils's diagnosis and rollback, and fresh
+recorder verification. The accepted revision serves 100% of traffic; the
+incident revision is retained at zero traffic. The latest template still
+contains the fault setting and must be corrected before another deployment.
+
+The recorder kept raw JSON and log exports with a SHA-256 index. A single
+linked timeline keeps each result with its source and owner; screenshots alone
+would not preserve individual failures or the different request populations.
+
 Follow [RUNBOOK.md](RUNBOOK.md) to observe the private service, record hypotheses
 before recovery and verify a named accepted traffic target. Nils's
 [operator report](reports/lab-08.md) links the timeline and raw observations
@@ -687,6 +699,19 @@ The report separately compares Victor's original five-by-eight baseline and
 incident with Nils's fresh recovery on that unchanged workload.
 
 ## Support and individual reports
+
+### Week 4 checkpoint and final release
+
+After all Lab 7–8 PRs are reviewed and merged, verify main CI and create an
+annotated `m4` tag on that reviewed commit. Submit its link with the short
+checkpoint note. Each member submits `reports/week-4.md` in their own private
+repository. The recorder PR alone does not complete peer review or submission.
+
+The later project handover requires a `v1.0.0` GitHub Release linking code,
+configuration, accepted model, checks, incident evidence, README, runbook and
+release notes, plus final verification and the team presentation. The selected
+candidate's held test is evaluated once at that later stage, never to choose
+between models. No held-test evaluation is performed by this Lab 8 PR.
 
 If setup remains blocked after five minutes, contact the instructor using the
 support route recorded in your working agreement. Do not spend the whole lab

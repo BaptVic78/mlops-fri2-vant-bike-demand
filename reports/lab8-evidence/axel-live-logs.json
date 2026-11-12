@@ -1,0 +1,5082 @@
+[
+  {
+    "insertId": "6af57a0a0008b3468c0a5098",
+    "jsonPayload": {
+      "duration_ms": 79.616,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.850813622Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:18.570182Z"
+  },
+  {
+    "insertId": "6af57a0a0008b21049d7be9a",
+    "jsonPayload": {
+      "duration_ms": 78.674,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.850813622Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:18.569872Z"
+  },
+  {
+    "insertId": "6af57a0a0008aec7a6166d66",
+    "jsonPayload": {
+      "duration_ms": 77.453,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.850813622Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:18.569031Z"
+  },
+  {
+    "insertId": "6af57a0a00088763e3de115a",
+    "jsonPayload": {
+      "duration_ms": 67.913,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.850813622Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:18.558947Z"
+  },
+  {
+    "insertId": "6af57a0a00078e30717c2c22",
+    "jsonPayload": {
+      "duration_ms": 51.206,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.519219090Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:18.495152Z"
+  },
+  {
+    "insertId": "6af57a0a00078de40af4ceb0",
+    "jsonPayload": {
+      "duration_ms": 43.228,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.519219090Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:18.495076Z"
+  },
+  {
+    "insertId": "6af57a0a00078bf257143ffa",
+    "jsonPayload": {
+      "duration_ms": 42.899,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.519219090Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:18.494578Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.096511557s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a0a0008b51a21f8a84d",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.850893194Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "ec73d596a9cdaba3",
+    "timestamp": "2026-11-12T08:34:18.472635Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/3aaa0e2b683136aa83b545206eede167"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.095364152s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a0a0008afffda88982f",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.850893194Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "ff84d1b2be44a748",
+    "timestamp": "2026-11-12T08:34:18.472016Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/f8f8ad41472108d501f52f9de7576606"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.101006903s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a0a0008bc7136ba9eb8",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.850893194Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "03dc48b83bce5048",
+    "timestamp": "2026-11-12T08:34:18.469326Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/259be4dec3af319d122d6ea8344da827"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.089060542s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a0a00088bb25db0cbdb",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.850893194Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "5054165565e92e05",
+    "timestamp": "2026-11-12T08:34:18.468759Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/2e50625cea0b922b92f0c3ab77f8c2ec"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.052655999s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a0a00079e664b553d7d",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.524240872Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "9cfc48edd5a453be",
+    "timestamp": "2026-11-12T08:34:18.443521Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/c9363af52b1fbe635c6990afaa807565"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.052212386s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a0a00079ab2dd3921e6",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.524240872Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "59dfba686c76f23e",
+    "timestamp": "2026-11-12T08:34:18.442997Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/3ad1234c948e04d6167f60a769e3dca2"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.055480263s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a0a00079942f70a79f6",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.524240872Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "a6fc3783feddcf33",
+    "timestamp": "2026-11-12T08:34:18.440309Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/1b8841b9f62d308b6670dba2a8446163"
+  },
+  {
+    "insertId": "6af57a0a0005d46cf65e5f2b",
+    "jsonPayload": {
+      "duration_ms": 7.319,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.519219090Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:18.382060Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.011658926s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a0a0005d92c9ba2953b",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.524240872Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "405d2f1e08acadc8",
+    "timestamp": "2026-11-12T08:34:18.369654Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/121da36353f8e029df4f86848a09315a"
+  },
+  {
+    "insertId": "6af57a09000e76e6428759c8",
+    "jsonPayload": {
+      "duration_ms": 51.965,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.186300029Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.947942Z"
+  },
+  {
+    "insertId": "6af57a09000e75bd14f5515b",
+    "jsonPayload": {
+      "duration_ms": 51.54,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.186300029Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.947645Z"
+  },
+  {
+    "insertId": "6af57a09000e6de7b3b7abc5",
+    "jsonPayload": {
+      "duration_ms": 50.647,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.186300029Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.945639Z"
+  },
+  {
+    "insertId": "6af57a09000e6cbe1d7170a3",
+    "jsonPayload": {
+      "duration_ms": 49.56,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.186300029Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.945342Z"
+  },
+  {
+    "insertId": "6af57a09000e542b5fc2d72f",
+    "jsonPayload": {
+      "duration_ms": 80.36,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.186300029Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.939051Z"
+  },
+  {
+    "insertId": "6af57a09000dda7729752f84",
+    "jsonPayload": {
+      "duration_ms": 51.245,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.186300029Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.907895Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.076511354s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a09000e7c940e2ddad8",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.189466920Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "db5b441fe3a7427f",
+    "timestamp": "2026-11-12T08:34:17.869907Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/5d9ce5d20619dea93d4ff08c75c6703d"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.077923009s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a09000e7a61efa60970",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.189466920Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "61b635413367fe33",
+    "timestamp": "2026-11-12T08:34:17.869020Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/b4c74c42ad21520db9286fd0c5174443"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.079517454s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a09000e70914c12ed2a",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.189466920Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "ce958325b3be03ba",
+    "timestamp": "2026-11-12T08:34:17.865273Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/f010790b92a8d88e0faea2452f54d1b8"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.079961880s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a09000e705ccf9c8514",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.189466920Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "86ca79c791381fc2",
+    "timestamp": "2026-11-12T08:34:17.863705Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/83ca98da4e1ab7a3f444345880495477"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.083237140s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a09000e588e83c0e3a3",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.189466920Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "cff07902d14216a2",
+    "timestamp": "2026-11-12T08:34:17.855284Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/35e2e76594a8c31ac6e10d1145855e30"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.054715037s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a09000de0663ab0c731",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.189466920Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "8fec9483fa269d7e",
+    "timestamp": "2026-11-12T08:34:17.852927Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/a96345a953da118fa867bbeb77ae5029"
+  },
+  {
+    "insertId": "6af57a09000cfb8706b8945b",
+    "jsonPayload": {
+      "duration_ms": 11.001,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:18.186300029Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.850823Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.014164344s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a09000cfee9f76ed8e1",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:18.189466920Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "5c9003a25d1ad2a0",
+    "timestamp": "2026-11-12T08:34:17.835452Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/7095285af36474fe7b2513960a16827a"
+  },
+  {
+    "insertId": "6af57a09000c4da1e5290a69",
+    "jsonPayload": {
+      "duration_ms": 7.946,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:17.851609564Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.806305Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.010963204s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a09000c50f5db63f6ba",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:17.851842452Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "3ec30998e5d26ad9",
+    "timestamp": "2026-11-12T08:34:17.794451Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/2720a700ebcea699ea2daab8315e6d81"
+  },
+  {
+    "insertId": "6af57a0900057535f778217e",
+    "jsonPayload": {
+      "duration_ms": 27.028,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:17.517578354Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.357685Z"
+  },
+  {
+    "insertId": "6af57a0900057308752e0a98",
+    "jsonPayload": {
+      "duration_ms": 28.431,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:17.517578354Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.357128Z"
+  },
+  {
+    "insertId": "6af57a0900056f2f36bc2d06",
+    "jsonPayload": {
+      "duration_ms": 27.153,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:17.517578354Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.356143Z"
+  },
+  {
+    "insertId": "6af57a09000560a55b358e0b",
+    "jsonPayload": {
+      "duration_ms": 36.302,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:17.517578354Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.352421Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.032527363s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a0900057e6ce8615898",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:17.527514757Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "0184f51b5fee34d6",
+    "timestamp": "2026-11-12T08:34:17.325806Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/74a694cf9558f5044d8a950bb8bc7a79"
+  },
+  {
+    "insertId": "6af57a090004dada808cb12f",
+    "jsonPayload": {
+      "duration_ms": 28.539,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:17.517578354Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.318170Z"
+  },
+  {
+    "insertId": "6af57a090004da22eabc5a58",
+    "jsonPayload": {
+      "duration_ms": 28.288,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:17.517578354Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.317986Z"
+  },
+  {
+    "insertId": "6af57a090004d957c5705ae6",
+    "jsonPayload": {
+      "duration_ms": 28.019,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:17.517578354Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.317783Z"
+  },
+  {
+    "insertId": "6af57a090004d33e0deddb8b",
+    "jsonPayload": {
+      "duration_ms": 29.167,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:17.517578354Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:17.316222Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.045440775s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a09000571d226706816",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:17.527514757Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "c660ea70a5eb6057",
+    "timestamp": "2026-11-12T08:34:17.310046Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/7f0f74ec71d0191292d828c5384e1a51"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.048433747s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a090005797677466f66",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:17.527514757Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "2c02c1eddfa77659",
+    "timestamp": "2026-11-12T08:34:17.307958Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/653d1f191bcdb0c2dfd94aaba0845c3b"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.055721266s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a09000569e5ffe868e0",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:17.527514757Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "4497f3e3634d573e",
+    "timestamp": "2026-11-12T08:34:17.297367Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/404dcd24bb77b34a67522763edcbf2f3"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.035154014s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a090004e909c42bc9e4",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:17.527514757Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "d52a9ccbba6c4c1e",
+    "timestamp": "2026-11-12T08:34:17.285245Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/f096ea4402f301c56417eecbf961843b"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.039491035s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a090004fa0fe609133d",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:17.527514757Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "aadb200ee44c5221",
+    "timestamp": "2026-11-12T08:34:17.285195Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/b85a117d81ff54a860c6fcd7fac8138b"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.034529019s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a090004e953274dc0d7",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:17.527514757Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "e2bd408ca011d405",
+    "timestamp": "2026-11-12T08:34:17.284432Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/0653d2fea27da3a1741fc4d9afe97d4c"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.033318054s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a090004d9308a42e4f3",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:17.527514757Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "34eb573bfa1f8376",
+    "timestamp": "2026-11-12T08:34:17.282305Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/c04e3e1541a9008739d19893bc1a92d9"
+  },
+  {
+    "insertId": "6af57a08000af038f8b4a069",
+    "jsonPayload": {
+      "duration_ms": 62.453,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.854602356Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:16.716856Z"
+  },
+  {
+    "insertId": "6af57a08000ad7c7e21ab284",
+    "jsonPayload": {
+      "duration_ms": 74.16,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.854602356Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:16.710599Z"
+  },
+  {
+    "insertId": "6af57a08000ad5f5a1024f64",
+    "jsonPayload": {
+      "duration_ms": 55.591,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.854602356Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:16.710133Z"
+  },
+  {
+    "insertId": "6af57a08000a1463745e98f4",
+    "jsonPayload": {
+      "duration_ms": 26.14,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.854602356Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:16.660579Z"
+  },
+  {
+    "insertId": "6af57a08000a0237a5271e21",
+    "jsonPayload": {
+      "duration_ms": 21.219,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.854602356Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:16.655927Z"
+  },
+  {
+    "insertId": "6af57a080009f721d0a70e95",
+    "jsonPayload": {
+      "duration_ms": 44.957,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.854602356Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:16.653089Z"
+  },
+  {
+    "insertId": "6af57a080009c2db7e8b58d0",
+    "jsonPayload": {
+      "duration_ms": 31.21,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.854602356Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:16.639707Z"
+  },
+  {
+    "insertId": "6af57a080009bcee73a31fa3",
+    "jsonPayload": {
+      "duration_ms": 29.842,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.854602356Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:16.638190Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.078690548s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a08000af27fa8fec5c0",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.857432512Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "0db9c2bf01c4f4b3",
+    "timestamp": "2026-11-12T08:34:16.636715Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/ea9a5bad07e78e510c98076450515e44"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.073561151s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a08000adc82c4051e45",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.857432512Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "f230f164630928ad",
+    "timestamp": "2026-11-12T08:34:16.634516Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/3dcf0e622140df34aca11e3badde1a33"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.086636221s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a08000ae38d2f1a8200",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.857432512Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "3dd6f23ed7006cd9",
+    "timestamp": "2026-11-12T08:34:16.623264Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/cccd46bb6469a27cf084dd69a3f16f15"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.033829868s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a08000a06e44464ab6b",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.857432512Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "9bd6940332e7ae3d",
+    "timestamp": "2026-11-12T08:34:16.621402Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/072b80e6b228c3572580778f5edc1002"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.091431822s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a08000aca17affc12ed",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.857432512Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "e88e23823b7041a1",
+    "timestamp": "2026-11-12T08:34:16.613226Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/8f189be0e4c2f235eca29d77432bfd1a"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.036029132s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a080009c78f4b22adc4",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.857432512Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "711e277224486765",
+    "timestamp": "2026-11-12T08:34:16.602564Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/d733c2f383cf8b4cf7f54a9f05d7622a"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.049715997s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1055",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a080009fd5d4f7a6241",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.857432512Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "634d35e540f60377",
+    "timestamp": "2026-11-12T08:34:16.602454Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/3e09b3813bb8bab3b2035ba960a4f82e"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.036739739s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a080009cb47c1cece1a",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.857432512Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "639fa48f2a4dc890",
+    "timestamp": "2026-11-12T08:34:16.601915Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/b6c45c2ff3168d7a021b5cd4435b8f7b"
+  },
+  {
+    "insertId": "6af57a080000131132863a04",
+    "jsonPayload": {
+      "duration_ms": 8.329,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.185710021Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:16.004881Z"
+  },
+  {
+    "insertId": "6af57a07000f2f5f6ea24f5d",
+    "jsonPayload": {
+      "duration_ms": 92.831,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.185710021Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:15.995167Z"
+  },
+  {
+    "insertId": "6af57a07000ea36f286f6588",
+    "jsonPayload": {
+      "duration_ms": 57.246,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.185710021Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:15.959343Z"
+  },
+  {
+    "insertId": "6af57a07000ea214a7027d7c",
+    "jsonPayload": {
+      "duration_ms": 55.562,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.185710021Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:15.958996Z"
+  },
+  {
+    "insertId": "6af57a07000ea0df3b0ccb43",
+    "jsonPayload": {
+      "duration_ms": 55.503,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.185710021Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:15.958687Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.047483363s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a0800001555470cfa09",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.192971867Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "3165ca47b2d1a003",
+    "timestamp": "2026-11-12T08:34:15.955741Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/362b667ce3b330d902ee2bccddda0575"
+  },
+  {
+    "insertId": "6af57a07000e88911e8f835c",
+    "jsonPayload": {
+      "duration_ms": 50.28,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.185710021Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:15.952465Z"
+  },
+  {
+    "insertId": "6af57a07000e86cfdbacf7d6",
+    "jsonPayload": {
+      "duration_ms": 48.593,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.185710021Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:15.952015Z"
+  },
+  {
+    "insertId": "6af57a07000e5ff565a09e81",
+    "jsonPayload": {
+      "duration_ms": 53.331,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:16.185710021Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:15.942069Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.062933937s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a07000eb08c6686c144",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.192971867Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "7001c79704479f38",
+    "timestamp": "2026-11-12T08:34:15.898394Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/5cd938c4741cf186d247a4bc1dbe26a8"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.067337219s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a07000eb0a18b68bc0d",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.192971867Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "bbe7460a1d3af7d2",
+    "timestamp": "2026-11-12T08:34:15.893425Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/8c7070c6244e816e1d6a71ce968dac96"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.062271260s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a07000e9c2d8c93f1ba",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.192971867Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "5e8fc456c305de9e",
+    "timestamp": "2026-11-12T08:34:15.891841Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/09e170ebca123a0dddb9fc9c3aab23fd"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.102976205s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a07000f34ebfa753671",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.192971867Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "a5dab23957f4b84c",
+    "timestamp": "2026-11-12T08:34:15.891435Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/2918ed4adf91c5484a69070dacdaf65b"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.069692701s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a07000ea79e7c1d99d3",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.192971867Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "595cc06ec6eb99bb",
+    "timestamp": "2026-11-12T08:34:15.888957Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/bdcdd9d758c2abe7bc7c9dbe5e2b1018"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.066894744s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a07000e9cdbb271b8fa",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.192971867Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "8afd0c5025976721",
+    "timestamp": "2026-11-12T08:34:15.888771Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/15f0aed02384a669e6c214155434ace8"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.060095524s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a07000e7058a4132350",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:16.192971867Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "71cc1ff1b06c1b21",
+    "timestamp": "2026-11-12T08:34:15.883974Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/b9e6e0a3d2f85cab805388a9d2d470f4",
+    "traceSampled": true
+  },
+  {
+    "insertId": "6af57a0700075f77ddb2d585",
+    "jsonPayload": {
+      "duration_ms": 1.003,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:15.521011091Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:15.483191Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003644761s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "GET",
+      "requestSize": "814",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/health",
+      "responseSize": "155",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a070007639288312f11",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:15.525451315Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "c2bc701c6dee1cf2",
+    "timestamp": "2026-11-12T08:34:15.478422Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/158cad103b93112df79b43db2760a318"
+  },
+  {
+    "httpRequest": {
+      "latency": "0s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "GET",
+      "requestSize": "274",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/health",
+      "serverIp": "34.143.74.2",
+      "status": 403,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a020009080512c2e759",
+    "labels": {
+      "accepted": "d24c050e",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:10.862669145Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "WARNING",
+    "spanId": "fa6044cfc6f526bc",
+    "textPayload": "The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Empty Authorization header value. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client",
+    "timestamp": "2026-11-12T08:34:10.400131Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/09f5d284f98e2bc77cfef2042d70bb19"
+  },
+  {
+    "insertId": "6af57a020004ee261cc358c6",
+    "jsonPayload": {
+      "duration_ms": 0.858,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": "/predict",
+      "status_code": 422
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:10.525395991Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:10.323110Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003800358s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1032",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "236",
+      "serverIp": "34.143.74.2",
+      "status": 422,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a020004f09b7fd4e540",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:10.530823432Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "WARNING",
+    "spanId": "6b6ac5d4ae0849a6",
+    "timestamp": "2026-11-12T08:34:10.316995Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/25b1a1947e4b0bc4661608452aa33afc"
+  },
+  {
+    "insertId": "6af57a0200038101fd0053c3",
+    "jsonPayload": {
+      "duration_ms": 8.306,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:10.525395991Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:10.229633Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.011604068s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a0200038617e00a6e7b",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:10.530823432Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "11e9b590c94d63f1",
+    "timestamp": "2026-11-12T08:34:10.216207Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/777748ea5954447a7733fb9bfc7aee97"
+  },
+  {
+    "insertId": "6af57a020000a46f6324503a",
+    "jsonPayload": {
+      "duration_ms": 2.597,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:10.192155024Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:10.042095Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.005509119s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "GET",
+      "requestSize": "814",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/health",
+      "responseSize": "155",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af57a020000a74e363e5b67",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:10.198307624Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "71349fc91c290556",
+    "timestamp": "2026-11-12T08:34:10.034826Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/99a1ab643a66465e9a7540fac6bdcbdc"
+  },
+  {
+    "httpRequest": {
+      "latency": "0s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "GET",
+      "requestSize": "273",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/health",
+      "serverIp": "34.143.74.2",
+      "status": 403,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579fe000473c9538fb304",
+    "labels": {
+      "accepted": "d24c050e",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:06.536872503Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "WARNING",
+    "spanId": "ff8dbc07f64386f5",
+    "textPayload": "The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Empty Authorization header value. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client",
+    "timestamp": "2026-11-12T08:34:06.097183Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/a2294756912ce3196fb73fd7268f5d4d"
+  },
+  {
+    "insertId": "6af579fd000e04bde076d2a8",
+    "jsonPayload": {
+      "duration_ms": 2.296,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": "/predict",
+      "status_code": 422
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:06.195997917Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:05.918717Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.007575993s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "236",
+      "serverIp": "34.143.74.2",
+      "status": 422,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579fd000e1231cd4887aa",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:06.201016252Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "WARNING",
+    "spanId": "7933e7af17a1f714",
+    "timestamp": "2026-11-12T08:34:05.912212Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/219040aac0b59dc6a4fa8635871d4387"
+  },
+  {
+    "insertId": "6af579fd000c62f8280dd97f",
+    "jsonPayload": {
+      "duration_ms": 6.237,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:05.862394967Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:05.811768Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.009820685s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579fd000c6a8a2b69ee4d",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:05.866651219Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "e3ec25ff13e89e1c",
+    "timestamp": "2026-11-12T08:34:05.799844Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/2e433729f84419f04f340f2ae6d911e4"
+  },
+  {
+    "insertId": "6af579fd000abc074b8d3ee7",
+    "jsonPayload": {
+      "duration_ms": 1.147,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:05.862394967Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:05.703495Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003666790s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "GET",
+      "requestSize": "814",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/health",
+      "responseSize": "155",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579fd000abf8476ba00e8",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:05.866651219Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "f3088f983d20b132",
+    "timestamp": "2026-11-12T08:34:05.694510Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/8e9926494c5bfad17568a8c268733172",
+    "traceSampled": true
+  },
+  {
+    "httpRequest": {
+      "latency": "0s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "GET",
+      "requestSize": "274",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/health",
+      "serverIp": "34.143.74.2",
+      "status": 403,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579fa000a327d91c4df64",
+    "labels": {
+      "accepted": "d24c050e",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:02.870636858Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "WARNING",
+    "spanId": "2e80bd8e32369fc4",
+    "textPayload": "The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Empty Authorization header value. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client",
+    "timestamp": "2026-11-12T08:34:02.667168Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/74d488c0e1484714e039b6b18bbc4d11"
+  },
+  {
+    "insertId": "6af579fa000905bc15f4c99e",
+    "jsonPayload": {
+      "duration_ms": 0.848,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": "/predict",
+      "status_code": 422
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:02.865624879Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:02.591292Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003214582s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "236",
+      "serverIp": "34.143.74.2",
+      "status": 422,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579fa0009088894ce6538",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:02.870636858Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "WARNING",
+    "spanId": "ef9dbf0abc0f7441",
+    "timestamp": "2026-11-12T08:34:02.583532Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/603db51cb62eca63b08c346f15a56c52"
+  },
+  {
+    "insertId": "6af579fa0007c38660ad9799",
+    "jsonPayload": {
+      "duration_ms": 7.057,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:02.535637441Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:02.508806Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.009670181s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579fa0007c666fd9d685e",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:02.535409991Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "6b011e9526ab9c93",
+    "timestamp": "2026-11-12T08:34:02.497741Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/b7a41b4e1c437648412b252c4532ee70"
+  },
+  {
+    "insertId": "6af579fa0006188e06aa5737",
+    "jsonPayload": {
+      "duration_ms": 1.478,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:02.535637441Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:34:02.399502Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.005233548s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "GET",
+      "requestSize": "815",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/health",
+      "responseSize": "155",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579fa00061d4c3703284a",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:34:02.535409991Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "aa09e482541a4c3a",
+    "timestamp": "2026-11-12T08:34:02.391796Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/12cd6a13a8e1f9242d47994a2e2ae11e"
+  },
+  {
+    "httpRequest": {
+      "latency": "0s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "GET",
+      "requestSize": "274",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/health",
+      "serverIp": "34.143.74.2",
+      "status": 403,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579f700060ffd6139e6ca",
+    "labels": {
+      "accepted": "d24c050e",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:33:59.538913463Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "WARNING",
+    "spanId": "080904508ed94863",
+    "textPayload": "The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Empty Authorization header value. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client",
+    "timestamp": "2026-11-12T08:33:59.202462Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/1a28cc144332f42686c9f3b51f234893"
+  },
+  {
+    "insertId": "6af579f70001e9015e123b1c",
+    "jsonPayload": {
+      "duration_ms": 0.922,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": "/predict",
+      "status_code": 422
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:33:59.204078467Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:33:59.125185Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.003590247s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "236",
+      "serverIp": "34.143.74.2",
+      "status": 422,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579f70001ebc0c7d4e83c",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:33:59.209259696Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "WARNING",
+    "spanId": "e2b0b2b935763b33",
+    "timestamp": "2026-11-12T08:33:59.120518Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/7ab4feb7165781f09bf3df03b27ef5c1"
+  },
+  {
+    "insertId": "6af579f70000792b7f68a43e",
+    "jsonPayload": {
+      "duration_ms": 8.898,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:33:59.204078467Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:33:59.031019Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.015225368s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579f700007c3721a55a37",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:33:59.209259696Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "9699d25d7bb263dc",
+    "timestamp": "2026-11-12T08:33:59.014632Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/526bb136a59d02e00d39704ac2776c1f"
+  },
+  {
+    "insertId": "6af579f6000e0647ab19dbcd",
+    "jsonPayload": {
+      "duration_ms": 1.918,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:33:59.204078467Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:33:58.919111Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.004528839s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "GET",
+      "requestSize": "815",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/health",
+      "responseSize": "155",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579f6000e0bb587ba39ea",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:33:59.209259696Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "d815bf8891637dd9",
+    "timestamp": "2026-11-12T08:33:58.912087Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/d2af4f2acb4a975adc950fb5839c7f51"
+  },
+  {
+    "httpRequest": {
+      "latency": "0s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "GET",
+      "requestSize": "273",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/health",
+      "serverIp": "34.143.74.2",
+      "status": 403,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579f4000172afb699e846",
+    "labels": {
+      "accepted": "d24c050e",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:33:56.209377694Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "WARNING",
+    "spanId": "eddf389ab77d54c7",
+    "textPayload": "The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Empty Authorization header value. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client",
+    "timestamp": "2026-11-12T08:33:55.871365Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/be4546f38b7cf549314576167e5c0a0a"
+  },
+  {
+    "insertId": "6af579f3000b482f6748a503",
+    "jsonPayload": {
+      "duration_ms": 1.293,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "rejected",
+      "route": "/predict",
+      "status_code": 422
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:01.022094290Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:33:55.739375Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.004880008s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1032",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "236",
+      "serverIp": "34.143.74.2",
+      "status": 422,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579f3000b4ec0dae57c3c",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:33:55.878647491Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "WARNING",
+    "spanId": "f80bde48feca1add",
+    "timestamp": "2026-11-12T08:33:55.731041Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/13617e7a5cbf695f68578ee71694b65c"
+  },
+  {
+    "insertId": "6af579f30009dfb6a892e30e",
+    "jsonPayload": {
+      "duration_ms": 8.547,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:34:01.022094290Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:33:55.647094Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.012702312s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579f30009e5a7fd84173b",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:33:55.878647491Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "1bc97061effc9d3c",
+    "timestamp": "2026-11-12T08:33:55.631115Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/d722f3909a6cf2fa6aa3d68b2c3c0f30"
+  },
+  {
+    "insertId": "6af579f300082050f2b67ec0",
+    "jsonPayload": {
+      "duration_ms": 2.537,
+      "event": "http_request",
+      "method": "GET",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/health",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:33:55.537650812Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:33:55.532560Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.013320417s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "GET",
+      "requestSize": "814",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/health",
+      "responseSize": "155",
+      "serverIp": "34.143.74.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af579f3000831013a7ab9a5",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:33:55.543627989Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "dd37e181e1f44a81",
+    "timestamp": "2026-11-12T08:33:55.506489Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/135e939a1312d21849d9eed8dfe9c731",
+    "traceSampled": true
+  },
+  {
+    "insertId": "6af5780c000976958b8fb5ff",
+    "jsonPayload": {
+      "duration_ms": 28.618,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:48.883416003Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:48.620181Z"
+  },
+  {
+    "insertId": "6af5780c0009581501158f8f",
+    "jsonPayload": {
+      "duration_ms": 23.266,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:48.883416003Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:48.612373Z"
+  },
+  {
+    "insertId": "6af5780c0009109e342453f8",
+    "jsonPayload": {
+      "duration_ms": 29.549,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:48.883416003Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:48.594078Z"
+  },
+  {
+    "insertId": "6af5780c00090b76141ee67a",
+    "jsonPayload": {
+      "duration_ms": 28.131,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:48.883416003Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:48.592758Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.041090643s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780c000979c08919228b",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:48.884662220Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "7f32e3302cac0602",
+    "timestamp": "2026-11-12T08:25:48.577975Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/13d0f28b4d667447d3697616aa67f47c"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.049406652s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780c00096e9dfd185080",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:48.884662220Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "d11effcba9c3262e",
+    "timestamp": "2026-11-12T08:25:48.566703Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/91ddf3b300859562e613d5bae9405066"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.033160298s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780c000913f80e3f2c82",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:48.884662220Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "350d2b9e64159cd0",
+    "timestamp": "2026-11-12T08:25:48.559475Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/f603288503dccbead2b130db3cb5082b"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.033181356s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780c0009140ff2bccfb3",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:48.884662220Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "9ffd303ed7e9a882",
+    "timestamp": "2026-11-12T08:25:48.558338Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/2f6b1259395d3a93f2a077c6a1c3c93a"
+  },
+  {
+    "insertId": "6af5780c0004c5cec3c285eb",
+    "jsonPayload": {
+      "duration_ms": 40.75,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:48.549553654Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:48.312782Z"
+  },
+  {
+    "insertId": "6af5780c0004bd7ac861ad18",
+    "jsonPayload": {
+      "duration_ms": 38.638,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:48.549553654Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:48.310650Z"
+  },
+  {
+    "insertId": "6af5780c0004ba03a32f5598",
+    "jsonPayload": {
+      "duration_ms": 37.062,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:48.549553654Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:48.309763Z"
+  },
+  {
+    "insertId": "6af5780c0004792c40e37b67",
+    "jsonPayload": {
+      "duration_ms": 40.007,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:48.549553654Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:48.293164Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.057051059s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780c0004cc344460874a",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:48.553265959Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "ea109f54817df317",
+    "timestamp": "2026-11-12T08:25:48.255298Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/816539062af07d1ae46c76c370c3164a"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.058355702s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780c0004c758a142c45a",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:48.553265959Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "a5538dda524d7cdc",
+    "timestamp": "2026-11-12T08:25:48.253271Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/6f29d421d70c1808b4ec1f6931b79ab3"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.055484595s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780c0004c33ac95b0711",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:48.553265959Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "626d41e57fc20b2d",
+    "timestamp": "2026-11-12T08:25:48.252945Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/43534452cbac602c19aeda8865bdb9a2"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.050532118s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780c00049b52a1e06a41",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:48.553265959Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "777b36be1dab55ce",
+    "timestamp": "2026-11-12T08:25:48.247833Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/fda36a9af36622244be8096bfc62796f"
+  },
+  {
+    "insertId": "6af5780b000f2f25b31037e1",
+    "jsonPayload": {
+      "duration_ms": 36.701,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:48.219089811Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:47.995109Z"
+  },
+  {
+    "insertId": "6af5780b000f2d8381f2430f",
+    "jsonPayload": {
+      "duration_ms": 27.514,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:48.219089811Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:47.994691Z"
+  },
+  {
+    "insertId": "6af5780b000f1c0c5e45cbb8",
+    "jsonPayload": {
+      "duration_ms": 31.874,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:48.219089811Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:47.990220Z"
+  },
+  {
+    "insertId": "6af5780b000ea84b7c7a082a",
+    "jsonPayload": {
+      "duration_ms": 12.316,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:48.219089811Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:47.960587Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.036579940s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780b000f321651520ee3",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:48.222447476Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "aa4380a67930f39f",
+    "timestamp": "2026-11-12T08:25:47.957769Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/836ef90f6e1415138f3f5cd2f1b2f772"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.036305435s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780b000f249b004e9e9e",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:48.222447476Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "ea61d4bb2b46d30c",
+    "timestamp": "2026-11-12T08:25:47.951536Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/71b40de8e044a6514df9d5625d7b333f"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.040141517s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780b000f328470aee372",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:48.222447476Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "3d381d57ba18e6a5",
+    "timestamp": "2026-11-12T08:25:47.951518Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/f8ce70c2e965549e56ae871a0194f4c4"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.015594702s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1031",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780b000eabf9da425955",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:48.222447476Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "8e8200689377be37",
+    "timestamp": "2026-11-12T08:25:47.943842Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/d4f5e5d982fa66f9e4f30a6ac340a2c6"
+  },
+  {
+    "insertId": "6af5780b000a61529080c274",
+    "jsonPayload": {
+      "duration_ms": 7.324,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:47.888899395Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:47.680274Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.010863006s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780b000a65d699ff84dc",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:47.886255121Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "dd2e301d02806c80",
+    "timestamp": "2026-11-12T08:25:47.667841Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/88e7d45aeabff290bd3b478e418a1778"
+  },
+  {
+    "insertId": "6af5780b000856566865751c",
+    "jsonPayload": {
+      "duration_ms": 41.701,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:47.888899395Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:47.546390Z"
+  },
+  {
+    "insertId": "6af5780b000855b165158fb1",
+    "jsonPayload": {
+      "duration_ms": 41.386,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:47.888899395Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:47.546225Z"
+  },
+  {
+    "insertId": "6af5780b000852c2706684e7",
+    "jsonPayload": {
+      "duration_ms": 43.948,
+      "event": "http_request",
+      "method": "POST",
+      "model_version": "baseline-28fdf1958b8a",
+      "outcome": "accepted",
+      "route": "/predict",
+      "status_code": 200
+    },
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-11-12T08:25:47.551467931Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "timestamp": "2026-11-12T08:25:47.545474Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.048061422s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780b00085e4692ab241f",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:47.886255121Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "3353c0a54f93e10e",
+    "timestamp": "2026-11-12T08:25:47.485778Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/25bac2c6f27fcfb5588be409136126e3"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.047348786s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1030",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780b00085bd3312ccea5",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:47.556723087Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "56aad91931551081",
+    "timestamp": "2026-11-12T08:25:47.485284Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/3aecdbae17b0081afa220b2f342421f1"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.050613676s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "83.204.142.32",
+      "requestMethod": "POST",
+      "requestSize": "1056",
+      "requestUrl": "https://bike-demand-lab7-obot7iy6yq-ew.a.run.app/predict",
+      "responseSize": "173",
+      "serverIp": "34.143.78.2",
+      "status": 200,
+      "userAgent": "Python-urllib/3.11"
+    },
+    "insertId": "6af5780b00085d1069d9b064",
+    "labels": {
+      "accepted": "d24c050e",
+      "instanceId": "00e8a408bd9004d449214ffaf64b5c896f34ab5e24525f52a1d2adf0242df722b649705f3b61eba03aeab8f0d017058ffd65dbc29e51bb69af11b7db44e5aca96bbbe3815a90fe8da67bfa26cb81915534ca252a4855117e68",
+      "lab": "7",
+      "source": "80f31db"
+    },
+    "logName": "projects/fourth-eon-424715-k1/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-11-12T08:25:47.886255121Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bike-demand-lab7",
+        "location": "europe-west1",
+        "project_id": "fourth-eon-424715-k1",
+        "revision_name": "bike-demand-lab7-refcurrent80f31db",
+        "service_name": "bike-demand-lab7"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "021b99a12a7dd173",
+    "timestamp": "2026-11-12T08:25:47.484243Z",
+    "trace": "projects/fourth-eon-424715-k1/traces/621d3d779064746b93eaf62801a5c3b8",
+    "traceSampled": true
+  }
+]
